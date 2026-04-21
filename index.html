@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital Archive of the Shiv Maha Puran. Explore the Vidyeshvara, Rudra, Shatrudra, Kotirudra, Uma, Kailash, and Vayaviya Samhitas.">
+    <title>Shri Shiv Maha Puran - Digital Dharmic Archive</title>
+    <style>
+        :root {
+            --amber-50: #fffbeb;
+            --amber-100: #fef3c7;
+            --amber-200: #fde68a;
+            --amber-400: #fbbf24;
+            --amber-500: #f59e0b;
+            --amber-600: #d97706;
+            --amber-700: #b45309;
+            --amber-800: #92400e;
+            --amber-900: #78350f;
+            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--amber-50);
+            color: var(--amber-900);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .om-mantra {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header h1 { margin: 0; font-size: 3rem; text-transform: uppercase; letter-spacing: 3px; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+        }
+
+        .intro-text { flex: 2; }
+        .intro-image { flex: 1; text-align: center; }
+        .intro-image img { 
+            max-width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 5px solid var(--amber-100);
+        }
+
+        h2 { color: var(--amber-800); border-left: 5px solid var(--amber-500); padding-left: 15px; margin-top: 40px; }
+
+        .samhita-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--amber-500);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5s); }
+
+        .card h3 { color: var(--amber-700); margin-top: 0; }
+        .card p { font-size: 0.95rem; flex-grow: 1; color: #555; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--amber-900);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .btn:hover { background: var(--amber-600); }
+
+        /* Special Styling for Rudra Samhita Sub-sections */
+        .rudra-sections {
+            background: var(--amber-100);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .rudra-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--amber-400);
+        }
+        .rudra-item:last-child { border-bottom: none; }
+        .rudra-item h4 { margin: 0; font-size: 1rem; color: var(--amber-900); }
+        .rudra-item p { margin: 5px 0; font-size: 0.85rem; }
+        .rudra-link { color: var(--amber-700); font-weight: bold; text-decoration: none; font-size: 0.8rem; }
+        .rudra-link:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--amber-900);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .intro-section { flex-direction: column; text-align: center; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <span class="om-mantra">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण</h1>
+    <p>The Eternal Wisdom of Lord Shiva - Digital Dharmic Archive</p>
+</header>
+
+<div class="container">
+    
+    <!-- Description Section -->
+    <section class="intro-section">
+        <div class="intro-text">
+            <h2>शिव पुराण का परिचय | About Shiv Puran</h2>
+            <p>The <strong>Shiv Purana</strong> is one of the eighteen major Puranas, dedicated to Lord Shiva. It explores the mysteries of creation, the nature of the soul, and the path to ultimate liberation. It is not merely a collection of stories but a complete guide to living a life of Dharma and devotion. By studying these sacred Samhitas, a devotee can dissolve all worldly attachments and merge with the infinite consciousness of Mahadeva.</p>
+        </div>
+        <div class="intro-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Hindu_God_Shiva.jpg/440px-Hindu_God_Shiva.jpg" alt="Lord Shiva">
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #777;">Lord Mahadeva in Meditation</p>
+        </div>
+    </section>
+
+    <h2>समस्त संहिताएँ | The Holy Samhitas</h2>
+    
+    <div class="samhita-grid">
+        
+        <!-- 1st Vidyeshvara -->
+        <div class="card">
+            <h3>1. विद्येश्वर संहिता (Vidyeshvara)</h3>
+            <p>The foundation of Shiv Puran. It details the glory of the Shiva Linga, the secret of the Omkaara mantra, and the essential rules for a devotee's daily conduct.</p>
+            <a href="vidyeshvara_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+        </div>
+
+        <!-- 2nd Rudra (Special Section) -->
+        <div class="card" style="grid-column: span 1; min-height: 500px;">
+            <h3>2. रुद्र संहिता (Rudra)</h3>
+            <p>The largest Samhita covering the divine incarnations and cosmic battles of Lord Rudra across five major segments.</p>
+            
+            <div class="rudra-sections">
+                <div class="rudra-item">
+                    <h4>सृष्टि खण्ड (Srishti)</h4>
+                    <p>The story of primordial creation and the Trinity.</p>
+                    <a href="rudra_samhita_srishti_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
+                </div>
+                <div class="rudra-item">
+                    <h4>सती खण्ड (Sati)</h4>
+                    <p>The life, devotion, and sacrifice of Devi Sati.</p>
+                    <a href="rudra_samhita_sati_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
+                </div>
+                <div class="rudra-item">
+                    <h4>पार्वती खण्ड (Parvati)</h4>
+                    <p>Rebirth, penance, and the divine wedding.</p>
+                    <a href="rudra_samhita_parvati_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
+                </div>
+                <div class="rudra-item">
+                    <h4>कुमार खण्ड (Kumar)</h4>
+                    <p>Birth and victories of Kartikeya and Ganesha.</p>
+                    <a href="rudra_samhita_kumara_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
+                </div>
+                <div class="rudra-item">
+                    <h4>युद्ध खण्ड (Yuddha)</h4>
+                    <p>Destruction of Tripura and major demonic forces.</p>
+                    <a href="rudra_samhita_yuddha_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
+                </div>
+            </div>
+            <a href="rudra_samhita_khand_wise_summary.html" class="btn">Full Samhita Overview</a>
+        </div>
+
+        <!-- 3rd Shatrudra -->
+        <div class="card">
+            <h3>3. शतरुद्र संहिता (Shatrudra)</h3>
+            <p>Explores the many incarnations of Shiva, including Nandi, Bhairava, and Hanuman, showcasing his diverse roles as a protector and teacher.</p>
+            <a href="shatrudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+        </div>
+
+        <!-- 4th Kotirudra -->
+        <div class="card">
+            <h3>4. कोटिरुद्र संहिता (Kotirudra)</h3>
+            <p>Dedicated to the twelve Jyotirlingas, their origins, and the specific merit gained by visiting these pillars of light.</p>
+            <a href="kotirudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+        </div>
+
+        <!-- 5th Uma -->
+        <div class="card">
+            <h3>5. उमा संहिता (Uma)</h3>
+            <p>Glorifies the Divine Mother Parvati, detailing her manifestations and the laws of Dharma and Karma.</p>
+            <a href="uma_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+        </div>
+
+        <!-- 6th Kailash -->
+        <div class="card">
+            <h3>6. कैलाश संहिता (Kailash)</h3>
+            <p>A philosophical deep-dive into Sannyasa, the meaning of OM, and the realization of Non-Duality (Advaita).</p>
+            <a href="kailash_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+        </div>
+
+        <!-- 7th Vayaviya -->
+        <div class="card">
+            <h3>7. वायवीय संहिता (Vayaviya)</h3>
+            <p>Narrated by the Wind God, it connects the rituals of Pashupata Yoga with the final liberation of the soul.</p>
+            <div style="display:flex; gap:10px;">
+                <a href="vayaviya_samhita_part_1_chapter_wise_summary.html" class="btn" style="flex:1">Part 1</a>
+                <a href="vayaviya_uttarabhaga_samhita_part_2_chapter_wise_summary.html" class="btn" style="flex:1">Part 2</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h3>ॐ नमः शिवाय</h3>
+        <p>Digital Dharmic Archive - Preserving Eternal Wisdom</p>
+        <p>&copy; 2026 Gurgaon, Haryana, India</p>
+    </div>
+</footer>
+
+</body>
+</html>
