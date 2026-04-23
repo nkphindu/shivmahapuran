@@ -85,8 +85,8 @@
             border-radius: 12px;
             box-shadow: 0 4px 30px rgba(0,0,0,0.02);
             border: 1px solid #f0ede9;
-			/* This ensures the header isn't hidden by the sticky nav */
-			scroll-margin-top: 70px;
+            /* This ensures the header isn't hidden by the sticky nav */
+            scroll-margin-top: 70px;
         }
 
         h2 { 
@@ -160,7 +160,7 @@
     <span class="om">ॐ नमः शिवाय</span>
     <h1>शिव महापुराण - वायवीय संहिता</h1>
     <p>Shiv Maha Puran - Vayaviya Samhita Part 1 Summary (35 Chapters)</p>
-    <a href="index.html" class="btn-top">← Back to Main Index</a>
+    <a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
 <nav>
@@ -276,14 +276,14 @@
     let currentLang = null;
 
     function toggleAudio(lang) {
-        // Toggle Stop functionality
+        // MOBILE FIX: Ensure immediate interaction check
         if (synth.speaking && currentLang === lang) {
             synth.cancel();
             resetButtons();
             return;
         }
 
-        // Cancel previous and switch
+        // Stop existing speech to prevent overlapping on mobile
         synth.cancel();
         resetButtons();
 
@@ -295,6 +295,7 @@
         const utter = new SpeechSynthesisUtterance(text);
         utter.lang = lang;
         utter.rate = 0.92;
+        utter.volume = 1; // Explicitly set for mobile
 
         const btn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
         
@@ -306,7 +307,9 @@
         };
 
         utter.onend = () => resetButtons();
+        utter.onerror = () => resetButtons();
 
+        // MOBILE TRIGGER: Must be called directly within the click event
         synth.speak(utter);
     }
 
@@ -315,15 +318,23 @@
         const btnHi = document.getElementById('btn-hi');
         const btnEn = document.getElementById('btn-en');
         
-        btnHi.innerHTML = "🔊 हिंदी में सुनें";
-        btnEn.innerHTML = "🔊 Listen in English";
+        if(btnHi) {
+            btnHi.innerHTML = "🔊 हिंदी में सुनें";
+            btnHi.style.background = "transparent";
+            btnHi.style.color = "#d1c4b2";
+        }
         
-        btnHi.style.background = "transparent";
-        btnHi.style.color = "#d1c4b2";
-        
-        btnEn.style.background = "transparent";
-        btnEn.style.color = "#d1c4b2";
+        if(btnEn) {
+            btnEn.innerHTML = "🔊 Listen in English";
+            btnEn.style.background = "transparent";
+            btnEn.style.color = "#d1c4b2";
+        }
     }
+
+    // Handle page navigation/close to stop audio
+    window.onbeforeunload = () => {
+        synth.cancel();
+    };
 </script>
 
 </body>
