@@ -274,43 +274,74 @@
 <script>
     const synth = window.speechSynthesis;
     let currentLang = null;
+    let voices = [];
+
+    // Helper to load voices (Crucial for mobile Chrome/Safari)
+    function loadVoices() {
+        voices = synth.getVoices();
+    }
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = loadVoices;
+    }
 
     function toggleAudio(lang) {
-        // MOBILE FIX: Ensure immediate interaction check
+        // 1. If already speaking same language, Stop.
         if (synth.speaking && currentLang === lang) {
             synth.cancel();
             resetButtons();
             return;
         }
 
-        // Stop existing speech to prevent overlapping on mobile
+        // 2. Stop everything else first
         synth.cancel();
         resetButtons();
 
+        // 3. Gather text
         const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
         const elements = document.querySelectorAll(selector);
-        let text = "";
-        elements.forEach(el => text += el.innerText + ". ");
+        
+        // Use an array to speak in chunks (Better for mobile stability)
+        let textArray = [];
+        elements.forEach(el => textArray.push(el.innerText));
 
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = lang;
-        utter.rate = 0.92;
-        utter.volume = 1; // Explicitly set for mobile
+        if (textArray.length === 0) return;
 
+        currentLang = lang;
         const btn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
         
-        utter.onstart = () => {
-            currentLang = lang;
-            btn.innerHTML = `🛑 STOP AUDIO`;
-            btn.style.background = "#c5a059";
-            btn.style.color = "white";
-        };
+        // Update UI immediately
+        btn.innerHTML = `🛑 STOP AUDIO`;
+        btn.style.background = "#c5a059";
+        btn.style.color = "white";
 
-        utter.onend = () => resetButtons();
-        utter.onerror = () => resetButtons();
+        // 4. Recursive function to speak chunks
+        function speakChunk(index) {
+            if (index >= textArray.length || currentLang !== lang) {
+                resetButtons();
+                return;
+            }
 
-        // MOBILE TRIGGER: Must be called directly within the click event
-        synth.speak(utter);
+            const utter = new SpeechSynthesisUtterance(textArray[index]);
+            utter.lang = lang;
+            utter.rate = 0.95;
+            utter.pitch = 1;
+            utter.volume = 1;
+
+            utter.onend = () => {
+                // Speak next chunk after a tiny pause
+                setTimeout(() => speakChunk(index + 1), 250);
+            };
+
+            utter.onerror = (event) => {
+                console.error("Speech Error:", event);
+                resetButtons();
+            };
+
+            synth.speak(utter);
+        }
+
+        // Start from first paragraph
+        speakChunk(0);
     }
 
     function resetButtons() {
@@ -331,10 +362,9 @@
         }
     }
 
-    // Handle page navigation/close to stop audio
-    window.onbeforeunload = () => {
-        synth.cancel();
-    };
+    // Force stop if user leaves page
+    window.addEventListener('blur', () => synth.cancel());
+    window.addEventListener('beforeunload', () => synth.cancel());
 </script>
 
 </body>
