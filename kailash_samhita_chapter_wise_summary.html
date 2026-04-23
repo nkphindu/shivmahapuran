@@ -1,226 +1,339 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed chapter-wise summary of the Kailash Samhita from the Shiv Maha Puran. Deep dive into Sannyasa Dharma, Pranava Yoga, and the essence of Advaita Vedanta.">
-    <meta name="keywords" content="Shiv Puran, Kailash Samhita, Sannyasa, Pranava Yoga, Om, Advaita, Shiva Puran Summary, Mahavakya, Hindu Philosophy">
-    <title>Shiv Maha Puran - Kailash Samhita Complete Summary</title>
+    <title>Shiv Maha Puran - Kailash Samhita Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            /* Smooth, professional serif fonts for eye comfort */
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 1.9;
         }
 
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 40px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        .om-mantra {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
+        
+        .btn-top {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            border: 1px solid #f1e4d1;
+            color: #f1e4d1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
 
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header h2 { margin: 5px 0; font-weight: 300; font-size: 1.5rem; }
-
+        /* Improved Glassmorphism Sticky Nav */
         nav {
-            background: var(--amber-900);
-            padding: 10px;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        nav a { color: var(--amber-100); text-decoration: none; font-size: 0.85rem; font-weight: bold; }
-        nav a:hover { color: var(--amber-400); }
-
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-
-        .chapter-group {
-            background: white;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid var(--amber-100);
-			/* This ensures the header isn't hidden by the sticky nav */
-			scroll-margin-top: 70px;
-        }
-
-        .group-header {
-            background: var(--amber-100);
-            padding: 20px;
-            border-bottom: 3px solid var(--amber-500);
-        }
-
-        .group-header h2 { margin: 0; color: var(--amber-800); }
-
-        .chapter-card {
-            padding: 25px;
-            border-bottom: 1px solid var(--amber-50);
-        }
-
-        .chapter-title {
-            color: var(--amber-700);
-            font-size: 1.3rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chapter-title span {
-            background: var(--amber-500);
-            color: white;
-            padding: 2px 10px;
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
             border-radius: 5px;
-            font-size: 0.8rem;
+            margin: 0 5px;
         }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; font-size: 0.95rem; }
+        nav a:hover {
+            background: #f1e4d1;
+            color: #8b0000;
+        }
+
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+        .section-box {
+            background: white;
+            margin-bottom: 80px;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+            border: 1px solid #f0ede9;
+            /* This ensures the header isn't hidden by the sticky nav */
+            scroll-margin-top: 70px;
+        }
+
+        h2 { 
+            color: var(--primary-maroon); 
+            border-bottom: 1px solid var(--soft-gold);
+            padding-bottom: 20px;
+            font-weight: normal;
+            font-size: 1.7rem;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 50px; }
+
+        .point-en {
+            display: block;
+            color: #2c2c2c;
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .point-hi {
+            display: block;
+            color: #555;
+            font-size: 1.15rem;
+            padding-left: 25px;
+            border-left: 4px solid var(--soft-gold);
+            text-align: justify;
+        }
 
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 60px 20px;
+            background: #2b1212;
+            color: #d1c4b2;
+            padding: 80px 20px;
             text-align: center;
-            margin-top: 50px;
         }
 
+        .audio-controls {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-audio {
+            background: transparent;
+            color: #d1c4b2;
+            border: 1px solid var(--soft-gold);
+            padding: 15px 35px;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: serif;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .btn-audio:hover { background: var(--soft-gold); color: white; }
+
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            nav { font-size: 0.75rem; }
+            nav { flex-wrap: wrap; padding: 5px; }
+            nav a { font-size: 0.8rem; padding: 8px 10px; }
+            .section-box { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय | Om Namah Shivay</span>
-    <h1>शिव महापुराण | Shiv Maha Puran</h1>
-    <h2>Kailash Samhita (23 Chapters): The 6th Samhita of Shiv Maha Puran</h2>
-	<a href="index.html" style="
-		display: inline-block;
-		margin-top: 15px;
-		padding: 8px 20px;
-		background-color: #fff;
-		color: #b45309;
-		text-decoration: none;
-		border-radius: 50px;
-		font-weight: bold;
-		font-size: 0.9rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		transition: all 0.3s ease;">
-		Back to Shiv Maha Puran Home Page
-	</a>
+    <span class="om">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण - कैलाश संहिता</h1>
+    <p>Shiv Maha Puran - Kailash Samhita Summary (23 Chapters) | Lord Shiva's Narration to Goddess Parvati</p>
+    <a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
 <nav>
-    <a href="#sannyasa">1-4: Divine Sound Pranava OM</a>
-    <a href="#yoga">5-10: Path of the Ascetic</a>
-    <a href="#vedanta">11-18: Supreme Wisdom & Yoga</a>
-    <a href="#ritual">19-23: Fruit of Liberation</a>
+    <a href="#s1">Pranav & Sanyas</a>
+    <a href="#s2">Shiv Tatva & Yoga</a>
 </nav>
 
 <div class="container">
     
-    <!-- Sannyasa Dharma -->
-    <section id="sannyasa" class="chapter-group">
-        <div class="group-header"><h2>The Divine Sound & Foundation (Chapters 1–4)</h2></div>
-        <div class="chapter-card">
-            <ul>
-                <li><b>The Sages' Inquiry:</b> Sages gather at Kashi to ask Suta Ji for the ultimate knowledge that grants liberation from the cycle of birth.</li>
-                <li><b>The Science of OM:</b> Lord Shiva reveals the Pranava Paddhati to Parvati, describing OM as the "cosmic boat" to cross worldly existence.</li>
-                <li><b>Five-Fold Structure:</b> The mantra is broken down into A, U, M, Bindu, and Nada, representing the entire manifest and unmanifest universe.</li>
-                <li><b>The Trinity:</b> Shiva explains that Brahma, Vishnu, and Rudra are the audible forms of the sound, while he is the silent resonance.</li>
-                <li><b>Non-Dual Foundation:</b> The chapters establish that the individual soul and the supreme consciousness are fundamentally one.</b></li>
-            </ul>
-        </div>
+    <section id="s1" class="section-box">
+        <h2>Chapters 1-14: Pranav Pradhiti & Sanyas Vidhi | प्रणव प्रधिति और संन्यास विधि</h2>
+        <ul>
+            <li>
+                <span class="point-en">Lord Shiva explains to Goddess Parvati that 'Pranav' (the sound of Om) is the primordial vibration from which all existence originates. He emphasizes that meditating on the syllable Om is the most direct method to stabilize the mind, as it represents the undifferentiated consciousness that supports the entire structure of the universe.</span>
+                <span class="point-hi">भगवान शिव देवी पार्वती को समझाते हैं कि 'प्रणव' (ओम की ध्वनि) वह आदि स्पंदन है जिससे संपूर्ण अस्तित्व की उत्पत्ति होती है। वे इस बात पर जोर देते हैं कि ओम अक्षर पर ध्यान करना मन को स्थिर करने का सबसे प्रत्यक्ष तरीका है, क्योंकि यह उस अविभाजित चेतना का प्रतिनिधित्व करता है जो ब्रह्मांड की पूरी संरचना का आधार है।</span>
+            </li>
+            <li>
+                <span class="point-en">The importance of 'Pranava-Pradhiti' is highlighted as a sacred absorption where the practitioner merges their individual breath with the cosmic sound. This process is described as a spiritual cleansing that removes the impurities of worldly desires, allowing the inner light of the soul to shine through the darkness of ignorance.</span>
+                <span class="point-hi">'प्रणव-प्रधिति' के महत्व को एक पवित्र अवशोषण के रूप में उजागर किया गया है जहाँ साधक अपनी व्यक्तिगत श्वास को ब्रह्मांडीय ध्वनि के साथ विलीन कर देता है। इस प्रक्रिया को एक आध्यात्मिक सफाई के रूप में वर्णित किया गया है जो सांसारिक इच्छाओं की अशुद्धियों को दूर करती है, जिससे आत्मा का आंतरिक प्रकाश अज्ञानता के अंधेरे में चमकने लगता है।</span>
+            </li>
+            <li>
+                <span class="point-en">Shiva details the 'Sanyas Achaar' or the rigorous code of conduct for those who wish to renounce the material world. He clarifies that true Sanyas is not merely changing clothes but an internal transformation where the seeker views the entire world as their family and remains unaffected by the dualities of joy and sorrow.</span>
+                <span class="point-hi">शिव 'संन्यास आचार' या उन लोगों के लिए आचरण की कठोर संहिता का विवरण देते हैं जो भौतिक दुनिया का त्याग करना चाहते हैं। वे स्पष्ट करते हैं कि सच्चा संन्यास केवल कपड़े बदलना नहीं है, बल्कि एक आंतरिक रूपांतरण है जहाँ साधक पूरी दुनिया को अपने परिवार के रूप में देखता है और सुख-दुख के द्वंद्वों से अप्रभावित रहता है।</span>
+            </li>
+            <li>
+                <span class="point-en">The 'Sanyas Vidhi' is presented as a metaphysical rebirth, involving specific rituals that signify the end of one's social identity. Shiva explains that by performing these rites, the aspirant effectively severs the bonds of karma and enters a state of total surrender, dedicating every remaining breath to the realization of the ultimate truth.</span>
+                <span class="point-hi">'संन्यास विधि' को एक तत्वमीमांसीय पुनर्जन्म के रूप में प्रस्तुत किया गया है, जिसमें विशिष्ट अनुष्ठान शामिल हैं जो किसी की सामाजिक पहचान के अंत का प्रतीक हैं। शिव समझाते हैं कि इन अनुष्ठानों को करने से, आकांक्षी प्रभावी रूप से कर्म के बंधनों को काट देता है और पूर्ण समर्पण की स्थिति में प्रवेश करता है।</span>
+            </li>
+            <li>
+                <span class="point-en">Within these early chapters, the power of 'Om' is further described as the 'Tara' mantra, which helps the soul cross the turbulent ocean of existence. Shiva teaches that the four quarters of Om correspond to the waking, dreaming, deep sleep, and the fourth state of pure consciousness, guiding the seeker toward final liberation.</span>
+                <span class="point-hi">इन शुरुआती अध्यायों में, 'ओम' की शक्ति को 'तारक' मंत्र के रूप में वर्णित किया गया है, जो आत्मा को अस्तित्व के अशांत सागर को पार करने में मदद करता है। शिव सिखाते हैं कि ओम के चार चरण जाग्रत, स्वप्न, सुषुप्ति और शुद्ध चेतना की चौथी अवस्था (तुरीय) के अनुरूप हैं, जो साधक को अंतिम मुक्ति की ओर ले जाते हैं।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- Pranava Yoga -->
-    <section id="yoga" class="chapter-group">
-        <div class="group-header"><h2>The Path of the Ascetic (Chapters 5–10)</h2></div>
-        <div class="chapter-card">
-            <ul>
-                <li><b>Entering Sannyasa:</b> Shiva details the mental and physical preparation required to renounce worldly life and enter the path of a monk.</li>
-				<li><b>Viraja Homa:</b> A sacred internal fire ritual is described to purify the five elements (Earth, Water, Fire, Air, Space) within the seeker.</li>
-				<li><b>Symbolic Transcendence:</b> The seeker is taught to move beyond external symbols like the sacred thread and tuft of hair to find the "internal thread."</li>
-				<li><b>The Mahavakyas:</b> Shiva instructs on the Great Vedic Sayings, emphasizing the realization of "Aham Brahmasmi" (I am Brahman).</li>
-				<li><b>Daily Discipline:</b> Rules for an ascetic’s conduct are provided, focusing on silence, begging for food for survival, and constant contemplation.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Advaita Vedanta -->
-    <section id="vedanta" class="chapter-group">
-        <div class="group-header"><h2>Supreme Wisdom & Yoga (Chapters 11–18)</h2></div>
-        <div class="chapter-card">
-            <ul>
-                <li><b>Heart Meditation:</b> Shiva teaches the technique of visualizing the "Lotus of the Heart" and seeing the Divine as a steady, eternal flame within.</li>
-				<li><b>Role of the Guru:</b> The absolute necessity of a realized Master is explained, as only a Guru can ignite the lamp of knowledge in a disciple.</li>
-				<li><b>Mental Worship:</b> The transition from physical rituals to Manasa-Puja is detailed, where thoughts and devotion become the only offerings.</li>
-				<li><b>The Yoga of Knowledge:</b> Shiva explains how Jnana (Knowledge) acts as a sword to cut the knots of ego and worldly attachment.</li>
-				<li><b>Mind Control:</b> Techniques to restrain the wandering mind and fix it steadily on the vibration of the soul are revealed to Parvati.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Rituals -->
-    <section id="ritual" class="chapter-group">
-        <div class="group-header"><h2>The Fruit of Liberation (Chapters 19–23)</h2></div>
-        <div class="chapter-card">
-            <ul>
-                <li><b>Desirelessness:</b> The seeker attains a state of total peace where worldly pleasures and pains no longer affect the steady mind.</li>
-				<li><b>Dissolving the Ego:</b> A process is described to merge the individual "I" into the universal consciousness of Lord Shiva.</li>
-				<li><b>The State of Jivanmukti:</b> Shiva defines the traits of a soul who is liberated while still living, acting as a beacon of light for others.</li>
-				<li><b>Divine Grace:</b> It is revealed that while effort is necessary, final liberation is a gift of Anugraha (Shiva’s Divine Grace).</li>
-				<li><b>Eternal Merit:</b> The Samhita concludes by stating that anyone who studies these 23 chapters with devotion becomes a form of Shiva himself.</li>
-            </ul>
-        </div>
+    <section id="s2" class="section-box">
+        <h2>Chapters 15-23: Shiv Tatva & The Path of Yoga | शिव तत्व और योग मार्ग</h2>
+        <ul>
+            <li>
+                <span class="point-en">Shiva delves into the mystery of 'Shiv-Tattva,' explaining that he is both the manifest world and the unmanifest spirit. He reveals to Parvati that there is no difference between the seeker and the sought, teaching that the highest knowledge is the realization that the individual soul is essentially identical to the Supreme Shiva.</span>
+                <span class="point-hi">शिव 'शिव-तत्व' के रहस्य में उतरते हैं, यह समझाते हुए कि वे व्यक्त संसार और अव्यक्त आत्मा दोनों हैं। वे पार्वती को प्रकट करते हैं कि साधक और साध्य के बीच कोई अंतर नहीं है, यह सिखाते हुए कि उच्चतम ज्ञान यह अहसास है कि व्यक्तिगत आत्मा अनिवार्य रूप से सर्वोच्च शिव के समान है।</span>
+            </li>
+            <li>
+                <span class="point-en">The relationship between 'Prakriti' (Nature) and 'Purusha' (The Divine Soul) is clarified as the interplay of energy and consciousness. Shiva explains that while Nature provides the stage and the instruments for experience, the Soul is the eternal witness whose presence gives life and meaning to the entire drama of cosmic creation.</span>
+                <span class="point-hi">'प्रकृति' और 'पुरुष' के बीच संबंध को ऊर्जा और चेतना के अंतर्संबंध के रूप में स्पष्ट किया गया है। शिव समझाते हैं कि जहाँ प्रकृति अनुभव के लिए मंच और उपकरण प्रदान करती है, वहीं आत्मा शाश्वत साक्षी है जिसकी उपस्थिति ब्रह्मांडीय सृष्टि के पूरे नाटक को जीवन और अर्थ प्रदान करती है।</span>
+            </li>
+            <li>
+                <span class="point-en">The 'Shisya Vidhi' establishes the sacred bond between a teacher and a student, outlining the tests a seeker must pass before receiving higher wisdom. Shiva emphasizes that a true disciple must possess unshakeable faith and mental purity, as divine secrets cannot be grasped by those whose minds are still clouded by arrogance or worldly greed.</span>
+                <span class="point-hi">'शिष्य विधि' शिक्षक और छात्र के बीच पवित्र बंधन स्थापित करती है, उन परीक्षाओं को रेखांकित करती है जिन्हें एक साधक को उच्च ज्ञान प्राप्त करने से पहले पास करना होगा। शिव इस बात पर जोर देते हैं कि एक सच्चे शिष्य में अटूट विश्वास और मानसिक शुद्धता होनी चाहिए, क्योंकि दिव्य रहस्यों को वे लोग नहीं समझ सकते जिनका मन अहंकार से भरा हो।</span>
+            </li>
+            <li>
+                <span class="point-en">The concept of 'Yogpatt' is introduced as a method of advanced spiritual alignment, focusing on the control of life-force and internal energy. Shiva provides instructions on how a yogi should master their senses to attain a state of perfect stillness, where the internal noise of the mind ceases and only the divine presence of Shiva remains.</span>
+                <span class="point-hi">'योगपट्ट' की अवधारणा को उन्नत आध्यात्मिक संरेखण की एक विधि के रूप में पेश किया गया है, जो जीवन-शक्ति और आंतरिक ऊर्जा के नियंत्रण पर केंद्रित है। शिव निर्देश देते हैं कि कैसे एक योगी को पूर्ण स्थिरता की स्थिति प्राप्त करने के लिए अपनी इंद्रियों पर महारत हासिल करनी चाहिए, जहाँ मन का शोर बंद हो जाता है और केवल शिव की उपस्थिति रहती है।</span>
+            </li>
+            <li>
+                <span class="point-en">The Samhita concludes with Lord Shiva’s final instruction on the attainment of 'Kaivalya' or supreme isolation in bliss. He assures Goddess Parvati that anyone who follows these 23 chapters with a sincere heart will transcend the limitations of the physical world and eventually merge into the infinite, eternal ocean of Shiva-consciousness.</span>
+                <span class="point-hi">संहिता 'कैवल्य' या आनंद में सर्वोच्च एकांत की प्राप्ति पर भगवान शिव के अंतिम निर्देश के साथ समाप्त होती है। वे देवी पार्वती को आश्वस्त करते हैं कि जो कोई भी सच्चे मन से इन 23 अध्यायों का पालन करता है, वह भौतिक दुनिया की सीमाओं को पार कर जाएगा और अंततः शिव-चेतना के अनंत, शाश्वत सागर में विलीन हो जाएगा।</span>
+            </li>
+        </ul>
     </section>
 
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय | शिव महापुराण</h3>
-        <p>Kailash Samhita (23 Chapters): The 6th Samhita of Shiv Maha Puran</p>
-        <p>&copy; 2026 Shiv Puran Digital Summary | Gurgaon, Haryana</p>
+    <h3>ॐ नमः शिवाय</h3>
+    <p>Shiv Maha Puran - Kailash Samhita Summary (23 Chapters)</p>
+    <p>Gurgaon, Haryana, India</p>
+
+    <div class="audio-controls">
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
     </div>
 </footer>
+
+<script>
+    const synth = window.speechSynthesis;
+    let currentLang = null;
+    let textChunks = [];
+    let chunkIndex = 0;
+
+    function stopAllAudio() {
+        synth.cancel();
+        currentLang = null;
+        textChunks = [];
+        chunkIndex = 0;
+
+        const btnHi = document.getElementById('btn-hi');
+        const btnEn = document.getElementById('btn-en');
+        
+        [btnHi, btnEn].forEach(btn => {
+            if (btn) {
+                btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
+                btn.style.background = "transparent";
+                btn.style.color = "#d1c4b2";
+            }
+        });
+    }
+
+    function toggleAudio(lang) {
+        // 1. Check if we are toggling the same language OFF
+        if (synth.speaking && currentLang === lang) {
+            stopAllAudio();
+            return;
+        }
+
+        // 2. Kill current speech and reset UI
+        synth.cancel(); 
+        
+        // Reset buttons manually here for instant feedback
+        const btnHi = document.getElementById('btn-hi');
+        const btnEn = document.getElementById('btn-en');
+        btnHi.innerHTML = "🔊 शिव महापुराण हिंदी में सुनें"; btnHi.style.background = "transparent";
+        btnEn.innerHTML = "🔊 Listen Shiv Mahapuran in English"; btnEn.style.background = "transparent";
+
+        // 3. Setup new language
+        currentLang = lang;
+        const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
+        const elements = document.querySelectorAll(selector);
+        textChunks = Array.from(elements).map(el => el.innerText);
+
+        if (textChunks.length === 0) return;
+
+        // 4. Update Active Button UI
+        const activeBtn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
+        activeBtn.innerHTML = `🛑 STOP AUDIO`;
+        activeBtn.style.backgroundColor = "#c5a059";
+        activeBtn.style.color = "white";
+
+        chunkIndex = 0;
+
+        /** * MOBILE CRITICAL FIX: 
+         * We MUST call speak() immediately inside the click event. 
+         * Mobile browsers will block speak() if it's delayed by logic.
+         */
+        const firstUtterance = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+        firstUtterance.lang = currentLang;
+        firstUtterance.rate = 0.95;
+
+        firstUtterance.onend = () => {
+            chunkIndex++;
+            speakNext();
+        };
+
+        firstUtterance.onerror = () => stopAllAudio();
+
+        // This direct call satisfies the mobile browser's security policy
+        synth.speak(firstUtterance);
+    }
+
+    function speakNext() {
+        // If user stopped it or we reached the end, quit.
+        if (!currentLang || chunkIndex >= textChunks.length) {
+            stopAllAudio();
+            return;
+        }
+
+        const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+        utter.lang = currentLang;
+        utter.rate = 0.95;
+
+        utter.onend = () => {
+            chunkIndex++;
+            setTimeout(speakNext, 100);
+        };
+
+        utter.onerror = () => stopAllAudio();
+
+        synth.speak(utter);
+    }
+
+    window.addEventListener('blur', stopAllAudio);
+    window.addEventListener('beforeunload', stopAllAudio);
+</script>
 
 </body>
 </html>
