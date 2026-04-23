@@ -3,246 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed 35-chapter summary of the Vayaviya Samhita (Part 1) from the Shiv Maha Puran. Explore the discourse of Vayu, creation, and Pashupata Yoga based on the Ramlagan Pandey edition.">
-    <meta name="keywords" content="Shiv Puran, Vayaviya Samhita, Vayu Dev, Ramlagan Pandey, Daksha Yagya, Devi Sati, Upamanyu, Shiva Puran Summary">
-    <title>Shiv Maha Puran - Vayaviya Samhita (Part 1) Complete Summary</title>
+    <title>Shiv Maha Puran - Vayaviya Samhita Part 1 Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            /* Smooth, professional serif fonts for eye comfort */
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 1.9;
         }
 
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 40px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        .om-mantra {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
+        
+        .btn-top {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            border: 1px solid #f1e4d1;
+            color: #f1e4d1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
 
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header h2 { margin: 5px 0; font-weight: 300; font-size: 1.5rem; }
-
+        /* Improved Glassmorphism Sticky Nav */
         nav {
-            background: var(--amber-900);
-            padding: 10px;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        nav a { 
-            color: var(--amber-100); 
-            text-decoration: none; 
-            font-size: 0.85rem; 
-            font-weight: bold;
-            padding: 5px 10px;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover { 
-            color: var(--amber-400) !important;
-            background: transparent; 
-        }
-
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-
-        .chapter-group {
-            background: white;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid var(--amber-100);
-            scroll-margin-top: 70px;
-        }
-
-        .group-header {
-            background: var(--amber-100);
-            padding: 20px;
-            border-bottom: 3px solid var(--amber-500);
-        }
-
-        .group-header h2 { margin: 0; color: var(--amber-800); }
-
-        .chapter-card {
-            padding: 25px;
-            border-bottom: 1px solid var(--amber-50);
-        }
-
-        .chapter-title {
-            color: var(--amber-700);
-            font-size: 1.3rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chapter-title span {
-            background: var(--amber-500);
-            color: white;
-            padding: 2px 10px;
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
             border-radius: 5px;
-            font-size: 0.8rem;
+            margin: 0 5px;
         }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; font-size: 0.95rem; }
+        nav a:hover {
+            background: #f1e4d1;
+            color: #8b0000;
+        }
+
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+        .section-box {
+            background: white;
+            margin-bottom: 80px;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+            border: 1px solid #f0ede9;
+			/* This ensures the header isn't hidden by the sticky nav */
+			scroll-margin-top: 70px;
+        }
+
+        h2 { 
+            color: var(--primary-maroon); 
+            border-bottom: 1px solid var(--soft-gold);
+            padding-bottom: 20px;
+            font-weight: normal;
+            font-size: 1.7rem;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 50px; }
+
+        .point-en {
+            display: block;
+            color: #2c2c2c;
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .point-hi {
+            display: block;
+            color: #555;
+            font-size: 1.15rem;
+            padding-left: 25px;
+            border-left: 4px solid var(--soft-gold);
+            text-align: justify;
+        }
 
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 60px 20px;
+            background: #2b1212;
+            color: #d1c4b2;
+            padding: 80px 20px;
             text-align: center;
-            margin-top: 50px;
         }
 
+        .audio-controls {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-audio {
+            background: transparent;
+            color: #d1c4b2;
+            border: 1px solid var(--soft-gold);
+            padding: 15px 35px;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: serif;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .btn-audio:hover { background: var(--soft-gold); color: white; }
+
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            nav { font-size: 0.75rem; }
+            nav { flex-wrap: wrap; padding: 5px; }
+            nav a { font-size: 0.8rem; padding: 8px 10px; }
+            .section-box { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय | Om Namah Shivay</span>
-    <h1>शिव महापुराण | Shiv Maha Puran</h1>
-    <h2>Vayaviya Samhita Part 1 (35 Chapters) - The 7th Samhita of Shiv Maha Puran</h2>
-	<a href="index.html" style="
-		display: inline-block;
-		margin-top: 15px;
-		padding: 8px 20px;
-		background-color: #fff;
-		color: #b45309;
-		text-decoration: none;
-		border-radius: 50px;
-		font-weight: bold;
-		font-size: 0.9rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		transition: all 0.3s ease;">
-		Back to Shiv Maha Puran Home Page
-	</a>
+    <span class="om">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण - वायवीय संहिता</h1>
+    <p>Shiv Maha Puran - Vayaviya Samhita Part 1 Summary (35 Chapters)</p>
+    <a href="index.html" class="btn-top">← Back to Main Index</a>
 </header>
 
 <nav>
-    <a href="#creation">1-17: Shiv Tatva & Universe</a>
-    <a href="#daksha">18-23: Daksha & Sati</a>
-    <a href="#devi">24-27: Kali to Gauri</a>
-    <a href="#lifestyle">28-33: Bhasma & Vrat</a>
-    <a href="#upamanyu">34-35: Upamanyu Bhakti</a>
+    <a href="#s1">Cosmology</a>
+    <a href="#s2">Daksha</a>
+    <a href="#s3">Shakti</a>
+    <a href="#s4">Yoga</a>
+    <a href="#s5">Bhakti</a>
 </nav>
 
 <div class="container">
     
-    <section id="creation" class="chapter-group">
-        <div class="group-header"><h2>Chapters 1-17: Shiv Tatva, Kaal & The Universe</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 1-17</span> The Blueprint of Creation</h3>
-            <ul>
-                <li><b>The Supreme Cause:</b> Vayu Dev reveals that Shiva is the primordial source from which the universe emerges.</li>
-                <li><b>The Instrument of Time:</b> Shiva utilizes <b>Kaal</b> (Time) as a systematic tool to regulate the cycles of creation and dissolution.</li>
-                <li><b>Nature and Soul:</b> Detailed explanation of 'Pradhana' (Matter) and 'Purusha' (Soul) as expressions of Shiva's Shakti.</li>
-                <li><b>Panchabhuta:</b> The manifestation of the five core elements—Earth, Water, Fire, Air, and Space—forming the physical world.</li>
-                <li><b>Systematic Universe:</b> The cosmos is presented as a structured manifestation designed for the soul's eventual liberation.</li>
-            </ul>
-        </div>
+    <section id="s1" class="section-box">
+        <h2>Chapters 1-17: Cosmology & The Divine Source | सृष्टि विज्ञान</h2>
+        <ul>
+            <li>
+                <span class="point-en">The text establishes that before the universe was formed, there was only the stagnant "Shiv-Tattva," a state of pure, unmanifested consciousness. It is from this absolute stillness that the first divine vibration emerged, acting as the catalyst for the entire manifestation of the material and spiritual realms we know today.</span>
+                <span class="point-hi">ग्रंथ यह स्थापित करता है कि ब्रह्मांड के निर्माण से पहले, केवल निश्चल "शिव-तत्व" था, जो शुद्ध और अव्यक्त चेतना की एक अवस्था है। इसी पूर्ण स्थिरता से प्रथम दिव्य स्पंदन उत्पन्न हुआ, जिसने भौतिक और आध्यात्मिक क्षेत्रों के संपूर्ण प्रकटीकरण के लिए उत्प्रेरक के रूप में कार्य किया।</span>
+            </li>
+            <li>
+                <span class="point-en">Time is presented not as a random flow, but as an intelligent governance system managed by Mahadeva to regulate cosmic cycles. It ensures that the lifespan of celestial beings and the shifting of eras (Yugas) occur in perfect harmony, allowing every soul to move through its karmic journey with rhythmic precision.</span>
+                <span class="point-hi">समय को एक यादृच्छिक प्रवाह के रूप में नहीं, बल्कि महादेव द्वारा संचालित एक बुद्धिमान शासन प्रणाली के रूप में प्रस्तुत किया गया है जो ब्रह्मांडीय चक्रों को नियंत्रित करती है। यह सुनिश्चित करता है कि दिव्य प्राणियों का जीवनकाल और युगों का परिवर्तन पूर्ण सामंजस्य में हो, जिससे प्रत्येक आत्मा अपनी कर्म यात्रा को लयबद्ध सटीकता के साथ पूरा कर सके।</span>
+            </li>
+            <li>
+                <span class="point-en">The evolution of the "Panchabhuta" or five great elements—Space, Air, Fire, Water, and Earth—is described as a sequence of divine manifestation. These elements provide the structural layer for the universe, creating a multi-dimensional platform where consciousness can inhabit physical forms and experience the material reality of creation.</span>
+                <span class="point-hi">"पंचभूत" या पांच महान तत्वों—आकाश, वायु, अग्नि, जल और पृथ्वी—के विकास को दिव्य प्रकटीकरण के एक क्रम के रूप में वर्णित किया गया है। ये तत्व ब्रह्मांड के लिए संरचनात्मक परत प्रदान करते हैं, एक बहु-आयामी मंच बनाते हैं जहाँ चेतना भौतिक रूपों में निवास कर सकती है और सृष्टि की भौतिक वास्तविकता का अनुभव कर सकती है।</span>
+            </li>
+            <li>
+                <span class="point-en">Vayu Dev explores the synergy between "Prakriti" (Nature) and "Purusha" (Soul), noting that neither can function without the other. While Nature provides the sensory field and the physical body, the Soul provides the light of awareness, creating a partnership that allows for the growth and eventual self-realization of all living beings.</span>
+                <span class="point-hi">वायु देव "प्रकृति" और "पुरुष" के बीच तालमेल की खोज करते हैं, यह देखते हुए कि कोई भी दूसरे के बिना कार्य नहीं कर सकता है। जहाँ प्रकृति संवेदी क्षेत्र और भौतिक शरीर प्रदान करती है, वहीं आत्मा जागरूकता का प्रकाश प्रदान करती है, एक ऐसी साझेदारी बनाती है जो सभी जीवित प्राणियों के विकास और अंततः आत्म-साक्षात्कार की अनुमति देती है।</span>
+            </li>
+            <li>
+                <span class="point-en">Ultimately, the entire structured universe is viewed as a "Lila" or divine play designed for the soul's liberation. Every aspect of existence, from the smallest atom to the largest galaxy, serves as a school to teach the soul its true nature, leading it from the darkness of ignorance back to the eternal light of Shiva.</span>
+                <span class="point-hi">अंततः, संपूर्ण संरचित ब्रह्मांड को आत्मा की मुक्ति के लिए डिज़ाइन की गई एक "लीला" या दिव्य खेल के रूप में देखा जाता है। अस्तित्व का प्रत्येक पहलू, सबसे छोटे परमाणु से लेकर सबसे बड़ी आकाशगंगा तक, आत्मा को उसके वास्तविक स्वरूप को सिखाने के लिए एक स्कूल के रूप में कार्य करता है, जो उसे अज्ञानता के अंधेरे से वापस शिव के शाश्वत प्रकाश की ओर ले जाता है।</span>
+            </li>
+        </ul>
     </section>
 
-    <section id="daksha" class="chapter-group">
-        <div class="group-header"><h2>Chapters 18-23: Daksha Yagya and Devi Sati</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 18-23</span> The Battle of Ego and Devotion</h3>
-            <ul>
-                <li><b>Daksha’s Arrogance:</b> Represents the worldly ego that mistakenly believes ritualistic status is superior to spiritual truth.</li>
-                <li><b>The Divine Protest:</b> Sati, representing the unwavering soul, sacrifices her body when the Divine (Shiva) is insulted.</li>
-                <li><b>Virabhadra's Wrath:</b> The destruction of Daksha's sacrifice serves as a purification process to dismantle false pride.</li>
-                <li><b>Restoration:</b> Daksha is revived with a goat's head, symbolizing a humble rebirth and the beginning of true understanding.</li>
-                <li><b>The Core Lesson:</b> Any life project (Yagya) that excludes the Supreme Consciousness is destined for failure.</li>
-            </ul>
-        </div>
+    <section id="s2" class="section-box">
+        <h2>Chapters 18-23: The Fall of Ego & Sati's Sacrifice | दक्ष यज्ञ प्रसंग</h2>
+        <ul>
+            <li>
+                <span class="point-en">The narrative of Daksha Prajapati serves as a profound warning against the dangers of intellectual and social vanity. Despite his vast ritualistic knowledge, Daksha's ego blinded him to the divinity of Shiva, teaching us that formal education and status are worthless if they lead to the disrespect of the Supreme Truth.</span>
+                <span class="point-hi">दक्ष प्रजापति का वृत्तांत बौद्धिक और सामाजिक अहंकार के खतरों के खिलाफ एक गहरी चेतावनी के रूप में कार्य करता है। अपने विशाल कर्मकांडीय ज्ञान के बावजूद, दक्ष के अहंकार ने उन्हें शिव की दिव्यता के प्रति अंधा कर दिया, जो हमें सिखाता है कि औपचारिक शिक्षा और स्थिति व्यर्थ है यदि वे सर्वोच्च सत्य के अनादर का कारण बनती हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">Mother Sati's decision to immolate herself in the yogic fire represents the ultimate commitment to spiritual integrity. It demonstrates that a true seeker must be willing to renounce worldly attachments and even the physical form if it means protecting the sanctity of their devotion and the honor of the Divine.</span>
+                <span class="point-hi">योग अग्नि में स्वयं को भस्म करने का माता सती का निर्णय आध्यात्मिक अखंडता के प्रति सर्वोच्च प्रतिबद्धता का प्रतिनिधित्व करता है। यह दर्शाता है कि एक सच्चे साधक को सांसारिक मोह और यहाँ तक कि भौतिक रूप को त्यागने के लिए भी तैयार रहना चाहिए यदि इसका अर्थ अपनी भक्ति की पवित्रता और परमात्मा के सम्मान की रक्षा करना हो।</span>
+            </li>
+            <li>
+                <span class="point-en">The manifestation of Virabhadra highlights the fierce, corrective power that the universe employs when Dharma is threatened. This energy is not born of malice, but is a necessary intervention to dismantle the structures of pride and arrogance that prevent the spiritual progress of the individual and society as a whole.</span>
+                <span class="point-hi">वीरभद्र का प्रकटीकरण उस उग्र, सुधारात्मक शक्ति पर प्रकाश डालता है जिसे ब्रह्मांड तब नियोजित करता है जब धर्म खतरे में होता है। यह ऊर्जा द्वेष से पैदा नहीं होती है, बल्कि गर्व और अहंकार के उन ढांचों को गिराने के लिए एक आवश्यक हस्तक्षेप है जो व्यक्ति और समाज की आध्यात्मिक प्रगति को रोकते हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">Daksha's eventual restoration with a goat's head is a powerful metaphor for the purification of the mind. It suggests that when the complex, prideful intellect is sacrificed, it is replaced by a simpler, more humble heart that is finally capable of receiving divine wisdom and authentic grace from Mahadeva.</span>
+                <span class="point-hi">बकरे के सिर के साथ दक्ष की अंततः पुनर्स्थापना मन के शुद्धिकरण के लिए एक शक्तिशाली रूपक है। यह सुझाव देता है कि जब जटिल, अभिमानी बुद्धि का त्याग किया जाता है, तो उसे एक सरल, अधिक विनम्र हृदय से बदल दिया जाता है जो अंततः महादेव से दिव्य ज्ञान और प्रामाणिक कृपा प्राप्त करने में सक्षम होता है।</span>
+            </li>
+            <li>
+                <span class="point-en">Shiva’s act of forgiving Daksha and restoring the Yagya emphasizes His role as "Ashutosh," the one who is easily pleased by sincere repentance. It shows that the path to redemption is always open to anyone who is willing to let go of their vanity and approach the Divine with a clean and honest heart.</span>
+                <span class="point-hi">दक्ष को क्षमा करने और यज्ञ को बहाल करने का शिव का कार्य "आशुतोष" के रूप में उनकी भूमिका पर जोर देता है, जो सच्चे पश्चाताप से आसानी से प्रसन्न हो जाते हैं। यह दर्शाता है कि मुक्ति का मार्ग हमेशा उस व्यक्ति के लिए खुला है जो अपने अहंकार को छोड़ने और स्वच्छ और ईमानदार हृदय के साथ परमात्मा के पास जाने के लिए तैयार है।</span>
+            </li>
+        </ul>
     </section>
 
-    <section id="devi" class="chapter-group">
-        <div class="group-header"><h2>Chapters 24-27: Kali to Gauri & Victory over Evil</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 24-27</span> Inner Transformation</h3>
-            <ul>
-                <li><b>From Kali to Gauri:</b> Parvati’s intense penance symbolizes the journey of the soul from darkness to radiant enlightenment.</li>
-                <li><b>Divine Radiance:</b> The transformation into the golden-hued 'Gauri' represents the attainment of spiritual purity.</li>
-                <li><b>Slaying the Demons:</b> The destruction of Shumbha and Nishumbha, who represent deep-rooted attachment and possessiveness.</li>
-                <li><b>Modern Parallel:</b> These chapters teach that internal discipline is required to defeat the mental "demons" of the modern world.</li>
-            </ul>
-        </div>
+    <section id="s3" class="section-box">
+        <h2>Chapters 24-27: The Mystery of Shakti | शक्ति तत्व और महिमा</h2>
+        <ul>
+            <li><span class="point-en">The transition from Kali to Gauri represents the alchemical process of inner transformation. It teaches that through intense focus and spiritual heat, the darker and more chaotic aspects of our human nature can be refined into a state of radiant peace and golden, divine wisdom.</span><span class="point-hi">काली से गौरी में संक्रमण आंतरिक रूपांतरण की कीमियाई प्रक्रिया का प्रतिनिधित्व करता है। यह सिखाता है कि गहन ध्यान और आध्यात्मिक अग्नि के माध्यम से, हमारे मानव स्वभाव के अंधेरे और अधिक अराजक पहलुओं को उज्ज्वल शांति और स्वर्ण, दिव्य ज्ञान की स्थिति में परिष्कृत किया जा सकता है।</span></li>
+            <li><span class="point-en">The defeat of the demons Shumbha and Nishumbha is a symbolic victory over the ego's primary traits of "Attachment" and "Selfishness." Shakti acts as the warrior force within the seeker that removes these deep-seated obstacles, clearing the way for the soul to witness its own inherent divinity.</span><span class="point-hi">असुर शुंभ और निशुंभ की हार अहंकार के प्राथमिक लक्षणों "मोह" और "स्वार्थ" पर एक प्रतीकात्मक विजय है। शक्ति साधक के भीतर योद्धा शक्ति के रूप में कार्य करती है जो इन गहरी बाधाओं को दूर करती है, जिससे आत्मा को अपनी अंतर्निहित दिव्यता को देखने का मार्ग प्रशस्त होता है।</span></li>
+            <li><span class="point-en">Shakti is revealed as the inseparable energy of Shiva, much like the light is inseparable from the sun. This unity highlights that while Shiva is the consciousness that observes, Shakti is the power that acts, ensuring that the entire cosmic order remains balanced and functional.</span><span class="point-hi">शक्ति को शिव की अविभाज्य ऊर्जा के रूप में प्रकट किया गया है, जैसे प्रकाश सूर्य से अविभाज्य है। यह एकता इस बात पर प्रकाश डालती है कि जहाँ शिव देखने वाली चेतना हैं, वहीं शक्ति कार्य करने वाली शक्ति है, जो यह सुनिश्चित करती है कि संपूर्ण ब्रह्मांडीय व्यवस्था संतुलित और कार्यात्मक बनी रहे।</span></li>
+            <li><span class="point-en">For a devotee, the Divine Mother serves as a nurturing protector against the turbulent waves of material existence. She provides the necessary courage and strength to overcome life's challenges, ensuring that the spiritual seed within the heart is protected until it fully blossoms into enlightenment.</span><span class="point-hi">एक भक्त के लिए, दिव्य माता भौतिक अस्तित्व की अशांत लहरों के खिलाफ एक पोषण करने वाली संरक्षक के रूप में कार्य करती हैं। वह जीवन की चुनौतियों पर विजय पाने के लिए आवश्यक साहस और शक्ति प्रदान करती हैं, यह सुनिश्चित करती हैं कि हृदय के भीतर आध्यात्मिक बीज तब तक सुरक्षित रहे जब तक कि वह पूरी तरह से ज्ञान में विकसित न हो जाए।</span></li>
+            <li><span class="point-en">True worship of Shakti leads to the realization that the entire world is a manifestation of divine energy. By seeing the Goddess in every form, a seeker develops a deep sense of reverence for all of creation, moving beyond narrow boundaries toward a state of universal love and spiritual peace.</span><span class="point-hi">शक्ति की सच्ची पूजा इस अहसास की ओर ले जाती है कि संपूर्ण विश्व दिव्य ऊर्जा की अभिव्यक्ति है। हर रूप में देवी को देखकर, एक साधक पूरी सृष्टि के प्रति श्रद्धा की गहरी भावना विकसित करता है, जो संकीर्ण सीमाओं से परे सार्वभौमिक प्रेम और आध्यात्मिक शांति की स्थिति की ओर बढ़ता है।</span></li>
+        </ul>
     </section>
 
-    <section id="lifestyle" class="chapter-group">
-        <div class="group-header"><h2>Chapters 28-33: Bhasma Tatva and Pashupat Vrat</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 28-33</span> The Practical Code of Conduct</h3>
-            <ul>
-                <li><b>The Glory of Bhasma:</b> Using holy ash as a "meditation on reality," reminding the seeker that the physical is temporary.</li>
-                <li><b>Pashupat Vrat:</b> A sacred discipline designed to transform a <b>Pashu</b> (soul bound by instincts) into a <b>Pashupati</b> (master of self).</li>
-                <li><b>Sagun and Nirgun:</b> Explanation of Shiva as both the formless energy and the personal deity available for worship.</li>
-                <li><b>Grounded Living:</b> Applying ash is described as a method to control the senses and maintain mental stability.</li>
-            </ul>
-        </div>
+    <section id="s4" class="section-box">
+        <h2>Chapters 28-33: The Path of Pashupat Yoga | पाशुपत योग और नियम</h2>
+        <ul>
+            <li><span class="point-en">The practice of smearing holy ash (Bhasma) is presented as a constant meditation on the impermanence of the physical body. It serves to detach the mind from the illusions of material beauty, reminding the yogi that the spirit alone is eternal while the vessel of the body is destined to return to dust.</span><span class="point-hi">पवित्र भस्म लगाने के अभ्यास को भौतिक शरीर की नश्वरता पर निरंतर ध्यान के रूप में प्रस्तुत किया गया है। यह मन को भौतिक सुंदरता के भ्रम से अलग करने का कार्य करता है, योगी को याद दिलाता है कि केवल आत्मा शाश्वत है जबकि शरीर का पात्र मिट्टी में मिलने के लिए नियत है।</span></li>
+            <li><span class="point-en">The Pashupat Vrat is a systematic method designed to liberate the "Pashu" (the soul bound by instincts) from the "Pasha" (the bonds of worldly desire). It provides a strict code of conduct that helps the individual master their senses and transform their animalistic tendencies into divine attributes.</span><span class="point-hi">पाशुपत व्रत एक व्यवस्थित विधि है जिसे "पशु" (प्रवृत्तियों से बंधी आत्मा) को "पाश" (सांसारिक इच्छाओं के बंधन) से मुक्त करने के लिए बनाया गया है। यह एक सख्त आचार संहिता प्रदान करता है जो व्यक्ति को अपनी इंद्रियों पर नियंत्रण पाने और अपनी पशुवत प्रवृत्तियों को दिव्य गुणों में बदलने में मदद करता है।</span></li>
+            <li><span class="point-en">Breath control and the chanting of sacred mantras are described as the primary tools for stabilizing the wandering mind. By aligning the internal rhythms of the body with divine sound, the yogi creates an inner sanctuary that is unaffected by the chaos and distractions of the external world.</span><span class="point-hi">श्वास नियंत्रण और पवित्र मंत्रों के जाप को भटकते मन को स्थिर करने के प्राथमिक उपकरणों के रूप में वर्णित किया गया है। शरीर की आंतरिक लय को दिव्य ध्वनि के साथ जोड़कर, योगी एक आंतरिक अभयारण्य बनाता है जो बाहरी दुनिया की अराजकता और विकर्षणों से अप्रभावित रहता है।</span></li>
+            <li><span class="point-en">The Vayaviya Samhita explains that both ritualistic worship (Saguna) and silent meditation (Nirguna) are essential steps on the spiritual ladder. While rituals help train the mind to focus, the ultimate goal is to move beyond all forms and names to experience the formless, all-pervading reality of Shiva.</span><span class="point-hi">वायवीय संहिता बताती है कि कर्मकांडीय पूजा (सगुण) और मौन ध्यान (निर्गुण) दोनों आध्यात्मिक सीढ़ी पर आवश्यक कदम हैं। जहाँ अनुष्ठान मन को केंद्रित करने के लिए प्रशिक्षित करने में मदद करते हैं, वहीं अंतिम लक्ष्य सभी रूपों और नामों से परे जाकर शिव की निराकार, सर्वव्यापी वास्तविकता का अनुभव करना है।</span></li>
+            <li><span class="point-en">Purity of character and the practice of non-violence are emphasized as the non-negotiable foundations of Pashupat Yoga. Without ethical groundings, spiritual powers can lead to a new form of ego, making it vital for the practitioner to remain rooted in compassion and truth at every stage of their journey.</span><span class="point-hi">चरित्र की शुद्धता और अहिंसा के अभ्यास पर पाशुपत योग की अपरिहार्य नींव के रूप में जोर दिया गया है। नैतिक आधार के बिना, आध्यात्मिक शक्तियाँ अहंकार के एक नए रूप को जन्म दे सकती हैं, जिससे साधक के लिए अपनी यात्रा के हर चरण में करुणा और सत्य में बने रहना महत्वपूर्ण हो जाता है।</span></li>
+        </ul>
     </section>
 
-    <section id="upamanyu" class="chapter-group">
-        <div class="group-header"><h2>Chapters 34-35: The Grace of Upamanyu</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 34-35</span> Childlike Faith and Infinite Reward</h3>
-            <ul>
-                <li><b>Upamanyu’s Quest:</b> A poor boy's simple desire for milk leads him to seek the ultimate source of nourishment—Shiva.</li>
-                <li><b>The Unwavering Test:</b> Shiva tests the boy's faith by appearing as Indra; Upamanyu passes by defending Shiva's glory.</li>
-                <li><b>The Ocean of Milk:</b> Shiva rewards the boy not with a cup of milk, but with the entire <b>Kshira Sagara</b> (Ocean of Milk).</li>
-                <li><b>The Teacher of Krishna:</b> Upamanyu later initiates Lord Krishna, bridging the gap between major spiritual lineages.</li>
-                <li><b>Phalashruti:</b> The Samhita concludes by stating that absolute faith is the fastest vehicle to attain Shiva’s grace.</li>
-            </ul>
-        </div>
+    <section id="s5" class="section-box">
+        <h2>Chapters 34-35: The Grace of Upamanyu | भक्ति एवं शिव अनुकंपा</h2>
+        <ul>
+            <li><span class="point-en">The story of young Upamanyu serves as the ultimate proof that the intensity of a devotee’s longing is far more powerful than complex theological knowledge. His simple, child-like faith was enough to move the Supreme Lord, demonstrating that God is always accessible to those who call with a pure heart.</span><span class="point-hi">युवा उपमन्यु की कहानी इस बात का परम प्रमाण है कि एक भक्त की तड़प की तीव्रता जटिल धार्मिक ज्ञान से कहीं अधिक शक्तिशाली है। उनका सरल, बालसुलभ विश्वास सर्वोच्च प्रभु को प्रसन्न करने के लिए पर्याप्त था, जो यह दर्शाता है कि ईश्वर हमेशा उन लोगों के लिए सुलभ है जो शुद्ध हृदय से पुकारते हैं।</span></li>
+            <li><span class="point-en">Upamanyu’s unwavering loyalty, even when tested by Shiva in the guise of Indra, represents the highest level of spiritual integrity. This teaches seekers that real devotion involves refusing to settle for lesser material gifts and remaining focused solely on the highest truth, regardless of the trials faced.</span><span class="point-hi">उपमन्यु की अडिग वफादारी, यहाँ तक कि इंद्र के वेश में शिव द्वारा परीक्षा लिए जाने पर भी, आध्यात्मिक अखंडता के उच्चतम स्तर का प्रतिनिधित्व करती है। यह साधकों को सिखाता है कि वास्तविक भक्ति में छोटे भौतिक उपहारों के लिए समझौता न करना और सामना किए गए परीक्षणों के बावजूद केवल उच्चतम सत्य पर ध्यान केंद्रित करना शामिल है।</span></li>
+            <li><span class="point-en">The gift of the "Ocean of Milk" symbolizes the infinite abundance that the Divine bestows upon those who surrender completely. It shows that God does not just fulfill the basic needs of a devotee, but grants them a vast treasury of spiritual peace and material security that far exceeds any worldly expectation.</span><span class="point-hi">"क्षीर सागर" का उपहार उस अनंत प्रचुरता का प्रतीक है जो परमात्मा उन लोगों को प्रदान करता है जो पूरी तरह से समर्पण करते हैं। यह दर्शाता है कि ईश्वर केवल भक्त की बुनियादी जरूरतों को पूरा नहीं करता है, बल्कि उन्हें आध्यात्मिक शांति और भौतिक सुरक्षा का एक विशाल खजाना प्रदान करता है जो किसी भी सांसारिक अपेक्षा से कहीं अधिक है।</span></li>
+            <li><span class="point-en">Through the grace shown to Upamanyu, Shiva is revealed as the ultimate, compassionate parent of all living beings. He is not a distant deity but a loving guardian who personally intervenes to protect and provide for those who trust Him, reminding us that faith is the strongest bond between the soul and God.</span><span class="point-hi">उपमन्यु पर दिखाई गई कृपा के माध्यम से, शिव को सभी जीवित प्राणियों के परम, दयालु माता-पिता के रूप में प्रकट किया गया है। वह कोई दूर के देवता नहीं हैं, बल्कि एक प्रेमपूर्ण रक्षक हैं जो उन लोगों की रक्षा और सहायता के लिए व्यक्तिगत रूप से हस्तक्षेप करते हैं जो उन पर भरोसा करते हैं, हमें याद दिलाते हैं कि विश्वास आत्मा और ईश्वर के बीच सबसे मजबूत बंधन है।</span></li>
+            <li><span class="point-en">The Samhita concludes by assuring that listening to or reading this sacred summary with devotion brings absolute peace and destroys all sins. It acts as a spiritual map, leading the devotee through the difficulties of the material world and finally into the blissful, eternal silence of Shiva-consciousness.</span><span class="point-hi">संहिता यह आश्वासन देते हुए समाप्त होती है कि इस पवित्र सारांश को भक्ति के साथ सुनने या पढ़ने से पूर्ण शांति मिलती है और सभी पापों का नाश होता है। यह एक आध्यात्मिक मानचित्र के रूप में कार्य करता है, जो भक्त को भौतिक संसार की कठिनाइयों के माध्यम से और अंततः शिव-चेतना की आनंदमय, शाश्वत शांति की ओर ले जाता है।</span></li>
+        </ul>
     </section>
 
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय | शिव महापुराण</h3>
-        <p>Vayaviya Samhita Part 1 (35 Chapters) - The 7th Samhita of Shiv Maha Puran</p>
-        <p>&copy; 2026 Shiv Puran Digital Summary | Gurgaon, Haryana</p>
+    <h3>ॐ नमः शिवाय</h3>
+    <p>Shiv Maha Puran - Vayaviya Samhita Part 1 Summary (35 Chapters)</p>
+    <p>Gurgaon, Haryana, India</p>
+
+    <div class="audio-controls">
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 हिंदी में सुनें</button>
     </div>
 </footer>
+
+<script>
+    const synth = window.speechSynthesis;
+    let currentLang = null;
+
+    function toggleAudio(lang) {
+        // Toggle Stop functionality
+        if (synth.speaking && currentLang === lang) {
+            synth.cancel();
+            resetButtons();
+            return;
+        }
+
+        // Cancel previous and switch
+        synth.cancel();
+        resetButtons();
+
+        const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
+        const elements = document.querySelectorAll(selector);
+        let text = "";
+        elements.forEach(el => text += el.innerText + ". ");
+
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = lang;
+        utter.rate = 0.92;
+
+        const btn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
+        
+        utter.onstart = () => {
+            currentLang = lang;
+            btn.innerHTML = `🛑 STOP AUDIO`;
+            btn.style.background = "#c5a059";
+            btn.style.color = "white";
+        };
+
+        utter.onend = () => resetButtons();
+
+        synth.speak(utter);
+    }
+
+    function resetButtons() {
+        currentLang = null;
+        const btnHi = document.getElementById('btn-hi');
+        const btnEn = document.getElementById('btn-en');
+        
+        btnHi.innerHTML = "🔊 हिंदी में सुनें";
+        btnEn.innerHTML = "🔊 Listen in English";
+        
+        btnHi.style.background = "transparent";
+        btnHi.style.color = "#d1c4b2";
+        
+        btnEn.style.background = "transparent";
+        btnEn.style.color = "#d1c4b2";
+    }
+</script>
 
 </body>
 </html>
