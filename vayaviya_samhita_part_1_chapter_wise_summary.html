@@ -266,8 +266,8 @@
     <p>Gurgaon, Haryana, India</p>
 
     <div class="audio-controls">
-        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen in English</button>
-        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 हिंदी में सुनें</button>
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
     </div>
 </footer>
 
@@ -288,7 +288,7 @@
         
         [btnHi, btnEn].forEach(btn => {
             if (btn) {
-                btn.innerHTML = btn.id === 'btn-hi' ? "🔊 हिंदी में सुनें" : "🔊 Listen in English";
+                btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
                 btn.style.background = "transparent";
                 btn.style.color = "#d1c4b2";
             }
@@ -308,8 +308,8 @@
         // Reset buttons manually here for instant feedback
         const btnHi = document.getElementById('btn-hi');
         const btnEn = document.getElementById('btn-en');
-        btnHi.innerHTML = "🔊 हिंदी में सुनें"; btnHi.style.background = "transparent";
-        btnEn.innerHTML = "🔊 Listen in English"; btnEn.style.background = "transparent";
+        btnHi.innerHTML = "🔊 शिव महापुराण हिंदी में सुनें"; btnHi.style.background = "transparent";
+        btnEn.innerHTML = "🔊 Listen Shiv Mahapuran in English"; btnEn.style.background = "transparent";
 
         // 3. Setup new language
         currentLang = lang;
