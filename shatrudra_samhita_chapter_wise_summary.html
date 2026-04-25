@@ -1,475 +1,417 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A comprehensive chapter-wise summary of the Shatrudra Samhita from the Shiv Maha Puran. Explore the 42 chapters detailing Shiva's avatars including Nandi, Bhairava, Sharabha, and Hanuman.">
-    <meta name="keywords" content="Shiv Puran, Shatrudra Samhita, Shiva Avatars, Bhairava, Hanuman, Sharabha, Nandi, Hindu Mythology, Shiva Mahapuran Summary">
-    <title>Shiv Maha Puran - Shatrudra Samhita Complete Summary</title>
+    <title>Shiv Maha Puran - Shatarudra Samhita Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 1.9;
         }
 
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 40px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        header h2 {
-            margin: 5px 0;
-            font-weight: 300;
-            font-size: 1.5rem;
-        }
-
-        .om-mantra {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
+        
+        .btn-top {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            border: 1px solid #f1e4d1;
+            color: #f1e4d1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
 
         nav {
-            background: var(--amber-900);
-            padding: 10px;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         nav a {
-            color: var(--amber-100);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: color 0.3s;
+            color: var(--primary-maroon);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            margin: 0 5px;
         }
 
         nav a:hover {
-            color: var(--amber-400);
+            background: #f1e4d1;
+            color: #8b0000;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+        .section-box {
+            background: white;
+            margin-bottom: 80px;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+            border: 1px solid #f0ede9;
+            scroll-margin-top: 70px;
         }
 
-        .intro {
+        h2 { 
+            color: var(--primary-maroon); 
+            border-bottom: 1px solid var(--soft-gold);
+            padding-bottom: 20px;
+            font-weight: normal;
+            font-size: 1.7rem;
             text-align: center;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 45px;
         }
 
-        .chapter-group {
-            background: white;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid var(--amber-100);
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 50px; }
+
+        .point-en {
+            display: block;
+            color: #2c2c2c;
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            text-align: justify;
         }
 
-        .group-header {
-            background: var(--amber-100);
-            padding: 20px;
-            border-bottom: 3px solid var(--amber-500);
-        }
-
-        .group-header h2 {
-            margin: 0;
-            color: var(--amber-800);
-        }
-
-        .chapter-card {
-            padding: 25px;
-            border-bottom: 1px solid var(--amber-50);
-        }
-
-        .chapter-card:last-child {
-            border-bottom: none;
-        }
-
-        .chapter-title {
-            color: var(--amber-700);
-            font-size: 1.4rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chapter-title span {
-            background: var(--amber-500);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
+        .point-hi {
+            display: block;
+            color: #555;
+            font-size: 1.15rem;
+            padding-left: 25px;
+            border-left: 4px solid var(--soft-gold);
+            text-align: justify;
         }
 
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 60px 20px;
+            background: #2b1212;
+            color: #d1c4b2;
+            padding: 80px 20px;
             text-align: center;
-            margin-top: 50px;
         }
 
-        .footer-content h3 {
-            margin-bottom: 20px;
-            color: var(--amber-400);
+        .audio-controls {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .back-to-top {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--amber-100);
-            text-decoration: none;
-            border: 1px solid var(--amber-100);
-            padding: 8px 15px;
-            border-radius: 5px;
+        .btn-audio {
+            background: transparent;
+            color: #d1c4b2;
+            border: 1px solid var(--soft-gold);
+            padding: 15px 35px;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: serif;
+            transition: 0.3s;
+            font-size: 1rem;
         }
+        .btn-audio:hover { background: var(--soft-gold); color: white; }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            header h2 { font-size: 1.1rem; }
-            .chapter-card { padding: 15px; }
-            nav { font-size: 0.8rem; }
+            nav { flex-wrap: wrap; padding: 5px; }
+            nav a { font-size: 0.8rem; padding: 8px 10px; }
+            .section-box { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय | Om Namah Shivay</span>
-    <h1>शिव महापुराण | Shiv Maha Puran</h1>
-    <h2>Shatrudra Samhita: Complete Chapter-Wise Summary</h2>
-	<a href="index.html" style="
-		display: inline-block;
-		margin-top: 15px;
-		padding: 8px 20px;
-		background-color: #fff;
-		color: #b45309;
-		text-decoration: none;
-		border-radius: 50px;
-		font-weight: bold;
-		font-size: 0.9rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		transition: all 0.3s ease;">
-		Back to Shiv Maha Puran Home Page
-	</a>
+    <span class="om">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण - शतरुद्र संहिता</h1>
+    <p>Shiv Maha Puran - Shatarudra Samhita Summary (42 Chapters) | The Infinite Incarnations and Avatars of Lord Shiva</p>
+    <a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
 <nav>
-    <a href="#rudras">1-5: Rudras</a>
-    <a href="#nandibhairav">6-10: Nandi/Bhairav</a>
-    <a href="#sharabha">11-15: Sharabha/Grihapati</a>
-    <a href="#yaksha">16-20: Yaksha/Mahavidya</a>
-    <a href="#hanuman">21-30: Hanuman/Durvasa</a>
-    <a href="#kirata">31-42: Kirata/Conclusion</a>
+    <a href="#s1">Ardhnarishwar & 5 Avatars</a>
+    <a href="#s2">Nandishwar & Bhairav</a>
+    <a href="#s3">Sharabh & Grahpati</a>
+    <a href="#s4">Hanuman & Others</a>
+    <a href="#s5">Piplad to Kirat</a>
 </nav>
 
 <div class="container">
-    <div class="intro">
-        <p>The <strong>Shatrudra Samhita</strong> is a sacred section of the Shiva Purana that reveals the diverse manifestations of the Supreme Lord. Across 42 chapters, it explains how Mahadeva takes forms to guide, test, and protect his devotees.</p>
-    </div>
-
-    <!-- 1-5 -->
-    <section id="rudras" class="chapter-group">
-        <div class="group-header"><h2>Chapters 1-5: The 11 Rudras & Yogeswaras</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 1-2</span> Foundations & Yogeswaras</h3>
-            <ul>
-                <li>Shiva is Nirguna (formless) but manifests Saguna (with form) for the universe's benefit.</li>
-                <li>Avatars are divine play (Lila) and are not bound by mortal karma.</li>
-                <li>Shiva appears in every Dvapara Yuga as a Yogeswara (Lord of Yoga).</li>
-                <li>There are 28 Yogeswara incarnations in the current cycle.</li>
-                <li>They begin with Shveta and conclude with the 28th, Lakulisha.</li>
-                <li>Each avatar is accompanied by four chief disciples to spread wisdom.</li>
-                <li>The purpose is to preserve the path of Pashupata Yoga.</li>
-                <li>These avatars appear on sacred peaks like the Himalayas.</li>
-                <li>They establish the authority of the Vedas across different ages.</li>
-                <li>Studying these forms removes the darkness of spiritual ignorance.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 3</span> Ardhanarishvara Avatar</h3>
-            <ul>
-                <li>Brahma's early mental creations failed to multiply naturally.</li>
-                <li>Shiva appeared as half-man and half-woman to solve this crisis.</li>
-                <li>The form represents the unity of Purusha (Consciousness) and Prakriti (Energy).</li>
-                <li>Brahma prayed for the female half to separate for the sake of creation.</li>
-                <li>The Goddess Shakti emerged from the left side of Shiva.</li>
-                <li>She granted Brahma the power to create women in the physical world.</li>
-                <li>This enabled 'Maithuni Srishti' or creation through union.</li>
-                <li>Shakti promised to manifest as Sati, the daughter of Daksha.</li>
-                <li>This chapter establishes the metaphysical basis of gender and balance.</li>
-                <li>The Goddess eventually merged back after the task was initiated.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 4-5</span> The Eleven Rudras</h3>
-            <ul>
-                <li>Brahma requested Shiva's help to protect the expanding universe.</li>
-                <li>Shiva manifested from Brahma's concentrated brow (Ajna Chakra).</li>
-                <li>This fierce entity divided into the Eleven (Ekadasa) Rudras.</li>
-                <li>Names include Kapali, Pingala, Bhima, Virupaksha, and Sambhu.</li>
-                <li>Each Rudra was assigned a direction and a specific cosmic power.</li>
-                <li>They govern the 11 vital parts of the human body (senses and mind).</li>
-                <li>The Rudras are the ultimate destroyers of misery and fear.</li>
-                <li>They are invoked during Rudra Abhishek for healing and protection.</li>
-                <li>They represent the protective anger of God against evil.</li>
-                <li>The chapters describe their unique weapons and divine vehicles.</li>
-            </ul>
-        </div>
+    
+    <section id="s1" class="section-box">
+        <h2>Section 1: Ardhnarishwar & The 5 Great Avatars (Ch. 1-5)</h2>
+        <ul>
+            <li>
+                <span class="point-en">The Shatarudra Samhita begins with a profound dialogue between Nandishwar and Sanatkumara, where the cosmic purpose of Shiva's incarnations is revealed. Nandishwar explains that although Shiva is birthless and eternal, he assumes various forms to protect the righteous, establish Dharma, and grant the desires of his beloved devotees.</span>
+                <span class="point-hi">शतरुद्र संहिता की शुरुआत नंदीश्वर और सनत्कुमार के बीच एक गहन संवाद से होती है, जिसमें शिव के अवतारों के ब्रह्मांडीय उद्देश्य का खुलासा किया गया है। नंदीश्वर बताते हैं कि यद्यपि शिव अजन्मा और शाश्वत हैं, वे धर्म की स्थापना करने और अपने प्रिय भक्तों की इच्छाओं को पूरा करने के लिए विभिन्न रूप धारण करते हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">The Ardhnarishwar avatar is highlighted as the primordial union of Shiva and Shakti, representing the balance of masculine and feminine energies in the universe. This form taught Brahma the necessity of female creation for the expansion of the world, proving that the creator and the power of creation are inseparable and equal in every aspect.</span>
+                <span class="point-hi">अर्धनारीश्वर अवतार को शिव और शक्ति के मौलिक मिलन के रूप में रेखांकित किया गया है, जो ब्रह्मांड में पुरुष और स्त्री ऊर्जा के संतुलन का प्रतिनिधित्व करता है। इस रूप ने ब्रह्मा को संसार के विस्तार के लिए स्त्री सृष्टि की आवश्यकता सिखाई, यह सिद्ध करते हुए कि निर्माता और निर्माण की शक्ति हर पहलू में अविभाज्य और समान हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">The five prominent avatars of Shiva—Sadyojata, Vamadeva, Aghora, Tatpurusha, and Ishana—are described as the masters of the five directions and the five elements. Each avatar manifested during different Kalpas to bless Brahma with specific knowledge, ensuring that the structural laws of the material and spiritual realms were perfectly aligned.</span>
+                <span class="point-hi">शिव के पांच प्रमुख अवतार—सद्योजात, वामदेव, अघोर, तत्पुरुष और ईशान—को पांच दिशाओं और पांच तत्वों के स्वामी के रूप में वर्णित किया गया है। प्रत्येक अवतार विभिन्न कल्पों के दौरान ब्रह्मा को विशिष्ट ज्ञान के साथ आशीर्वाद देने के लिए प्रकट हुए, यह सुनिश्चित करते हुए कि भौतिक और आध्यात्मिक क्षेत्रों के संरचनात्मक नियम पूरी तरह से संरेखित थे।</span>
+            </li>
+            <li>
+                <span class="point-en">Nandishwar details the eight idols (Ashtamurti) of Shiva, which include Sharva, Bhava, Rudra, Ugra, Bhima, Pashupati, Mahadeva, and Ishana. These forms reside in the earth, water, fire, air, ether, the soul, the sun, and the moon, showing that the entire physical universe is essentially a living manifestation of Lord Shiva's body.</span>
+                <span class="point-hi">नंदीश्वर शिव की आठ मूर्तियों (अष्टमूर्ति) का विवरण देते हैं, जिनमें शर्व, भव, रुद्र, उग्र, भीम, पशुपति, महादेव और ईशान शामिल हैं। ये रूप पृथ्वी, जल, अग्नि, वायु, आकाश, आत्मा, सूर्य और चंद्रमा में निवास करते हैं, यह दिखाते हुए कि संपूर्ण भौतिक ब्रह्मांड अनिवार्य रूप से भगवान शिव के शरीर की एक जीवित अभिव्यक्ति है।</span>
+            </li>
+            <li>
+                <span class="point-en">Finally, these chapters emphasize that meditating on these early forms of Shiva removes the duality of the mind and fosters a sense of universal unity. By understanding the Ardhnarishwar and the five directional avatars, the seeker begins to see the divine presence in every element of nature and every gender, leading to a state of profound inner peace.</span>
+                <span class="point-hi">अंत में, ये अध्याय इस बात पर जोर देते हैं कि शिव के इन शुरुआती रूपों पर ध्यान करने से मन का द्वैत दूर हो जाता है और सार्वभौमिक एकता की भावना बढ़ती है। अर्धनारीश्वर और पांच दिशात्मक अवतारों को समझकर, साधक प्रकृति के हर तत्व और हर लिंग में दिव्य उपस्थिति देखना शुरू कर देता है।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- 6-10 -->
-    <section id="nandibhairav" class="chapter-group">
-        <div class="group-header"><h2>Chapters 6-10: Nandi & Bhairava</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 6-7</span> Nandishwar Avatar</h3>
-            <ul>
-                <li>Sage Shilada performed penance for a son not born of a womb.</li>
-                <li>Shiva appeared from the sacrificial fire as the radiant Nandi.</li>
-                <li>At birth, Nandi possessed three eyes and four arms.</li>
-                <li>Sages predicted Nandi would not live past the age of nine.</li>
-                <li>Nandi performed intense penance at Kashi to conquer death.</li>
-                <li>Shiva granted him immortality and touched him with his own garland.</li>
-                <li>Nandi was appointed as the 'Ganeshwara' (Lord of all Ganas).</li>
-                <li>He is the eternal gatekeeper and the vehicle of Mahadeva.</li>
-                <li>Nandi represents the pinnacle of devotion and service.</li>
-                <li>He was married to Suyasha, symbolizing a balanced life.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 8-10</span> Kaala Bhairava Avatar</h3>
-            <ul>
-                <li>Bhairava manifested to humble Brahma’s arrogant fifth head.</li>
-                <li>With a fingernail, Bhairava severed the head to destroy Brahma's ego.</li>
-                <li>He accepted the sin of Brahma-hatya to teach universal law.</li>
-                <li>He wandered as a 'Kapalika' (beggar) with the skull as a bowl.</li>
-                <li>He visited Vaikuntha, where Vishnu offered alms from his own blood.</li>
-                <li>The skull finally fell at Kapala Mochan in the city of Kashi.</li>
-                <li>Shiva appointed him as the 'Kotwal' or Guardian of Kashi.</li>
-                <li>He punishes sinners via 'Bhairavi Yatana' to ensure liberation.</li>
-                <li>He manifested as Ashta (eight) Bhairavas to guard all directions.</li>
-                <li>Devotees must pray to Bhairava before entering Kashi’s inner sanctum.</li>
-            </ul>
-        </div>
+    <section id="s2" class="section-box">
+        <h2>Section 2: Nandishwar & Bhairav Manifestations (Ch. 6-9)</h2>
+        <ul>
+            <li>
+                <span class="point-en">The story of Nandishwar's own incarnation is revealed as a result of Sage Shilada’s rigorous penance to obtain an immortal child who is not born from a womb. Shiva, pleased by the sage's devotion, appeared as Nandi, who initially appeared as a human child but transformed into his divine form as the leader of the Ganas and the primary gatekeeper of Kailash.</span>
+                <span class="point-hi">नंदीश्वर के स्वयं के अवतार की कहानी ऋषि शिलाद की कठोर तपस्या के परिणाम के रूप में सामने आती है, जो एक ऐसे अमर बच्चे को प्राप्त करना चाहते थे जो गर्भ से पैदा न हुआ हो। शिव ने नंदी के रूप में अवतार लिया, जो शुरू में एक मानवीय बालक के रूप में दिखे लेकिन बाद में गणों के नेता और कैलाश के मुख्य द्वारपाल के रूप में अपने दिव्य रूप में बदल गए।</span>
+            </li>
+            <li>
+                <span class="point-en">Bhairav is introduced as the fierce manifestation of Shiva, born from the concentrated power of his anger to humble the ego of Brahma. Known as the Lord of Kashi, Bhairav serves as the guardian of the holy city, ensuring that no impurity enters the sacred space and providing protection to those who seek refuge in the shelter of the divine.</span>
+                <span class="point-hi">भैरव को शिव के उग्र प्रकटीकरण के रूप में पेश किया गया है, जो ब्रह्मा के अहंकार को शांत करने के लिए उनके क्रोध की केंद्रित शक्ति से पैदा हुए थे। काशी के स्वामी के रूप में जाने जाने वाले, भैरव पवित्र शहर के संरक्षक के रूप में कार्य करते हैं और दिव्य की शरण लेने वालों को सुरक्षा प्रदान करते हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">The text details the various forms of Bhairav, such as Kalabhairav, Batuk Bhairav, and Swarnakarshana Bhairav, each serving a unique spiritual and protective function. These chapters explain that while the form of Bhairav may seem terrifying, it is actually an expression of Shiva's deep love, intended to destroy the internal enemies like lust, anger, and greed.</span>
+                <span class="point-hi">पाठ भैरव के विभिन्न रूपों जैसे कालभैरव, बटुक भैरव और स्वर्णकर्षण भैरव का विवरण देता है। ये अध्याय स्पष्ट करते हैं कि हालांकि भैरव का रूप भयानक लग सकता है, लेकिन यह वास्तव में शिव के गहरे प्रेम की अभिव्यक्ति है, जिसका उद्देश्य काम, क्रोध और लोभ जैसे आंतरिक शत्रुओं को नष्ट करना है।</span>
+            </li>
+            <li>
+                <span class="point-en">Nandishwar explains the rituals associated with worshipping the Bhairav form, emphasizing the use of specific mantras and the importance of discipline. It is stated that during the dark nights of the lunar month, special prayers to Bhairav can dissolve the effects of negative planetary influences and grant the devotee the courage to face any worldly challenge.</span>
+                <span class="point-hi">नंदीश्वर भैरव रूप की पूजा से जुड़े अनुष्ठानों की व्याख्या करते हैं, जिसमें विशिष्ट मंत्रों के उपयोग और अनुशासन के महत्व पर जोर दिया गया है। यह कहा गया है कि चंद्रमा के अंधेरे रातों के दौरान, भैरव की विशेष प्रार्थना नकारात्मक ग्रहों के प्रभाव को समाप्त कर सकती है और भक्त को किसी भी चुनौती का सामना करने का साहस प्रदान कर सकती है।</span>
+            </li>
+            <li>
+                <span class="point-en">The philosophical essence of these chapters is to realize that fear is conquered only by surrendering to the one who controls time itself (Mahakal). By honoring Nandi and Bhairav, the devotee gains the steadfastness of the bull and the vigilance of the guardian, preparing them for the more complex avatars of Shiva that demonstrate his role as the ultimate judge.</span>
+                <span class="point-hi">इन अध्यायों का दार्शनिक सार यह महसूस करना है कि भय पर केवल उसी के सामने आत्मसमर्पण करके विजय प्राप्त की जा सकती है जो स्वयं समय (महाकाल) को नियंत्रित करता है। नंदी और भैरव का सम्मान करके, भक्त बैल जैसी स्थिरता और रक्षक जैसी सतर्कता प्राप्त करता है।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- 11-15 -->
-    <section id="sharabha" class="chapter-group">
-        <div class="group-header"><h2>Chapters 11-15: Sharabha & Grihapati</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 11-12</span> Sharabha Avatar</h3>
-            <ul>
-                <li>Narasimha remained in a state of extreme rage after killing Hiranyakashipu.</li>
-                <li>His fury threatened the balance of the entire solar system.</li>
-                <li>Shiva first sent Virabhadra to calmly pacify the Man-Lion form.</li>
-                <li>Narasimha did not yield, forcing Shiva to take a fiercer form.</li>
-                <li>Shiva manifested as Sharabha (part-bird, part-lion, eight legs).</li>
-                <li>Sharabha lifted Narasimha into the air, instantly cooling his rage.</li>
-                <li>Vishnu recognized Shiva's supremacy and returned to his calm state.</li>
-                <li>This avatar teaches the control of raw power and divine balance.</li>
-                <li>It highlights the non-duality between Hari (Vishnu) and Hara (Shiva).</li>
-                <li>Sharabha is worshipped for victory over impossible obstacles.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 13-15</span> Grihapati Avatar</h3>
-            <ul>
-                <li>Born to Vishvanara and Shuchismati in Kashi as a divine boon.</li>
-                <li>Prophesied to face death by lightning in his ninth year.</li>
-                <li>Grihapati went to Kashi to perform penance and change his fate.</li>
-                <li>He established a Linga and meditated with unwavering focus.</li>
-                <li>Indra tried to strike him with a thunderbolt out of jealousy.</li>
-                <li>Shiva appeared and swallowed the thunderbolt to protect the boy.</li>
-                <li>Shiva renamed the Linga 'Agnishwara' in honor of the fire.</li>
-                <li>Grihapati was granted immortality and a position as a Dikpala.</li>
-                <li>He became the lord of the household sacrificial fire (Grahpatya).</li>
-                <li>This story shows that devotion can overwrite the lines of fate.</li>
-            </ul>
-        </div>
+    <section id="s3" class="section-box">
+        <h2>Section 3: Sharabh & Grahpati Avatars (Ch. 10-16)</h2>
+        <ul>
+            <li>
+                <span class="point-en">The Sharabh avatar is one of Shiva's most powerful forms, assumed to calm the fierce Narasimha (the half-lion incarnation of Vishnu) after the slaying of Hiranyakashipu. Manifesting as a colossal winged creature that was part-lion and part-bird, Sharabh demonstrated that Shiva's calm nature can take an even more powerful form to restore cosmic balance when needed.</span>
+                <span class="point-hi">शरभ अवतार शिव के सबसे शक्तिशाली रूपों में से एक है, जिसे हिरण्यकशिपु के वध के बाद उग्र नरसिंह (विष्णु के आधे शेर अवतार) को शांत करने के लिए धारण किया गया था। एक विशाल पंख वाले प्राणी के रूप में प्रकट होकर, शरभ ने प्रदर्शित किया कि आवश्यकता पड़ने पर ब्रह्मांडीय संतुलन बहाल करने के लिए शिव का शांत स्वभाव और भी शक्तिशाली रूप ले सकता है।</span>
+            </li>
+            <li>
+                <span class="point-en">The story of Grahpati begins with the devotion of Sage Vishwanar and his wife Shuchismati, who desired a son as powerful as Shiva himself. Shiva, touched by their sincere prayers at Kashi, took birth as Grahpati, a brilliant child who eventually performed such intense penance that he was granted control over the directions and the title of 'Dikpal'.</span>
+                <span class="point-hi">गृहपति की कथा ऋषि विश्वानर और उनकी पत्नी शुचिष्मती की भक्ति से शुरू होती है, जो शिव के समान शक्तिशाली पुत्र चाहते थे। काशी में उनकी प्रार्थनाओं से प्रभावित होकर, शिव ने गृहपति के रूप में जन्म लिया, जिसने अंततः इतनी गहन तपस्या की कि उन्हें दिशाओं पर नियंत्रण और 'दिक्पाल' की उपाधि दी गई।</span>
+            </li>
+            <li>
+                <span class="point-en">Shiva explains that the Grahpati avatar serves as an inspiration for all seekers to understand that human effort, combined with divine grace, can elevate a soul to the highest cosmic positions. Grahpati's victory over the fear of death through the 'Mritunjaya' mantra is a central theme, highlighting the power of sound and vibration in spiritual achievement.</span>
+                <span class="point-hi">शिव समझाते हैं कि गृहपति अवतार सभी साधकों के लिए एक प्रेरणा है कि मानवीय प्रयास, दिव्य कृपा के साथ मिलकर, एक आत्मा को सर्वोच्च ब्रह्मांडीय पदों तक ले जा सकता है। 'मृत्युंजय' मंत्र के माध्यम से मृत्यु के भय पर गृहपति की विजय एक केंद्रीय विषय है, जो आध्यात्मिक उपलब्धि में ध्वनि की शक्ति को उजागर करती है।</span>
+            </li>
+            <li>
+                <span class="point-en">The interaction between the various deities during these avatars showcases the intricate hierarchy and mutual respect within the Hindu pantheon. For example, the transformation of Narasimha's fierce energy into the 'Sharabheshwara' idol taught the gods that even the highest protectors must ultimately find peace within the stillness of Shiva's supreme consciousness.</span>
+                <span class="point-hi">इन अवतारों के दौरान विभिन्न देवताओं के बीच बातचीत हिंदू देवकुल के भीतर जटिल पदानुक्रम और आपसी सम्मान को प्रदर्शित करती है। उदाहरण के लिए, नरसिंह की उग्र ऊर्जा का 'शरभेश्वर' मूर्ति में परिवर्तन ने देवताओं को सिखाया कि सर्वोच्च रक्षकों को भी अंततः शिव की चेतना की स्थिरता में शांति खोजनी चाहिए।</span>
+            </li>
+            <li>
+                <span class="point-en">These chapters conclude by promising that those who recite the stories of Sharabh and Grahpati will be freed from the influence of negative energies and the fear of premature death. They emphasize that Shiva is the ultimate Grahpati (Lord of the House/Universe), who meticulously manages the destiny of every living being through his various manifested powers.</span>
+                <span class="point-hi">ये अध्याय यह वादा करते हुए समाप्त होते हैं कि जो लोग शरभ और गृहपति की कहानियों का पाठ करेंगे, वे नकारात्मक ऊर्जाओं के प्रभाव और अकाल मृत्यु के भय से मुक्त हो जाएंगे। वे इस बात पर जोर देते हैं कि शिव ही परम गृहपति (ब्रह्मांड के स्वामी) हैं।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- 16-20 -->
-    <section id="yaksha" class="chapter-group">
-        <div class="group-header"><h2>Chapters 16-20: Yaksha & The 10 Mahavidyas</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 16</span> Yaksha Avatar</h3>
-            <ul>
-                <li>The Devas became proud after winning the war for Amrita.</li>
-                <li>Shiva appeared as a mysterious Yaksha to test their true power.</li>
-                <li>Agni could not burn a blade of grass placed by the Yaksha.</li>
-                <li>Vayu could not move the same blade of grass with his wind.</li>
-                <li>The gods realized their strength was a loan from the Supreme.</li>
-                <li>Goddess Uma Haimavati appeared to explain the Yaksha's identity.</li>
-                <li>This incarnation destroyed the 'Ahankara' (pride) of the heavens.</li>
-                <li>It teaches that God is the source of all elemental energy.</li>
-                <li>The Yaksha is the 'mysterious' aspect of the Brahman.</li>
-                <li>Humility is established as the primary virtue for spiritual seekers.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 17-20</span> Mahavidyas & Avadhuta</h3>
-            <ul>
-                <li>Shiva took 10 forms to match Parvati's 10 Mahavidyas.</li>
-                <li>Includes forms like Mahakala, Taraka, and Bhuvaneshwara.</li>
-                <li>Each form represents a cosmic law: Time, Space, or Sound.</li>
-                <li>As 'Avadhuta', Shiva tested Indra's patience as a naked ascetic.</li>
-                <li>As 'Bhikshuvarya', he tested the purity of sages' wives in the forest.</li>
-                <li>These avatars show Shiva as a master of occult sciences.</li>
-                <li>They emphasize internal purity over external ritualistic pride.</li>
-                <li>Shiva values the heart of the devotee more than their status.</li>
-                <li>They represent the wild, untamed nature of divine wisdom.</li>
-                <li>Worship of these forms leads to both material and spiritual gain.</li>
-            </ul>
-        </div>
+    <section id="s4" class="section-box">
+        <h2>Section 4: Hanuman, Durvasa & Unique Avatars (Ch. 17-23)</h2>
+        <ul>
+            <li>
+                <span class="point-en">A highlight of the Shatarudra Samhita is the revelation of Lord Hanuman as the 11th Rudra avatar of Shiva, born to assist Lord Rama in his mission against Ravana. Shiva describes how his own divine seed was transferred by the Wind God (Vayu) to Anjana, resulting in a being of incomparable strength, wisdom, and selfless devotion, proving that Shiva is always present to serve Vishnu.</span>
+                <span class="point-hi">शतरुद्र संहिता का एक मुख्य आकर्षण भगवान हनुमान को शिव के 11वें रुद्र अवतार के रूप में प्रकट करना है, जो रावण के विरुद्ध उनके मिशन में भगवान राम की सहायता करने के लिए पैदा हुए थे। शिव बताते हैं कि कैसे उनके अपने दिव्य बीज को वायु देव द्वारा अंजना को हस्तांतरित किया गया था, जिसके परिणामस्वरूप अतुलनीय शक्ति और निस्वार्थ भक्ति वाले हनुमान का जन्म हुआ।</span>
+            </li>
+            <li>
+                <span class="point-en">Sage Durvasa is introduced as the incarnation of Shiva's anger, born to test the patience and character of both gods and mortals through his famous short-tempered nature. These chapters explain that Durvasa's curses were actually blessings in disguise, designed to strip away the pride of individuals and redirect them toward the path of humility and spiritual discipline.</span>
+                <span class="point-hi">ऋषि दुर्वासा को शिव के क्रोध के अवतार के रूप में पेश किया गया है, जो अपने प्रसिद्ध क्रोधी स्वभाव के माध्यम से देवताओं और मनुष्यों दोनों के धैर्य और चरित्र की परीक्षा लेने के लिए पैदा हुए थे। ये अध्याय स्पष्ट करते हैं कि दुर्वासा के श्राप वास्तव में गुप्त आशीर्वाद थे, जिनका उद्देश्य व्यक्तियों के अहंकार को दूर करना था।</span>
+            </li>
+            <li>
+                <span class="point-en">The Vrishabh (Bull) avatar is described as a form Shiva took to protect the world during a period of chaos caused by the sons of Vishnu in the underworld. By appearing as a powerful bull, Shiva subdued the destructive forces and restored order, eventually establishing the bull as his own vehicle and a symbol of Dharma that stands on four legs.</span>
+                <span class="point-hi">वृषभ (बैल) अवतार को उस रूप के रूप में वर्णित किया गया है जिसे शिव ने पाताल लोक में विष्णु के पुत्रों द्वारा उत्पन्न अराजकता के दौरान दुनिया की रक्षा के लिए धारण किया था। एक शक्तिशाली बैल के रूप में प्रकट होकर, शिव ने विनाशकारी शक्तियों को वश में किया और व्यवस्था बहाल की, अंततः बैल को अपने वाहन और धर्म के प्रतीक के रूप में स्थापित किया।</span>
+            </li>
+            <li>
+                <span class="point-en">The Yakcheshwar avatar narrates how Shiva appeared as a mysterious Yaksha (spirit) to the demigods after their victory over the demons to check their growing pride. By placing a single blade of grass that neither Agni could burn nor Vayu could move, Shiva humbled the elemental gods and reminded them that their power is merely a fraction of the supreme divine energy.</span>
+                <span class="point-hi">यक्षेश्वर अवतार बताता है कि कैसे शिव असुरों पर जीत के बाद देवताओं के बढ़ते अहंकार की जांच करने के लिए एक रहस्यमय यक्ष के रूप में प्रकट हुए। घास का एक तिनका रखकर जिसे न तो अग्नि जला सकी और न ही वायु हिला सकी, शिव ने देवताओं को याद दिलाया कि उनकी शक्ति सर्वोच्च दिव्य ऊर्जा का मात्र एक अंश है।</span>
+            </li>
+            <li>
+                <span class="point-en">Finally, the Mahesh and Vrisha forms are discussed as manifestations of pure goodness and stability. These chapters teach that Shiva is not just a destroyer but also the ultimate teacher who assumes the most humble forms—like a bull or a sage—to guide the universe toward the realization that power without humility is a source of bondage.</span>
+                <span class="point-hi">अंत में, महेश और वृष रूपों को शुद्ध अच्छाई और स्थिरता की अभिव्यक्ति के रूप में चर्चा की गई है। ये अध्याय सिखाते हैं कि शिव केवल संहारक नहीं हैं, बल्कि वे परम शिक्षक भी हैं जो ब्रह्मांड को यह महसूस कराने के लिए बैल या ऋषि जैसे अत्यंत विनम्र रूप धारण करते हैं कि विनम्रता के बिना शक्ति बंधन का स्रोत है।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- 21-30 -->
-    <section id="hanuman" class="chapter-group">
-        <div class="group-header"><h2>Chapters 21-30: Hanuman, Durvasa & Sureshvara</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 21</span> Sureshvara Avatar</h3>
-            <ul>
-                <li>Shiva tested a young boy named Upamanyu who wanted milk.</li>
-                <li>He appeared as Indra (Sureshvara) and criticized Shiva.</li>
-                <li>Upamanyu prepared to die rather than listen to Shiva's insult.</li>
-                <li>Pleased, Shiva revealed himself and gave him the Ocean of Milk.</li>
-                <li>This chapter teaches the power of Ekanta Bhakti (single-minded devotion).</li>
-                <li>Shiva often tests devotees by appearing as their greatest temptation.</li>
-                <li>One must stay firm in faith despite external pressure.</li>
-                <li>The Ocean of Milk symbolizes the infinite bliss of the soul.</li>
-                <li>Upamanyu became one of the greatest masters of Shiva-Jnana.</li>
-                <li>The story ends with the boy being adopted as Shiva's own son.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 22-30</span> Hanuman & Durvasa</h3>
-            <ul>
-                <li>Durvasa was born as Shiva's avatar of 'Divine Anger'.</li>
-                <li>He maintained Dharma by punishing the arrogant and testing the good.</li>
-                <li>Hanuman is the 11th Rudra, born to serve Lord Rama.</li>
-                <li>Vayu carried Shiva's essence into Anjani’s womb.</li>
-                <li>Hanuman represents the union of supreme power and total humility.</li>
-                <li>As the Vrishabha (Bull), Shiva corrected Vishnu's wayward sons.</li>
-                <li>As Yatinath, he tested the hospitality of the tribal couple Ahu/Ahuka.</li>
-                <li>Shiva appeared as a guest to teach the sacredness of 'Atithi'.</li>
-                <li>These chapters cover various 'protective' forms in human society.</li>
-                <li>Hanuman is the only immortal avatar of Shiva currently on Earth.</li>
-            </ul>
-        </div>
+    <section id="s5" class="section-box">
+        <h2>Section 5: Piplad to Kirat & 12 Jyotirlingas (Ch. 24-42)</h2>
+        <ul>
+            <li>
+                <span class="point-en">The Samhita covers a series of human-centric avatars like Piplad, who was born to destroy the negative effects of the planet Saturn (Shani) and provide relief to suffering humanity. These stories illustrate Shiva's role as a compassionate protector who enters the human experience to provide practical remedies for the hardships caused by time and cosmic influences.</span>
+                <span class="point-hi">संहिता पिप्लाद जैसे मानव-केंद्रित अवतारों की एक श्रृंखला को कवर करती है, जो शनि ग्रह के नकारात्मक प्रभावों को नष्ट करने और पीड़ित मानवता को राहत देने के लिए पैदा हुए थे। ये कहानियाँ एक दयालु रक्षक के रूप में शिव की भूमिका को दर्शाती हैं जो समय और ब्रह्मांडीय प्रभावों के कारण होने वाली कठिनाइयों के लिए व्यावहारिक उपचार प्रदान करते हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">Avatars like Bhikshuvarya and Sunat Nartak show Shiva’s playful yet testing nature, where he appeared as a beggar or a dancer to bless devotees like King Shwetaketu. These chapters emphasize that Shiva is pleased not by grand offerings, but by the purity of heart and the steadiness of faith during the most challenging circumstances of life.</span>
+                <span class="point-hi">भिक्षुवर्य और सुनत नर्तक जैसे अवतार शिव के चंचल लेकिन परीक्षण करने वाले स्वभाव को दिखाते हैं, जहाँ वे राजा श्वेतकेतु जैसे भक्तों को आशीर्वाद देने के लिए एक भिखारी या नर्तक के रूप में प्रकट हुए। ये अध्याय इस बात पर जोर देते हैं कि शिव बड़े चढ़ावे से नहीं, बल्कि हृदय की पवित्रता और विश्वास की स्थिरता से प्रसन्न होते हैं।</span>
+            </li>
+            <li>
+                <span class="point-en">The Kirat avatar is a famous episode where Shiva appeared as a tribal hunter to challenge Arjuna during his penance for the Pashupata weapon. Through a fierce duel, Shiva tested Arjuna's warrior skills and devotion, eventually revealing his true form and granting the invincible weapon, proving that the divine rewards only those who are willing to fight for righteousness.</span>
+                <span class="point-hi">किरात अवतार एक प्रसिद्ध प्रकरण है जहाँ शिव ने पाशुपत अस्त्र के लिए तपस्या के दौरान अर्जुन को चुनौती देने के लिए एक शिकारी के रूप में अवतार लिया। एक भीषण द्वंद्व के माध्यम से, शिव ने अर्जुन के कौशल और भक्ति की परीक्षा ली, अंततः अपने वास्तविक रूप को प्रकट किया और अजेय अस्त्र प्रदान किया।</span>
+            </li>
+            <li>
+                <span class="point-en">Ashvatthama is described as a partial incarnation of Shiva's fierce form, born to Drona to play a pivotal role in the Mahabharata war. This avatar serves as a reminder of the complexity of Dharma and Karma, showing how the divine energy can manifest in human form to fulfill specific destinies, even those that involve great conflict and suffering.</span>
+                <span class="point-hi">अश्वत्थामा को शिव के उग्र रूप के आंशिक अवतार के रूप में वर्णित किया गया है, जो महाभारत युद्ध में महत्वपूर्ण भूमिका निभाने के लिए द्रोण के यहाँ पैदा हुए थे। यह अवतार धर्म और कर्म की जटिलता की याद दिलाता है, यह दिखाता है कि कैसे दिव्य ऊर्जा विशिष्ट नियति को पूरा करने के लिए मानवीय रूप में प्रकट हो सकती है।</span>
+            </li>
+            <li>
+                <span class="point-en">The Samhita concludes with the magnificent description of the 12 Jyotirlingas, where Shiva manifested as pillars of light across the geography of India. These 42 chapters affirm that from the formless light to the specific avatars like Hanuman or Kirat, the purpose of Shiva is always one: to guide the soul back to its eternal source of bliss.</span>
+                <span class="point-hi">संहिता 12 ज्योतिर्लिंगों के शानदार वर्णन के साथ समाप्त होती है, जहाँ शिव भारत के भूगोल में प्रकाश के स्तंभों के रूप में प्रकट हुए। ये 42 अध्याय पुष्टि करते हैं कि निराकार प्रकाश से लेकर हनुमान या किरात जैसे विशिष्ट अवतारों तक, शिव का उद्देश्य हमेशा एक ही है: आत्मा को उसके आनंद के शाश्वत स्रोत तक वापस ले जाना।</span>
+            </li>
+        </ul>
     </section>
 
-    <!-- 31-42 -->
-    <section id="kirata" class="chapter-group">
-        <div class="group-header"><h2>Chapters 31-42: Kirata & The 12 Jyotirlingas</h2></div>
-        
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 31-35</span> Kirata Avatar</h3>
-            <ul>
-                <li>Arjuna performed penance in the Himalayas for the Pashupata weapon.</li>
-                <li>Shiva took the form of a Kirata (Hunter) to test Arjuna’s skill.</li>
-                <li>They fought over a demon (Mooka) disguised as a wild boar.</li>
-                <li>Arjuna was humbled to find a hunter who could withstand his arrows.</li>
-                <li>They engaged in a divine wrestling match that shook the mountains.</li>
-                <li>Shiva revealed his form when Arjuna offered flowers to a Linga.</li>
-                <li>The flowers appeared on the Kirata’s head, proving he was Shiva.</li>
-                <li>Shiva gifted Arjuna the Gandiva and the Pashupata Astra.</li>
-                <li>This incarnation proves that the Lord loves bravery and focus.</li>
-                <li>It marks a turning point in the Mahabharata narrative.</li>
-            </ul>
-        </div>
-
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 36-42</span> Jyotirlingas & Lakulisha</h3>
-            <ul>
-                <li>Explains the origins of the 12 Jyotirlingas (Pillars of Light).</li>
-                <li>Shiva manifested to resolve crises at Somnath, Kashi, etc.</li>
-                <li>The Sunritavadi avatar emphasizes truth as the highest worship.</li>
-                <li>Lakulisha (the 28th Yogeswara) appeared with a staff to guide seekers.</li>
-                <li>Lakulisha revived the systematic Yoga of the current age.</li>
-                <li>The Samhita describes the physical map of Shiva’s grace in India.</li>
-                <li>Chapter 42 details the immense merit of hearing this Samhita.</li>
-                <li>It promises freedom from poverty, sudden death, and rebirth.</li>
-                <li>The Samhita ends with a focus on the eternal, formless Shiva.</li>
-                <li>Om Namah Shivaya is established as the seed of all liberation.</li>
-            </ul>
-        </div>
-    </section>
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय | शिव महापुराण</h3>
-        <p>Shatrudra Samhita Archive | Dedicated to the Glory of Mahadeva</p>
-        <p>&copy; 2026 Digital Dharmic Archive</p>
-        <a href="#" class="back-to-top">Back to Top / ऊपर जाएं</a>
+    <h3>ॐ नमः शिवाय</h3>
+    <p>Shiv Maha Puran - Shatarudra Samhita Summary (42 Chapters) | The Infinite Incarnations and Avatars of Lord Shiva</p>
+    <p>Gurgaon, Haryana, India</p>
+
+    <div class="audio-controls">
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
     </div>
 </footer>
+
+<script>
+    const synth = window.speechSynthesis;
+    let currentLang = null;
+    let textChunks = [];
+    let chunkIndex = 0;
+
+    function stopAllAudio() {
+        synth.cancel();
+        currentLang = null;
+        textChunks = [];
+        chunkIndex = 0;
+
+        const btnHi = document.getElementById('btn-hi');
+        const btnEn = document.getElementById('btn-en');
+        
+        [btnHi, btnEn].forEach(btn => {
+            if (btn) {
+                btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
+                btn.style.background = "transparent";
+                btn.style.color = "#d1c4b2";
+            }
+        });
+    }
+
+    function toggleAudio(lang) {
+        // 1. Check if we are toggling the same language OFF
+        if (synth.speaking && currentLang === lang) {
+            stopAllAudio();
+            return;
+        }
+
+        // 2. Kill current speech and reset UI
+        synth.cancel(); 
+        
+        // Reset buttons manually here for instant feedback
+        const btnHi = document.getElementById('btn-hi');
+        const btnEn = document.getElementById('btn-en');
+        btnHi.innerHTML = "🔊 शिव महापुराण हिंदी में सुनें"; btnHi.style.background = "transparent";
+        btnEn.innerHTML = "🔊 Listen Shiv Mahapuran in English"; btnEn.style.background = "transparent";
+
+        // 3. Setup new language
+        currentLang = lang;
+        const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
+        const elements = document.querySelectorAll(selector);
+        textChunks = Array.from(elements).map(el => el.innerText);
+
+        if (textChunks.length === 0) return;
+
+        // 4. Update Active Button UI
+        const activeBtn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
+        activeBtn.innerHTML = `🛑 STOP AUDIO`;
+        activeBtn.style.backgroundColor = "#c5a059";
+        activeBtn.style.color = "white";
+
+        chunkIndex = 0;
+
+        /** * MOBILE CRITICAL FIX: 
+         * We MUST call speak() immediately inside the click event. 
+         * Mobile browsers will block speak() if it's delayed by logic.
+         */
+        const firstUtterance = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+        firstUtterance.lang = currentLang;
+        firstUtterance.rate = 0.95;
+
+        firstUtterance.onend = () => {
+            chunkIndex++;
+            speakNext();
+        };
+
+        firstUtterance.onerror = () => stopAllAudio();
+
+        // This direct call satisfies the mobile browser's security policy
+        synth.speak(firstUtterance);
+    }
+
+    function speakNext() {
+        // If user stopped it or we reached the end, quit.
+        if (!currentLang || chunkIndex >= textChunks.length) {
+            stopAllAudio();
+            return;
+        }
+
+        const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+        utter.lang = currentLang;
+        utter.rate = 0.95;
+
+        utter.onend = () => {
+            chunkIndex++;
+            setTimeout(speakNext, 100);
+        };
+
+        utter.onerror = () => stopAllAudio();
+
+        synth.speak(utter);
+    }
+
+    window.addEventListener('blur', stopAllAudio);
+    window.addEventListener('beforeunload', stopAllAudio);
+</script>
 
 </body>
 </html>
