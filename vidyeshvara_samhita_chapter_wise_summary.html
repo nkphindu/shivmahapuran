@@ -378,7 +378,7 @@
          */
         const firstUtterance = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
         firstUtterance.lang = currentLang;
-        firstUtterance.rate = 0.7;
+        firstUtterance.rate = 0.75;
 
         firstUtterance.onend = () => {
             chunkIndex++;
@@ -400,7 +400,7 @@
 
         const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
         utter.lang = currentLang;
-        utter.rate = 0.7;
+        utter.rate = 0.75;
 
         utter.onend = () => {
             chunkIndex++;
