@@ -1,266 +1,318 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Digital Archive of the Shiv Maha Puran. Explore the Vidyeshvara, Rudra, Shatrudra, Kotirudra, Uma, Kailash, and Vayaviya Samhitas.">
-    <title>Shri Shiv Maha Puran - Digital Dharmic Archive</title>
+    <meta name="description" content="Complete Digital Summary of the Shiv Maha Puran. Explore Samhitas, Divine Stories, Jyotirlingas, and Mantras.">
+    <title>शिव महापुराण - Shiv Maha Puran - Online Digital Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
+        /* --- Restore Original Font Stack --- */
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 1.9;
         }
 
+        /* --- Header Section --- */
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 60px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        .om-mantra {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 15px;
-            font-weight: bold;
-            letter-spacing: 2px;
+        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; text-align: center; }
+        header h1 { font-weight: normal; font-size: 2.8rem; margin: 0; letter-spacing: 1px; text-align: center; }
+        
+        header p { 
+            font-size: 1.35rem; 
+            color: #ffffff; 
+            margin: 15px auto 0 auto; 
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            text-align: center;
+            max-width: 850px;
         }
 
-        header h1 { margin: 0; font-size: 3rem; text-transform: uppercase; letter-spacing: 3px; }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-
-        .intro-section {
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
-            align-items: center;
-            gap: 40px;
+            justify-content: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        nav a:hover { background: #f1e4d1; color: #8b0000; }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+
+        /* --- Intro Section --- */
+        .intro-section {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+            border: 1px solid #f0ede9;
+            text-align: center;
+			scroll-margin-top: 130px;
+        }
+
+        .top-big-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+			object-position: top;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 5px solid var(--soft-gold);
+        }
+
+        .summary-text { text-align: justify; margin-bottom: 30px; padding: 0 15px; font-size: 1.15rem;}
+        .summary-text h2 { text-align: center; border-bottom: 1px solid var(--soft-gold); padding-bottom: 15px; color: var(--primary-maroon); }
+
+        /* --- Content Blocks --- */
+        .section-box {
+            background: white;
             margin-bottom: 50px;
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid #f0ede9;
+            scroll-margin-top: 130px;
         }
 
-        .intro-text { flex: 2; }
-        .intro-image { flex: 1; text-align: center; }
-        .intro-image img { 
-            max-width: 100%; 
-            border-radius: 15px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            border: 5px solid var(--amber-100);
-        }
-
-        h2 { color: var(--amber-800); border-left: 5px solid var(--amber-500); padding-left: 15px; margin-top: 40px; }
-
-        .samhita-grid {
+        .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            gap: 30px;
         }
 
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--amber-500);
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid var(--soft-gold);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
         }
 
-        .card:hover { transform: translateY(-5s); }
-
-        .card h3 { color: var(--amber-700); margin-top: 0; }
-        .card p { font-size: 0.95rem; flex-grow: 1; color: #555; }
+        h2 { color: var(--primary-maroon); font-weight: normal; font-size: 1.8rem; margin-bottom: 30px; }
+        h3 { color: var(--primary-maroon); margin-top: 0; font-size: 1.4rem; border-bottom: 1px solid #f9f4ec; padding-bottom: 10px; margin-bottom: 15px; }
+        p { color: #444; font-size: 1.15rem; margin-bottom: 15px; text-align: justify; }
 
         .btn {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: auto;
             padding: 10px 20px;
-            background: var(--amber-900);
-            color: white;
+            background: var(--primary-maroon);
+            color: #f1e4d1;
             text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #3d1111; color: #fff; }
+
+        /* --- Full Link Khand List --- */
+        .rudra-list {
+            font-size: 1rem;
+            background: #fdfaf5;
+            padding: 5px 0;
             border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-align: center;
-            transition: background 0.3s;
+            margin-bottom: 20px;
         }
-
-        .btn:hover { background: var(--amber-600); }
-
-        /* Special Styling for Rudra Samhita Sub-sections */
-        .rudra-sections {
-            background: var(--amber-100);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
+        .rudra-list a { 
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none; 
+            color: var(--primary-maroon); 
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            transition: 0.2s;
         }
+        .rudra-list a:hover { background-color: #f1e4d1; color: #8b0000; }
+        .rudra-list a:last-child { border-bottom: none; }
 
-        .rudra-item {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed var(--amber-400);
-        }
-        .rudra-item:last-child { border-bottom: none; }
-        .rudra-item h4 { margin: 0; font-size: 1rem; color: var(--amber-900); }
-        .rudra-item p { margin: 5px 0; font-size: 0.85rem; }
-        .rudra-link { color: var(--amber-700); font-weight: bold; text-decoration: none; font-size: 0.8rem; }
-        .rudra-link:hover { text-decoration: underline; }
-
+        /* --- Footer Section Updated & Centered --- */
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 40px 20px;
+            background: #1a0a0a;
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            margin-top: 60px;
+            border-top: 4px solid var(--soft-gold);
+        }
+
+        .footer-om { font-size: 2.2rem; display: block; margin-bottom: 15px; color: var(--soft-gold); text-align: center; }
+        footer h3 { color: #ffffff; font-size: 1.6rem; margin: 0 auto 10px auto; font-weight: normal; text-align: center; }
+        footer p { 
+            color: #d1c4b2; 
+            font-size: 1.1rem; 
+            margin: 5px auto; 
+            text-align: center;
+            max-width: 700px;
         }
 
         @media (max-width: 768px) {
-            .intro-section { flex-direction: column; text-align: center; }
             header h1 { font-size: 2rem; }
+            .grid-layout { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय</span>
+    <span class="om">ॐ नमः शिवाय</span>
     <h1>शिव महापुराण</h1>
-    <p>The Eternal Wisdom of Lord Shiva - Digital Dharmic Archive</p>
+    <p>A Sacred Digital Compendium of the Shri Shiv Maha Puran | श्री शिव महापुराण: एक संपूर्ण डिजिटल संकलन</p>
 </header>
 
+<nav>
+    <a href="#intro">परिचय | Intro</a>
+    <a href="#samhitas">संहिता | Samhitas</a>
+    <a href="#lore">गाथाएं | Lore</a>
+</nav>
+
 <div class="container">
-    
-    <!-- Description Section -->
-    <section class="intro-section">
-        <div class="intro-text">
-            <h2>शिव पुराण का परिचय | About Shiv Puran</h2>
-            <p>The <strong>Shiv Purana</strong> is one of the eighteen major Puranas, dedicated to Lord Shiva. It explores the mysteries of creation, the nature of the soul, and the path to ultimate liberation. It is not merely a collection of stories but a complete guide to living a life of Dharma and devotion. By studying these sacred Samhitas, a devotee can dissolve all worldly attachments and merge with the infinite consciousness of Mahadeva.</p>
-        </div>
-        <div class="intro-image">
-            <img src="shiv_maha_puran.png" alt="Shiva Maha Puran">
-            <p style="font-size: 0.8rem; margin-top: 10px; color: #777;">Shri Shiv Maha Puran</p>
+
+    <section id="intro" class="intro-section">
+        <div class="summary-text">
+            <h2>शिव पुराण का महत्व | Significance of Shiv Puran</h2>
+			<img src="./images/shiv_maha_puran.png" alt="भगवान शिव" class="top-big-image">
+            <p><strong>शिव पुराण</strong> सनातन धर्म के सबसे महत्वपूर्ण और प्राचीन अठारह पुराणों में से एक है, जो साक्षात भगवान शिव की महिमा का बखान करता है। यह ग्रंथ केवल कथाओं का संग्रह नहीं है, बल्कि जीवन जीने की एक सम्पूर्ण कला और मोक्ष प्राप्ति का सुगम मार्ग है। इसके श्रवण मात्र से मनुष्य के जन्म-जन्मांतर के संचित पापों का नाश होता है और हृदय में भक्ति का उदय होता है। इसमें भगवान शिव के निर्गुण निराकार स्वरूप से लेकर सगुण साकार स्वरूप तक की यात्रा का वैज्ञानिक और आध्यात्मिक वर्णन मिलता है। सृष्टि की उत्पत्ति, पालन और संहार के रहस्यों को इस पुराण में अत्यंत विस्तारपूर्वक समझाया गया है। यह ग्रंथ गृहस्थों के लिए धर्म का पालन करने और संन्यासियों के लिए आत्मज्ञान प्राप्त करने की प्रेरणा देता है। इसमें वर्णित पंचाक्षर मंत्र (ॐ नमः शिवाय) और महामृत्युंजय मंत्र की महिमा साधक को अकाल मृत्यु के भय से मुक्त करती है। शिव पुराण का नियमित पाठ करने से मन की चंचलता समाप्त होती है और साधक को मानसिक शांति एवं संतोष की प्राप्ति होती है। यह दिव्य ग्रंथ हमें सिखाता है कि अहंकार का त्याग और समस्त प्राणियों के प्रति करुणा ही शिवत्व प्राप्त करने का वास्तविक पथ है। कलियुग में शिव पुराण की अमृतवाणी मानव जाति के कल्याण और विश्व शांति के लिए एक अमूल्य उपहार है।</p>
+            <p>The <strong>Shiv Purana</strong> is a magnificent spiritual encyclopedia that unveils the profound mysteries of the universe through the lens of Shaivism. It stands as an eternal beacon of wisdom, guiding humanity from the darkness of ignorance toward the luminous light of Self-realization. Comprising 24,000 verses, it meticulously details the divine exploits and cosmic functions of Lord Shiva, the primordial source of all existence. The scripture explains that Shiva is both the 'Nirguna' Brahman (formless reality) and the 'Saguna' Ishvara (the manifest deity) who loves his devotees. It provides a scientific understanding of creation (Srishti), explaining how the cosmos emerged from the union of Shiva and Shakti. Through its sacred stories, it emphasizes the importance of 'Dharma' (righteousness), 'Satya' (truth), and 'Ahinsa' (non-violence) in daily life. The text highlights the unparalleled power of the holy syllable 'Om' and the 'Panchakshara Mantra' as tools for achieving mental liberation. By studying the Shiv Purana, a seeker learns to transcend the ego and recognize the divine presence in every atom of the physical world. It offers practical spiritual remedies for overcoming the struggles of the modern age, such as stress, anxiety, and moral degradation. Ultimately, this sacred archive is a roadmap for the soul to merge back into the ocean of infinite bliss and eternal consciousness.</p>
         </div>
     </section>
 
-    <h2>समस्त संहिताएँ | The Holy Samhitas</h2>
-    
-    <div class="samhita-grid">
-        
-        <!-- 1st Vidyeshvara -->
-        <div class="card">
-            <h3>1. विद्येश्वर संहिता (Vidyeshvara)</h3>
-            <p>The foundation of Shiv Puran. It details the glory of the Shiva Linga, the secret of the Omkaara mantra, and the essential rules for a devotee's daily conduct.</p>
-            <a href="vidyeshvara_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
-        </div>
-
-        <!-- 2nd Rudra (Special Section) -->
-        <div class="card" style="grid-column: span 1; min-height: 500px;">
-            <h3>2. रुद्र संहिता (Rudra)</h3>
-            <p>The largest Samhita covering the divine incarnations and cosmic battles of Lord Rudra across five major segments.</p>
+    <section id="samhitas" class="section-box">
+        <h2>समस्त संहिताएँ | The Seven Samhitas</h2>
+        <div class="grid-layout">
             
-            <div class="rudra-sections">
-                <div class="rudra-item">
-                    <h4>सृष्टि खण्ड (Srishti)</h4>
-                    <p>The story of primordial creation and the Trinity.</p>
-                    <a href="rudra_samhita_srishti_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
-                </div>
-                <div class="rudra-item">
-                    <h4>सती खण्ड (Sati)</h4>
-                    <p>The life, devotion, and sacrifice of Devi Sati.</p>
-                    <a href="rudra_samhita_sati_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
-                </div>
-                <div class="rudra-item">
-                    <h4>पार्वती खण्ड (Parvati)</h4>
-                    <p>Rebirth, penance, and the divine wedding.</p>
-                    <a href="rudra_samhita_parvati_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
-                </div>
-                <div class="rudra-item">
-                    <h4>कुमार खण्ड (Kumar)</h4>
-                    <p>Birth and victories of Kartikeya and Ganesha.</p>
-                    <a href="rudra_samhita_kumara_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
-                </div>
-                <div class="rudra-item">
-                    <h4>युद्ध खण्ड (Yuddha)</h4>
-                    <p>Destruction of Tripura and major demonic forces.</p>
-                    <a href="rudra_samhita_yuddha_khand_chapter_wise_summary.html" class="rudra-link">Details →</a>
-                </div>
+            <div class="card">
+                <h3>1. विद्येश्वर संहिता</h3>
+                <p>This Samhita establishes the fundamental principles of Shaivite worship. It details the glory of the <strong>Shiva Linga</strong> as the symbol of the cosmic pillar of fire. It provides deep insights into the meaning of the <strong>Panchakshara Mantra</strong> and the spiritual potency of <strong>Rudraksha</strong> beads.</p>
+                <a href="vidyeshvara_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
             </div>
-            <a href="rudra_samhita_khand_wise_summary.html" class="btn">Full Samhita Overview</a>
-        </div>
 
-        <!-- 3rd Shatrudra -->
-        <div class="card">
-            <h3>3. शतरुद्र संहिता (Shatrudra)</h3>
-            <p>Explores the many incarnations of Shiva, including Nandi, Bhairava, and Hanuman, showcasing his diverse roles as a protector and teacher.</p>
-            <a href="shatrudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
-        </div>
+            <div class="card">
+                <h3>2. रुद्र संहिता (५ खण्ड)</h3>
+                <p>The biographical core of the Purana, chronicling the descent of the Divine into the material realm across five specialized sections:</p>
+                <div class="rudra-list">
+                    <a href="rudra_samhita_srishti_khand_chapter_wise_summary.html"><span>१. सृष्टि खण्ड (Srishti)</span> <span class="arrow">→</span></a>
+                    <a href="rudra_samhita_sati_khand_chapter_wise_summary.html"><span>२. सती खण्ड (Sati)</span> <span class="arrow">→</span></a>
+                    <a href="rudra_samhita_parvati_khand_chapter_wise_summary.html"><span>३. पार्वती खण्ड (Parvati)</span> <span class="arrow">→</span></a>
+                    <a href="rudra_samhita_kumara_khand_chapter_wise_summary.html"><span>४. कुमार खण्ड (Kumara)</span> <span class="arrow">→</span></a>
+                    <a href="rudra_samhita_yuddha_khand_chapter_wise_summary.html"><span>५. युद्ध खण्ड (Yuddha)</span> <span class="arrow">→</span></a>
+                </div>
+                <a href="rudra_samhita_khand_wise_summary.html" class="btn">Full Overview</a>
+            </div>
 
-        <!-- 4th Kotirudra -->
-        <div class="card">
-            <h3>4. कोटिरुद्र संहिता (Kotirudra)</h3>
-            <p>Dedicated to the twelve Jyotirlingas, their origins, and the specific merit gained by visiting these pillars of light.</p>
-            <a href="kotirudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
-        </div>
+            <div class="card">
+                <h3>3. शतरुद्र संहिता</h3>
+                <p>Enumerates Shiva's <strong>100 incarnations</strong>. It describes the <strong>five primary faces</strong> (Pancha-mukha) representing the five elements of nature. It also covers the birth of <strong>Nandi</strong>, the bull, as the symbol of Dharma.</p>
+                <a href="shatrudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+            </div>
 
-        <!-- 5th Uma -->
-        <div class="card">
-            <h3>5. उमा संहिता (Uma)</h3>
-            <p>Glorifies the Divine Mother Parvati, detailing her manifestations and the laws of Dharma and Karma.</p>
-            <a href="uma_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
-        </div>
+            <div class="card">
+                <h3>4. कोटिरुद्र संहिता</h3>
+                <p>Detailed accounts of the <strong>12 Jyotirlingas</strong> scattered across India, explaining the legends behind each divine pillar of light. It highlights the origin story of the <strong>Sudarshan Chakra</strong>, which Shiva gifted to Lord Vishnu.</p>
+                <a href="kotirudra_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+            </div>
 
-        <!-- 6th Kailash -->
-        <div class="card">
-            <h3>6. कैलाश संहिता (Kailash)</h3>
-            <p>A philosophical deep-dive into Sannyasa, the meaning of OM, and the realization of Non-Duality (Advaita).</p>
-            <a href="kailash_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
-        </div>
+            <div class="card">
+                <h3>5. उमा संहिता</h3>
+                <p>Mother <strong>Uma</strong> explains the laws of <strong>Karma</strong> and the cycle of rebirth. It provides descriptions of celestial heavens and various hells based on earthly deeds, emphasizing the creative energy (Shakti) of the universe.</p>
+                <a href="uma_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+            </div>
 
-        <!-- 7th Vayaviya -->
-        <div class="card">
-            <h3>7. वायवीय संहिता (Vayaviya)</h3>
-            <p>Narrated by the Wind God, it connects the rituals of Pashupata Yoga with the final liberation of the soul.</p>
-            <div style="display:flex; gap:10px;">
-                <a href="vayaviya_samhita_part_1_chapter_wise_summary.html" class="btn" style="flex:1">Part 1</a>
-                <a href="vayaviya_samhita_part_2_chapter_wise_summary.html" class="btn" style="flex:1">Part 2</a>
+            <div class="card">
+                <h3>6. कैलाश संहिता</h3>
+                <p>An esoteric guide for advanced seekers on <strong>Sannyasa</strong> and the vibration of <strong>Pranava (Om)</strong>. It provides instructions on internal yoga and merging with the absolute reality of Shiva.</p>
+                <a href="kailash_samhita_chapter_wise_summary.html" class="btn">View Detailed Summary</a>
+            </div>
+
+            <div class="card">
+                <h3>7. वायवीय संहिता</h3>
+                <p>Delivered by the Wind God, it delves into <strong>Pashupata Yoga</strong>. It explains the relationship between the individual soul (Pashu), worldly bonds (Pasha), and the Supreme Master (Pashupati).</p>
+                <div style="display:flex; gap:10px;">
+					<a href="vayaviya_samhita_part_1_chapter_wise_summary.html" class="btn" style="flex:1">Part 1</a>
+					<a href="vayaviya_samhita_part_2_chapter_wise_summary.html" class="btn" style="flex:1">Part 2</a>
+				</div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="lore" class="section-box">
+        <h2>दिव्य गाथाएं और मंत्र | Lore & Mantras</h2>
+        <div class="grid-layout">
+			<div class="card">
+				<h3>12 ज्योतिर्लिंग (12 Jyotirlingas)</h3>
+				<p>Discover the history, origin, and divine stories of the 12 sacred Jyotirlingas from Shiv Purana.</p>
+				<a href="12_jyotirlinga_shiv_maha_puran.html" class="btn">Learn More</a>
+			</div>
+            <div class="card">
+                <h3>पौराणिक कथाएं (Stories)</h3>
+                <p>Explore cosmic battles, Samudra Manthan, and the origin of River Ganga.</p>
+                <a href="divine_stories.html" class="btn">Read Stories</a>
+            </div>
+            <div class="card">
+                <h3>नारी शक्ति (Women)</h3>
+                <p>Devotion and wisdom of Devi Sati, Mata Parvati, and Sati Anasuya.</p>
+                <a href="women_stories.html" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>शक्तिशाली मंत्र (Mantras)</h3>
+                <p>Learn Mahamrityunjaya Mantra and Shiva Tandava Stotram with meanings.</p>
+                <a href="sacred_mantras.html" class="btn">Explore</a>
+            </div>
+            <div class="card">
+                <h3>व्रत एवं तथ्य (Vrats)</h3>
+                <p>Guides for Somvar Vrat, Maha Shivratri, and sacred Purana facts.</p>
+                <a href="vrat_facts.html" class="btn">Explore Detail</a>
             </div>
         </div>
+    </section>
 
-    </div>
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय</h3>
-        <p>Digital Dharmic Archive - Preserving Eternal Wisdom</p>
-        <p>&copy; 2026 Gurgaon, Haryana, India</p>
-    </div>
+    <span class="footer-om">ॐ नमः शिवाय</span>
+    <h3>श्री शिव महापुराण डिजिटल आर्काइव</h3>
+    <p>Preserving Ancient Wisdom for the Modern Age</p>
+    <p>Gurgaon, Haryana, India | © 2026</p>
 </footer>
 
 </body>
