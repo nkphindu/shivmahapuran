@@ -1,416 +1,309 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed chapter-wise summary of the Kotirudra Samhita from the Shiv Maha Puran. Explore the origins of the 12 Jyotirlingas and the path to liberation.">
-    <meta name="keywords" content="Shiv Puran, Kotirudra Samhita, 12 Jyotirlingas, Somnath, Mahakaleshwar, Kashi Vishwanath, Shiva Puran Summary">
-    <title>Shiv Maha Puran - Kotirudra Samhita Complete Summary</title>
+    <title>Shiv Maha Puran - Kotirudra Samhita Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 2;
         }
 
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 40px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 100px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        .om-mantra {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .om { font-size: 3rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.8rem; margin: 0; letter-spacing: 1px; }
+        
+        .btn-top {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 35px;
+            border: 1px solid #f1e4d1;
+            color: #f1e4d1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 1rem;
         }
-
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header h2 { margin: 5px 0; font-weight: 300; font-size: 1.5rem; }
 
         nav {
-            background: var(--amber-900);
-            padding: 10px;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 2px solid var(--soft-gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        nav a { color: var(--amber-100); text-decoration: none; font-size: 0.85rem; font-weight: bold; }
-        nav a:hover { color: var(--amber-400); }
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
 
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        nav a:hover { color: #8b0000; text-decoration: underline; }
 
-        .chapter-group {
+        .container { max-width: 1000px; margin: 60px auto; padding: 0 25px; }
+
+        .section-box {
             background: white;
-            margin-bottom: 40px;
+            margin-bottom: 100px;
+            padding: 60px;
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid var(--amber-100);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border: 1px solid #f0ede9;
+            scroll-margin-top: 120px;
         }
 
-        .group-header {
-            background: var(--amber-100);
-            padding: 20px;
-            border-bottom: 3px solid var(--amber-500);
+        h2 { 
+            color: var(--primary-maroon); 
+            border-bottom: 2px solid var(--soft-gold);
+            padding-bottom: 25px;
+            font-weight: normal;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
-        .group-header h2 { margin: 0; color: var(--amber-800); }
-
-        .chapter-card {
-            padding: 25px;
-            border-bottom: 1px solid var(--amber-50);
+        .lang-section { margin-bottom: 60px; }
+        
+        .eng-block {
+            color: #1a1a1a;
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            text-align: justify;
+            border-left: 5px solid #eee;
+            padding-left: 25px;
         }
 
-        .chapter-title {
-            color: var(--amber-700);
-            font-size: 1.3rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .hin-block {
+            color: #444;
+            font-size: 1.15rem;
+            text-align: justify;
+            border-left: 5px solid var(--soft-gold);
+            padding-left: 25px;
+            margin-bottom: 50px;
+            background: #fffcf8;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
-
-        .chapter-title span {
-            background: var(--amber-500);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-        }
-
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; font-size: 0.95rem; }
 
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 60px 20px;
+            background: #2b1212;
+            color: #d1c4b2;
+            padding: 100px 20px;
             text-align: center;
-            margin-top: 50px;
         }
 
-        @media (max-width: 600px) {
+        .audio-controls {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn-audio {
+            background: transparent;
+            color: #d1c4b2;
+            border: 2px solid var(--soft-gold);
+            padding: 18px 40px;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: serif;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .btn-audio:hover { background: var(--soft-gold); color: white; }
+
+        @media (max-width: 768px) {
+            nav { overflow-x: auto; white-space: nowrap; justify-content: flex-start; }
+            .section-box { padding: 30px; }
             header h1 { font-size: 1.8rem; }
-            nav { font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय | Om Namah Shivay</span>
-    <h1>शिव महापुराण | Shiv Maha Puran</h1>
-    <h2>Kotirudra Samhita: The 4th Samhita - Complete Summary</h2>
-	<a href="index.html" style="
-		display: inline-block;
-		margin-top: 15px;
-		padding: 8px 20px;
-		background-color: #fff;
-		color: #b45309;
-		text-decoration: none;
-		border-radius: 50px;
-		font-weight: bold;
-		font-size: 0.9rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		transition: all 0.3s ease;">
-		Back to Shiv Maha Puran Home Page
-	</a>
+    <span class="om">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण: कोटिरुद्र संहिता</h1>
+	<p>Shiv Maha Puran - Kotirudra Samhita Summary (43 Chapters) | Unveiling the Glory of Jyotirlingas</p>
+    <a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
 <nav>
-    <a href="#somnath">1-5: Somnath/Mallikarjuna</a>
-    <a href="#mahakal">6-10: Mahakal/Omkareshwar</a>
-    <a href="#kedar">11-15: Kedar/Bhimashankar</a>
-    <a href="#kashi">16-20: Kashi/Tryambak</a>
-    <a href="#vaidyanath">21-25: Vaidyanath/Nageshwar</a>
-    <a href="#rameswar">26-30: Rameswar/Ghushmeshwar</a>
-    <a href="#moksha">31-43: Vishnu/Shivaritri/Moksha</a>
+    <a href="#s1">Atri-Anasuya & Nandi</a>
+    <a href="#s2">Mahabal & Haatkeshwar</a>
+    <a href="#s3">Jyotirlingas 1-4</a>
+    <a href="#s4">Jyotirlingas 5-8</a>
+    <a href="#s5">Jyotirlingas 9-12</a>
+    <a href="#s6">Sahasranaam & Vrat</a>
 </nav>
 
 <div class="container">
     
-    <!-- Section 1 -->
-    <section id="somnath" class="chapter-group">
-        <div class="group-header"><h2>Chapters 1-5: Origins & Somnath</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 1-3</span> Significance of the Jyotirlingas</h3>
-            <ul>
-                <li>The Samhita begins with the sages asking Suta Ji about the holiest sites for Shiva worship.</li>
-                <li>Kotirudra Samhita specifically focuses on 'Koti' (millions) of forms, simplified into the 12 primary ones.</li>
-                <li>The term 'Jyotirlinga' signifies the column of light that has no beginning or end.</li>
-                <li>Chapter 1 establishes that worshipping these sites removes sins from multiple lifetimes.</li>
-                <li>The second chapter details the specific geography of these 12 manifestations across India.</li>
-                <li>Chapter 3 explains the general ritual procedure for visiting a Jyotirlinga.</li>
-                <li>It emphasizes 'Manasa Puja' (internal worship) alongside physical rituals.</li>
-                <li>The text states that Shiva is omnipresent, but specifically radiant at these locations.</li>
-                <li>Hearing the names of the 12 Jyotirlingas in the morning grants success in all endeavors.</li>
-                <li>The chapter ends by highlighting the liberation (*Moksha*) attainable through these pilgrimages.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 4-5</span> Somnath and Mallikarjuna</h3>
-            <ul>
-                <li>Somnath is the first Jyotirlinga, located in Saurashtra (Gujarat).</li>
-                <li>Chandra (The Moon) was cursed by Daksha to lose his radiance due to neglect of his other wives.</li>
-                <li>Chandra performed intense penance at Prabhasa Patan as per Brahma's advice.</li>
-                <li>Lord Shiva appeared and blessed Chandra, restoring his light periodically (phases of the moon).</li>
-                <li>Shiva remained there as Somnath ('Lord of the Moon') at Chandra's request.</li>
-                <li>Mallikarjuna is the second Jyotirlinga, located on the Srisailam mountain (Andhra Pradesh).</li>
-                <li>This manifestation occurred when Kartikeya left Kailash in anger over Ganesha's marriage.</li>
-                <li>Shiva and Parvati visited Srisailam to stay near their son Kartikeya.</li>
-                <li>'Malli' represents Parvati and 'Arjuna' represents Shiva.</li>
-                <li>Worshipping Mallikarjuna is said to grant the fruit of an Ashwamedha Yagna.</li>
-            </ul>
+    <section id="s1" class="section-box">
+        <h2>Chapters 1-5: The Glory of Atri, Anasuya, and Nandi</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                The Kotirudra Samhita begins with a profound emphasis on the power of asceticism and the purity of character. The narrative of Sage Atri and Sati Anasuya serves as a cornerstone, demonstrating how Anasuya’s unwavering devotion (Pativrata Dharma) was so potent that she transformed the divine Trinity—Brahma, Vishnu, and Shiva—into small infants when they came to test her. This story highlights that the Lord is not swayed by complex rituals alone but is bound by the simplicity and integrity of a pure heart. Following this, the text explores the descent of the Divine in the form of a holy cow, detailing how Gau-Seva (serving the cow) is the most accessible path to washing away one's sins, as every deity resides within her form.
+                <br><br>
+                The focus then shifts to the origin of Nandikeshwar, a pivotal figure in Shaivism. Sage Shilada, desiring a son who was not born of a womb and who was immortal, performed severe penance. Shiva, moved by this dedication, took birth as Nandi. Initially appearing as a human child, Nandi soon revealed his divine form, becoming the commander of the Ganas and the primary vehicle of Lord Shiva. His life teaches that constant remembrance of the Divine leads to an eternal state of proximity to God. These chapters conclude by explaining that Nandi is the embodiment of Dharma (Righteousness), and his presence at the entrance of every temple reminds us to leave our worldly ego outside before approaching the Mahadeva.
+            </div>
+            <div class="hin-block">
+                कोटिरुद्र संहिता की शुरुआत तपस्या की शक्ति और चरित्र की पवित्रता पर गहरे जोर के साथ होती है। ऋषि अत्रि और सती अनुसूया का वृत्तांत एक आधारशिला के रूप में कार्य करता है, जो यह दर्शाता है कि अनुसूया की अडिग भक्ति (पतिव्रत धर्म) इतनी शक्तिशाली थी कि उन्होंने दिव्य त्रिदेवों—ब्रह्मा, विष्णु और शिव—को छोटे शिशुओं में बदल दिया जब वे उनकी परीक्षा लेने आए थे। यह कहानी इस बात पर प्रकाश डालती है कि भगवान केवल जटिल अनुष्ठानों से नहीं डिगते, बल्कि एक शुद्ध हृदय की सादगी और अखंडता से बंधे होते हैं। इसके बाद, पाठ एक पवित्र गाय के रूप में दिव्य के अवतरण की खोज करता है, जिसमें विस्तार से बताया गया है कि गौ-सेवा (गाय की सेवा) अपने पापों को धोने का सबसे सुलभ मार्ग है, क्योंकि प्रत्येक देवता उनके रूप के भीतर निवास करते हैं।
+                <br><br>
+                इसके बाद ध्यान शैव धर्म के एक प्रमुख व्यक्तित्व नंदीकेश्वर की उत्पत्ति की ओर जाता है। ऋषि शिलाद ने एक ऐसे पुत्र की इच्छा की जो गर्भ से पैदा न हुआ हो और जो अमर हो, इसके लिए उन्होंने घोर तपस्या की। शिव ने इस समर्पण से द्रवित होकर नंदी के रूप में जन्म लिया। प्रारंभ में एक मानव बालक के रूप में दिखाई देने के बाद, नंदी ने जल्द ही अपना दिव्य रूप प्रकट किया, जो गणों के सेनापति और भगवान शिव के प्राथमिक वाहन बन गए। उनका जीवन सिखाता है कि दिव्य का निरंतर स्मरण ईश्वर के साथ निकटता की शाश्वत स्थिति की ओर ले जाता है। ये अध्याय यह समझाते हुए समाप्त होते हैं कि नंदी धर्म के अवतार हैं, और हर मंदिर के प्रवेश द्वार पर उनकी उपस्थिति हमें महादेव के पास जाने से पहले अपने सांसारिक अहंकार को बाहर छोड़ने की याद दिलाती है।
+            </div>
         </div>
     </section>
 
-    <!-- Section 2 -->
-    <section id="mahakal" class="chapter-group">
-        <div class="group-header"><h2>Chapters 6-10: Mahakal & Omkareshwar</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 6-8</span> Mahakaleshwar (Ujjain)</h3>
-            <ul>
-                <li>Ujjain (Avanti) was ruled by King Chandrasena, a great devotee of Shiva.</li>
-                <li>A tribal boy named Shrikara was inspired by the King and started worshipping a stone as Shiva.</li>
-                <li>Other kings attacked Ujjain, but Shrikara remained absorbed in his deep meditation.</li>
-                <li>A demon named Dushana harassed the people of Avanti, leading to widespread chaos.</li>
-                <li>Lord Shiva manifested from the ground in a terrifying form to destroy the demon Dushana.</li>
-                <li>Shiva then became the 'Mahakal' (Lord of Time and Death) to protect his devotees in Ujjain.</li>
-                <li>Hanuman Ji later described the greatness of this manifestation to the sages.</li>
-                <li>Mahakaleshwar is unique as it is a 'Dakshinamurti' (south-facing) Linga.</li>
-                <li>The Bhasma Arati here is symbolic of the transient nature of the physical body.</li>
-                <li>Worshipping Mahakal frees a devotee from 'Akaal Mrityu' (untimely death).</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 9-10</span> Omkareshwar (Narmada)</h3>
-            <ul>
-                <li>Located on the Mandhata mountain island in the Narmada river (Madhya Pradesh).</li>
-                <li>The sage Narada visited Vindhya mountain and told him he was inferior to Mount Meru.</li>
-                <li>Humiliated, Vindhya performed penance for Shiva on the banks of the Narmada.</li>
-                <li>Shiva appeared as the form of the sacred syllable 'Om'.</li>
-                <li>The Linga divided into two: Omkareshwar and Mamleshwar.</li>
-                <li>Both are considered parts of the same single Jyotirlinga.</li>
-                <li>Mandhata’s sons also performed penance here, giving the island its name.</li>
-                <li>The island itself is shaped naturally in the form of the 'Om' symbol.</li>
-                <li>Worshipping here grants the combined merits of all Vedic sacrifices.</li>
-                <li>It highlights that Shiva respects the devotion of even the mountains and nature.</li>
-            </ul>
+    <section id="s2" class="section-box">
+        <h2>Chapters 6-13: Mahabal, Kalmashpad, and the Netherworld</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                This section dives into the mystical geography of Shivlings, starting with the Mahabal Shivling. Its name literally means "Great Strength," and the legend states that its power is so immense that it cannot be moved by any force once established. This highlights the concept of 'Sthirata' or stability in devotion. Alongside this, the story of Chandali is narrated—a fallen woman who achieved salvation through the unintentional sight of a Shivling, proving that the mercy of Shiva is boundless and does not discriminate based on past actions, provided there is a spark of faith.
+                <br><br>
+                The narrative of King Kalmashpad provides a deep karmic lesson. After being cursed to become a man-eater due to an unfortunate confrontation with a sage, the King suffered immensely. However, his eventual encounter with the Chandrabhal Shivling led to his purification. This story is significant in the Pandey edition as it explains the psychological and spiritual transformation that occur through pilgrimage. Furthermore, the chapters introduce Haatkeshwar Mahadev, the Lord of the Patala (netherworld). This shows that Shiva’s reign is not just limited to the heavens and earth but extends to the deepest realms of the universe. The role of Batuk Bhairav is also emphasized as a guardian deity who protects children and those who are fearful, acting as a bridge between the physical and subtle worlds.
+            </div>
+            <div class="hin-block">
+                यह खंड शिवलिंगों के रहस्यमय भूगोल में गोता लगाता है, जिसकी शुरुआत महाबल शिवलिंग से होती है। इसका नाम शाब्दिक रूप से "बड़ी शक्ति" है, और किंवदंती कहती है कि इसकी शक्ति इतनी अधिक है कि एक बार स्थापित होने के बाद इसे किसी भी बल द्वारा स्थानांतरित नहीं किया जा सकता है। यह भक्ति में 'स्थिरता' की अवधारणा को उजागर करता है। इसके साथ ही, चंदाली की कहानी सुनाई गई है—एक पतित महिला जिसने अनजाने में शिवलिंग के दर्शन के माध्यम से मुक्ति प्राप्त की, यह सिद्ध करते हुए कि शिव की दया असीम है और पिछले कार्यों के आधार पर भेदभाव नहीं करती है, बशर्ते विश्वास की एक चिंगारी हो।
+                <br><br>
+                राजा कल्माषपाद का वृत्तांत एक गहरा कर्म सबक प्रदान करता है। एक ऋषि के साथ दुर्भाग्यपूर्ण टकराव के कारण नरभक्षी बनने का श्राप मिलने के बाद, राजा को बहुत कष्ट हुआ। हालांकि, चंद्रभाल शिवलिंग के साथ उनके अंततः मिलन ने उनके शुद्धिकरण का मार्ग प्रशस्त किया। पाण्डेय संस्करण में यह कहानी महत्वपूर्ण है क्योंकि यह तीर्थयात्रा के माध्यम से होने वाले मनोवैज्ञानिक और आध्यात्मिक परिवर्तन की व्याख्या करती है। इसके अलावा, अध्याय पाताल लोक के स्वामी हाटकेश्वर महादेव का परिचय देते हैं। यह दर्शाता है कि शिव का शासन केवल स्वर्ग और पृथ्वी तक ही सीमित नहीं है, बल्कि ब्रह्मांड के सबसे गहरे क्षेत्रों तक फैला हुआ है। बटुक भैरव की भूमिका पर भी एक संरक्षक देवता के रूप में जोर दिया गया है जो बच्चों और भयभीत लोगों की रक्षा करते हैं।
+            </div>
         </div>
     </section>
 
-    <!-- Section 3 -->
-    <section id="kedar" class="chapter-group">
-        <div class="group-header"><h2>Chapters 11-15: Kedarnath & Bhimashankar</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 11-12</span> Kedarnath (Himalayas)</h3>
-            <ul>
-                <li>The Nara and Narayana sages (incarnations of Vishnu) performed penance at Badrikashram.</li>
-                <li>They daily worshipped a mud Linga of Shiva with absolute devotion.</li>
-                <li>Lord Shiva was so pleased that he asked them to seek a boon.</li>
-                <li>They requested Shiva to stay permanently in that Himalayan region for the welfare of the world.</li>
-                <li>Shiva manifested as the 'Kedarnath' Jyotirlinga in the form of a hump.</li>
-                <li>It is the highest of the 12 Jyotirlingas, symbolizing the peak of consciousness.</li>
-                <li>Pandavas later sought Kedar's blessing to cleanse the sins of the Kurukshetra war.</li>
-                <li>The temple remains closed for 6 months, showing the seasonal rhythm of nature.</li>
-                <li>Drinking the water of the Mandakini river near Kedar is equivalent to bathing in Ganga.</li>
-                <li>The chapter ends by stating that a visit to Kedar ensures no further rebirth.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 13-15</span> Bhimashankar (Maharashtra)</h3>
-            <ul>
-                <li>The demon Bhima (son of Kumbhakarna) terrorized the world and imprisoned King Sudakshina.</li>
-                <li>Sudakshina was a Shiva devotee who made a Linga in prison and worshipped it.</li>
-                <li>Bhima attempted to break the Linga with his sword, mocking the King's faith.</li>
-                <li>Lord Shiva manifested from the Linga and burned the demon Bhima to ashes.</li>
-                <li>The heat of the battle created the Bhima river, which flows in Maharashtra.</li>
-                <li>At the request of the gods and sages, Shiva stayed there as Bhimashankar.</li>
-                <li>This avatar represents the protection of the innocent against tyranny.</li>
-                <li>It is located in the Sahyadri mountains, surrounded by lush forests.</li>
-                <li>Chapter 14 details the specific prayers to be offered at this site.</li>
-                <li>Chapter 15 explains that anyone who visits this site is protected from negative energies.</li>
-            </ul>
+    <section id="s3" class="section-box">
+        <h2>Chapters 14-19: Detailed Origins of Jyotirlingas 1-4</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                <b>1. Somnath (The Moon's Lord):</b> The first Jyotirlinga manifested when Chandra (the Moon God) was cursed by his father-in-law Daksha Prajapati for neglecting 26 of his wives in favor of Rohini. As Chandra began to wither away, he performed penance at the Saraswati river's mouth. Shiva appeared and placed the moon on his forehead, granting him the power to wax and wane. 
+				<br><br>
+				<b>2. Mallikarjuna (The Divine Parents):</b> When Kartikeya felt slighted and moved to Srisailam, Shiva and Parvati followed him. Shiva took the form of Arjuna and Parvati took the form of Mallika (Jasmine). This lingam symbolizes the balance between the warrior spirit and the fragrant grace of the mother.
+                <br><br>
+                <b>3. Mahakaleshwar (The Master of Time):</b> In Ujjain, a demon named Dushana was harassing the devotees. Lord Shiva erupted from the ground as a pillar of light and ash, swallowing the demon in an instant. Being Swayambhu (self-manifested), Mahakal remains the only Jyotirlinga facing South, the direction of death, which he has conquered. 
+				<br><br>
+				<b>4. Omkareshwar (The Sacred Sound):</b> When the Vindhya Mountain wanted to surpass the Meru Mountain, it performed penance to Shiva. Shiva manifested in two forms: Omkareshwar and Mamleshwar. These forms represent the physical and spiritual aspects of the pranava 'OM', the sound of creation itself.
+            </div>
+            <div class="hin-block">
+                <b>१. सोमनाथ (चंद्रमा के स्वामी):</b> प्रथम ज्योतिर्लिंग तब प्रकट हुआ जब चंद्रमा को उनके ससुर दक्ष प्रजापति ने रोहिणी के पक्ष में अपनी २६ पत्नियों की उपेक्षा करने के लिए श्राप दिया था। जब चंद्रमा क्षय होने लगे, तो उन्होंने सरस्वती नदी के मुहाने पर तपस्या की। शिव प्रकट हुए और चंद्रमा को अपने माथे पर धारण किया, जिससे उन्हें घटने और बढ़ने की शक्ति मिली। 
+				<br><br>
+				<b>२. मल्लिकार्जुन (दिव्य माता-पिता):</b> जब कार्तिकेय ने अपमानित महसूस किया और श्रीशैल चले गए, तो शिव और पार्वती उनके पीछे गए। शिव ने अर्जुन का रूप धारण किया और पार्वती ने मल्लिका (चमेली) का रूप धारण किया। यह लिंग योद्धा भावना और माँ की सुगंधित कृपा के बीच संतुलन का प्रतीक है।
+                <br><br>
+                <b>३. महाकालेश्वर (काल के स्वामी):</b> उज्जैन में, दूषण नामक एक राक्षस भक्तों को परेशान कर रहा था। भगवान शिव प्रकाश और राख के स्तंभ के रूप में जमीन से फूट पड़े, और एक क्षण में राक्षस को निगल लिया। स्वयंभू होने के नाते, महाकाल एकमात्र ज्योतिर्लिंग है जिसका मुख दक्षिण की ओर है, जो मृत्यु की दिशा है, जिसे उन्होंने जीत लिया है। 
+				<br><br>
+				<b>४. ओंकारेश्वर (पवित्र ध्वनि):</b> जब विंध्य पर्वत मेरु पर्वत से आगे निकलना चाहता था, तो उसने शिव की तपस्या की। शिव दो रूपों में प्रकट हुए: ओंकारेश्वर और ममलेश्वर। ये रूप सृजन की ध्वनि 'ॐ' के भौतिक और आध्यात्मिक पहलुओं का प्रतिनिधित्व करते हैं।
+            </div>
         </div>
     </section>
 
-    <!-- Section 4 -->
-    <section id="kashi" class="chapter-group">
-        <div class="group-header"><h2>Chapters 16-20: Kashi Vishwanath & Tryambakeshwar</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 16-18</span> Kashi Vishwanath (Varanasi)</h3>
-            <ul>
-                <li>Kashi is described as the city that stays afloat on Shiva's trident during Pralaya.</li>
-                <li>It is the 'Avimukta' kshetra, meaning it is never forsaken by Lord Shiva.</li>
-                <li>Chapter 16 details the creation of Kashi for the pleasure of Shiva and Parvati.</li>
-                <li>The 'Manikarnika' ghat was created from the sweat of Vishnu's penance.</li>
-                <li>Shiva's earring fell at Manikarnika, giving it supreme sanctity.</li>
-                <li>Vishwanath means 'Lord of the Universe'; he is the king of this eternal city.</li>
-                <li>It is said that Shiva whispers the 'Taraka Mantra' in the ears of those dying in Kashi.</li>
-                <li>Worshipping Vishwanath grants immediate liberation (*Kaivalya*).</li>
-                <li>Chapter 18 explains the 'Pancha-koshi' yatra of Kashi and its benefits.</li>
-                <li>Kashi is the spiritual heart of the world where death is celebrated as a release.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 19-20</span> Tryambakeshwar (Nashik)</h3>
-            <ul>
-                <li>Sage Gautama and his wife Ahalya lived in the Brahmagiri mountains during a famine.</li>
-                <li>Gautama created a perennial supply of grain through his spiritual merit to feed all sages.</li>
-                <li>Jealous sages used a magical cow to frame Gautama for 'Go-hatya' (killing a cow).</li>
-                <li>To purify himself, Gautama performed penance to bring the Ganga to the mountains.</li>
-                <li>Shiva appeared and brought the Ganga (known as Gautami or Godavari) to Nashik.</li>
-                <li>At Gautama's request, Shiva stayed there as Tryambakeshwar.</li>
-                <li>The Linga is unique as it has three faces representing Brahma, Vishnu, and Mahesh.</li>
-                <li>The Godavari river emerges from the roots of an Audumbar tree nearby.</li>
-                <li>Tryambak means 'Lord of the Three Eyes' or 'Three Mothers'.</li>
-                <li>This site is considered the best place for performing 'Narayan Nagbali' rituals.</li>
-            </ul>
+    <section id="s4" class="section-box">
+        <h2>Chapters 20-25: Detailed Origins of Jyotirlingas 5-8</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                <b>5. Kedareshwar (The Himalayan Refuge):</b> On the Kedar peaks, the sages Nara and Narayana (avatars of Vishnu) worshipped a clay lingam. Shiva was so pleased that he took permanent residence there. 
+				<br><br>
+				<b>6. Bhimeshwar (The Protector):</b> Manifested in the Dakini forests to save his devotee Sudakshin from the demon Bhima, Kumbhakarna's son. Shiva's roar alone turned the demon to ashes, emphasizing protection from physical tyranny. 
+                <br><br>
+                <b>7. Vishweshwar (The King of Kashi):</b> The oldest city Kashi is said to rest on Shiva’s trident. Vishwanath is the light of liberation (Moksha-dayak). 
+				<br><br>
+				<b>8. Trayambakeshwar (The Sin-Remover):</b> After Sage Gautama was falsely accused of killing a cow (which was a magical illusion by other jealous sages), he brought the Ganga down to purify himself. Shiva appeared as the three-faced lingam (representing Brahma, Vishnu, Shiva) at the source of the Godavari.
+            </div>
+            <div class="hin-block">
+                <b>५. केदारेश्वर (हिमालयी शरण):</b> केदार चोटियों पर, ऋषि नर और नारायण (विष्णु के अवतार) ने मिट्टी के लिंग की पूजा की। शिव इतने प्रसन्न हुए कि उन्होंने वहां स्थायी निवास किया। 
+				<br><br>
+				<b>६. भीमेश्वर (रक्षक):</b> कुंभकर्ण के पुत्र राक्षस भीम से अपने भक्त सुदक्षिण को बचाने के लिए डाकिनी वनों में प्रकट हुए। शिव की गर्जना मात्र ने राक्षस को राख में बदल दिया।
+                <br><br>
+                <b>७. विश्वेश्वर (काशी के राजा):</b> सबसे पुराना शहर काशी शिव के त्रिशूल पर टिका हुआ कहा जाता है। विश्वनाथ मुक्ति का प्रकाश (मोक्ष-दायक) हैं। 
+				<br><br>
+				<b>८. त्र्यंबकेश्वर (पाप-निवारक):</b> ऋषि गौतम पर झूठा गोहत्या का आरोप लगने के बाद, उन्होंने खुद को शुद्ध करने के लिए गंगा को नीचे उतारा। शिव गोदावरी के उद्गम स्थल पर तीन मुखी लिंग (ब्रह्मा, विष्णु, शिव का प्रतिनिधित्व करने वाले) के रूप में प्रकट हुए।
+            </div>
         </div>
     </section>
 
-    <!-- Section 5 -->
-    <section id="vaidyanath" class="chapter-group">
-        <div class="group-header"><h2>Chapters 21-25: Vaidyanath & Nageshwar</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 21-23</span> Vaidyanath (Deoghar)</h3>
-            <ul>
-                <li>Ravana, the king of Lanka, performed penance to take Shiva permanently to Lanka.</li>
-                <li>Ravana offered his heads one by one; Shiva appeared as a doctor (*Vaidya*) to heal him.</li>
-                <li>Shiva gave him a Linga but warned it would be fixed wherever Ravana placed it.</li>
-                <li>Varuna entered Ravana's stomach as water, forcing him to seek a place to urinate.</li>
-                <li>Lord Vishnu disguised as a Brahmin held the Linga and placed it on the ground.</li>
-                <li>The Linga became fixed at Deoghar (Jharkhand) and Ravana could not move it.</li>
-                <li>Shiva is called Vaidyanath because he healed Ravana's severed heads.</li>
-                <li>It is a 'Siddha Peetha' where wishes are granted like medicine to a patient.</li>
-                <li>Worshippers here are freed from chronic physical and mental ailments.</li>
-                <li>Chapter 23 highlights the significance of carrying Ganga water from Sultanganj to this site.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 24-25</span> Nageshwar (Dwarka)</h3>
-            <ul>
-                <li>A demon named Daruka and his wife Daruki imprisoned a Shiva devotee named Supriya.</li>
-                <li>Supriya taught all the prisoners the Shiva Mantra and started worshipping a Linga.</li>
-                <li>The demons attacked Supriya for his devotion, leading Supriya to call upon Mahadeva.</li>
-                <li>Shiva appeared from the earth and destroyed the demons with his 'Pashupata' weapon.</li>
-                <li>At Supriya's request, Shiva remained there as Nageshwar ('Lord of Serpents').</li>
-                <li>The Goddess Parvati also stayed there in the form of 'Nageshwari'.</li>
-                <li>It is located near the coast of Dwarka in Gujarat.</li>
-                <li>Nageshwar represents the control over the poisons and snakes of life.</li>
-                <li>A person who meditates on Nageshwar is protected from all forms of poison.</li>
-                <li>The chapter ends by stating that Nageshwar is the protector of the western coast.</li>
-            </ul>
+    <section id="s5" class="section-box">
+        <h2>Chapters 26-33: Detailed Origins of Jyotirlingas 9-12</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                <b>9. Vaidyanatheshwar (The Divine Healer):</b> Ravana wanted to take Shiva to Lanka. Shiva gave him a lingam but warned him not to place it on the ground. Through a divine trick, it was placed in Parali/Deoghar. Shiva stays here as the healer of all ailments. 
+				<br><br>
+				<b>10. Nageshwar (Lord of Snakes):</b> Manifested to save the devotee Supriya from the demon Daruka. It represents the control over the poisons of the mind.
+                <br><br>
+                <b>11. Rameshwaram (The Bridge of Faith):</b> Established by Lord Rama himself to seek blessings before crossing the ocean to Lanka. It stands as the ultimate symbol of the harmony between Vishnu and Shiva. 
+				<br><br>
+				<b>12. Ghrishneshwar (The Reward of Devotion):</b> For the devotee Ghushma, whose son was killed by her sister, Shiva appeared in the pond where she threw the remains. He revived her son and stayed back as Ghrishneshwar, the god of compassion.
+            </div>
+            <div class="hin-block">
+                <b>९. वैद्यनाथेश्वर (दिव्य चिकित्सक):</b> रावण शिव को लंका ले जाना चाहता था। शिव ने उसे एक लिंग दिया लेकिन उसे जमीन पर न रखने की चेतावनी दी। एक दैवीय चाल के माध्यम से, इसे देवघर में रख दिया गया। 
+				<br><br>
+				<b>१०. नागेश्वर (सांपों के देवता):</b> भक्त सुप्रिय को दारुका राक्षस से बचाने के लिए प्रकट हुए। यह मन के जहरों पर नियंत्रण का प्रतिनिधित्व करता है।
+                <br><br>
+                <b>११. रामेश्वरम (विश्वास का सेतु):</b> लंका जाने के लिए समुद्र पार करने से पहले आशीर्वाद लेने के लिए स्वयं भगवान राम द्वारा स्थापित। यह विष्णु और शिव के बीच सद्भाव का प्रतीक है। 
+				<br><br>
+				<b>१२. घृष्णेश्वर (भक्ति का प्रतिफल):</b> भक्त घुश्मा के लिए, जिसका पुत्र उसकी बहन द्वारा मार दिया गया था, शिव उस तालाब में प्रकट हुए जहाँ उसने अवशेष फेंके थे। उन्होंने उसके पुत्र को पुनर्जीवित किया और घृष्णेश्वर के रूप में वहीं रुक गए।
+            </div>
         </div>
     </section>
 
-    <!-- Section 6 -->
-    <section id="rameswar" class="chapter-group">
-        <div class="group-header"><h2>Chapters 26-30: Rameshwaram & Ghushmeshwar</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 26-27</span> Rameshwaram (Tamil Nadu)</h3>
-            <ul>
-                <li>Lord Rama, while searching for Sita, reached the southern tip of India.</li>
-                <li>Rama felt thirsty and drank water; he then decided to worship Shiva for success.</li>
-                <li>Rama made a Linga out of sand and performed an elaborate Puja.</li>
-                <li>Shiva appeared and blessed Rama, granting him victory over Ravana.</li>
-                <li>At Rama's request, Shiva stayed there as Rameshwaram ('Lord of Rama').</li>
-                <li>The 22 wells (Teerthas) within the temple are said to have been created by Rama's arrows.</li>
-                <li>Bathing in the Rameshwaram sea is said to purify the soul of the sin of killing.</li>
-                <li>It is the southern pillar of the 'Char Dham' pilgrimage.</li>
-                <li>The chapter emphasizes that Vishnu (Rama) and Shiva are inseparable.</li>
-                <li>Rameshwaram is the gate to the southern ocean and spiritual victory.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 28-30</span> Ghushmeshwar (Ellora)</h3>
-            <ul>
-                <li>A pious woman named Ghushma worshipped 101 Shiva Lingas daily by immersing them in a lake.</li>
-                <li>Her sister Sudeha, out of jealousy, killed Ghushma's son and threw him into the lake.</li>
-                <li>Ghushma remained calm and continued her Shiva worship without grief.</li>
-                <li>As she immersed the 101st Linga, Shiva restored her son to life.</li>
-                <li>Shiva prepared to kill Sudeha, but the compassionate Ghushma prayed for her sister's forgiveness.</li>
-                <li>Pleased by her kindness, Shiva stayed there as Ghushmeshwar (or Grishneshwar).</li>
-                <li>It is the final of the 12 Jyotirlingas, located near the Ellora caves (Maharashtra).</li>
-                <li>The lake is known as Shivalaya and its water is considered holy.</li>
-                <li>Ghushmeshwar represents the power of patience and selfless devotion.</li>
-                <li>Worshipping here ensures the well-being and longevity of one's children.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Section 7 -->
-    <section id="moksha" class="chapter-group">
-        <div class="group-header"><h2>Chapters 31-43: Vishnu, Shivaratri & The Path to Liberation</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 31-35</span> Vishnu’s Worship of Shiva</h3>
-            <ul>
-                <li>These chapters detail how Lord Vishnu obtained the 'Sudarshana Chakra' from Shiva.</li>
-                <li>Vishnu offered 1000 lotuses to Shiva; Shiva hid one lotus to test his devotion.</li>
-                <li>Vishnu prepared to offer his own eye (Lotus-eye) to complete the 1000.</li>
-                <li>Shiva appeared, blessed Vishnu, and gave him the supreme weapon.</li>
-                <li>It emphasizes that Vishnu is the foremost devotee of Shiva.</li>
-                <li>Chapter 33 describes the 'Shiva-Sahasranama' (1000 names) spoken by Vishnu.</li>
-                <li>The text details how Shiva should be worshipped during various months.</li>
-                <li>It discusses the spiritual significance of wearing 'Bhasma' and 'Rudraksha'.</li>
-                <li>Shiva is described as the 'Pashupati' who frees souls from the bondage of nature.</li>
-                <li>The unity of the Trinity is reinforced through Vishnu's absolute surrender to Shiva.</li>
-            </ul>
-        </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 36-43</span> Mahashivaratri & Final Merits</h3>
-            <ul>
-                <li>Details the story of the hunter Lubdhaka who unknowingly worshipped Shiva on Shivaratri.</li>
-                <li>A single Bilva leaf dropped on a Linga on this night can grant salvation.</li>
-                <li>Mahashivaratri is the night of the marriage between Shiva and Shakti.</li>
-                <li>Chapter 38 details the fasts and rituals associated with this great night.</li>
-                <li>The 'Panchakshara Mantra' (Om Namah Shivaya) is described as the seed of the universe.</li>
-                <li>The text explains the various types of liberation: Salokya, Samipya, Sarupya, and Sayujya.</li>
-                <li>Chapter 41 discusses the greatness of the 'Puranas' and their role in the Kali Yuga.</li>
-                <li>The Samhita concludes by stating that Shiva is the only truth in a world of illusion.</li>
-                <li>Anyone who listens to the Kotirudra Samhita with faith is freed from the cycle of birth.</li>
-                <li>The final chapter is the 'Phalashruti', promising peace, prosperity, and divine union.</li>
-            </ul>
+    <section id="s6" class="section-box">
+        <h2>Chapters 34-43: Sahasranaam, Sudarshan Chakra & Conclusion</h2>
+        <div class="lang-section">
+            <div class="eng-block">
+                The climax of this Samhita is the revelation of the Shiv Sahasranaam. The Pandey edition describes how Lord Vishnu, in his quest to acquire the power to protect the universe, worshipped Shiva with 1,000 lotuses every day. One day, Shiva hid the 1,000th lotus to test Vishnu’s resolve. Without hesitation, Vishnu offered his own eye (the 'Kamal-Nayan' or lotus-eye) to complete the offering. Overwhelmed by this supreme sacrifice, Shiva manifested and gifted Vishnu the Sudarshan Chakra, the invincible disc of light. This confirms that even the highest protectors derive their strength from the Mahadeva.
+                <br><br>
+                The Samhita concludes with the scientific and spiritual importance of the Shivaratri Vrat. It explains the significance of the Bel-Patra (wood apple leaf) and the specific types of Abhishekam. The final chapters discuss Vyaghreshwar Mahadev and the Saguna (with form) and Nirguna (without form) aspects of the Lord. The message is clear: whether one sees Shiva as the physical lingam or the formless light, the path of devotion leads to the same ocean of consciousness. Hearing these 43 chapters is said to bestow the same merit as performing a thousand Ashvamedha Yagnas.
+            </div>
+            <div class="hin-block">
+                इस संहिता का चरमोत्कर्ष शिव सहस्त्रनाम का प्रकटीकरण है। पाण्डेय संस्करण बताता है कि कैसे भगवान विष्णु ने ब्रह्मांड की रक्षा करने की शक्ति प्राप्त करने के लिए हर दिन १००० कमलों के साथ शिव की पूजा की। एक दिन, शिव ने विष्णु के संकल्प की परीक्षा लेने के लिए १०००वां कमल छिपा दिया। बिना किसी हिचकिचाहट के, विष्णु ने भेंट पूरी करने के लिए अपनी ही आंख ('कमल-नयन') अर्पित कर दी। इस सर्वोच्च बलिदान से अभिभूत होकर, शिव प्रकट हुए और विष्णु को प्रकाश का अजेय चक्र 'सुदर्शन चक्र' भेंट किया। यह पुष्टि करता है कि सर्वोच्च रक्षक भी महादेव से ही अपनी शक्ति प्राप्त करते हैं।
+                <br><br>
+                संहिता शिवरात्रि व्रत के वैज्ञानिक और आध्यात्मिक महत्व के साथ समाप्त होती है। यह बेल-पत्र के महत्व और अभिषेक के विशिष्ट प्रकारों की व्याख्या करती है। अंतिम अध्याय व्याघ्रेश्वर महादेव और प्रभु के सगुण और निर्गुण पहलुओं पर चर्चा करते हैं। संदेश स्पष्ट है: चाहे कोई शिव को भौतिक लिंग के रूप में देखे या निराकार प्रकाश के रूप में, भक्ति का मार्ग चेतना के उसी सागर की ओर ले जाता है। इन ४३ अध्यायों को सुनने के बारे में कहा जाता है कि यह एक हजार अश्वमेध यज्ञ करने के समान पुण्य प्रदान करता है।
+            </div>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय | शिव महापुराण</h3>
-        <p>Kotirudra Samhita Archive | Glory to the 12 Jyotirlingas</p>
-        <p>&copy; 2026 Digital Dharmic Archive | Gurgaon, Haryana</p>
+    <h3>ॐ नमः शिवाय</h3>
+    <p><p>Shiv Maha Puran - Kotirudra Samhita Summary (43 Chapters) | Unveiling the Glory of Jyotirlingas</p></p>
+    <p>Gurgaon, Haryana, India</p>
+
+    <div class="audio-controls">
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
     </div>
 </footer>
+
+<script src="./javascript/audio.js"></script>
 
 </body>
 </html>
