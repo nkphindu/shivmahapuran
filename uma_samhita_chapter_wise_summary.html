@@ -1,330 +1,357 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed chapter-wise summary of the Uma Samhita from the Shiv Maha Puran. Explore the glory of the Divine Mother, creation, and the paths to spiritual merit.">
-    <meta name="keywords" content="Shiv Puran, Uma Samhita, Parvati, Shakti, Devi Mahatmya, Shiva Puran Summary, Hindu Mythology">
-    <title>Shiv Maha Puran - Uma Samhita Complete Summary</title>
+    <title>Shiv Maha Puran - Uma Samhita Summary</title>
     <style>
         :root {
-            --amber-50: #fffbeb;
-            --amber-100: #fef3c7;
-            --amber-200: #fde68a;
-            --amber-400: #fbbf24;
-            --amber-500: #f59e0b;
-            --amber-600: #d97706;
-            --amber-700: #b45309;
-            --amber-800: #92400e;
-            --amber-900: #78350f;
-            --gradient: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+            --primary-maroon: #5d1b1b;
+            --soft-gold: #c5a059;
+            --text-gray: #333333;
+            --bg-linen: #fdfaf5;
+            --nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--amber-50);
-            color: var(--amber-900);
-            line-height: 1.6;
+            background-color: var(--bg-linen);
+            color: var(--text-gray);
+            line-height: 2;
         }
 
         header {
-            background: var(--gradient);
-            color: white;
-            padding: 40px 20px;
+            background-color: var(--primary-maroon);
+            color: #f1e4d1;
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--soft-gold);
         }
 
-        .om-mantra {
-            font-size: 1.8rem;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
+        
+        .btn-top {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            border: 1px solid #f1e4d1;
+            color: #f1e4d1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
-
-        header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
-        header h2 { margin: 5px 0; font-weight: 300; font-size: 1.5rem; }
 
         nav {
-            background: var(--amber-900);
-            padding: 10px;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        nav a { color: var(--amber-100); text-decoration: none; font-size: 0.85rem; font-weight: bold; }
-        nav a:hover { color: var(--amber-400); }
-
-        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-
-        .chapter-group {
-            background: white;
-            margin-bottom: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid var(--amber-100);
-        }
-
-        .group-header {
-            background: var(--amber-100);
-            padding: 20px;
-            border-bottom: 3px solid var(--amber-500);
-        }
-
-        .group-header h2 { margin: 0; color: var(--amber-800); }
-
-        .chapter-card {
-            padding: 25px;
-            border-bottom: 1px solid var(--amber-50);
-        }
-
-        .chapter-title {
-            color: var(--amber-700);
-            font-size: 1.3rem;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .chapter-title span {
-            background: var(--amber-500);
-            color: white;
-            padding: 2px 10px;
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
             border-radius: 5px;
-            font-size: 0.8rem;
+            margin: 0 5px;
         }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; font-size: 0.95rem; }
+        nav a:hover { background: #f1e4d1; color: #8b0000; }
+
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+
+        .section-box {
+            background: white;
+            margin-bottom: 80px;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            border: 1px solid #f0ede9;
+            scroll-margin-top: 70px;
+        }
+
+        h2 { 
+            color: var(--primary-maroon); 
+            border-bottom: 2px solid var(--soft-gold);
+            padding-bottom: 25px;
+            font-weight: normal;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .paragraph-block { margin-bottom: 60px; }
+
+        .point-en {
+            display: block;
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .point-hi {
+            display: block;
+            color: #444;
+            font-size: 1.25rem;
+            padding-left: 35px;
+            border-left: 5px solid var(--soft-gold);
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+		
+		.audio-controls {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-audio {
+            background: transparent;
+            color: #d1c4b2;
+            border: 1px solid var(--soft-gold);
+            padding: 15px 35px;
+            cursor: pointer;
+            border-radius: 50px;
+            font-family: serif;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .btn-audio:hover { background: var(--soft-gold); color: white; }
 
         footer {
-            background: var(--amber-900);
-            color: white;
-            padding: 60px 20px;
+            background: #2b1212;
+            color: #d1c4b2;
+            padding: 80px 20px;
             text-align: center;
-            margin-top: 50px;
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            nav { font-size: 0.75rem; }
+            nav { flex-wrap: wrap; padding: 5px; }
+            nav a { font-size: 0.8rem; padding: 8px 10px; }
+            .section-box { padding: 30px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <span class="om-mantra">ॐ नमः शिवाय | Om Namah Shivay</span>
-    <h1>शिव महापुराण | Shiv Maha Puran</h1>
-    <h2>Uma Samhita: The 5th Samhita - Complete Summary</h2>
-	<a href="index.html" style="
-		display: inline-block;
-		margin-top: 15px;
-		padding: 8px 20px;
-		background-color: #fff;
-		color: #b45309;
-		text-decoration: none;
-		border-radius: 50px;
-		font-weight: bold;
-		font-size: 0.9rem;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		transition: all 0.3s ease;">
-		Back to Shiv Maha Puran Home Page
-	</a>
+    <span class="om">ॐ नमः शिवाय</span>
+    <h1>शिव महापुराण - उमा संहिता (विस्तृत)</h1>
+    <p>Shiv Maha Puran - Kailash Samhita Summary (51 Chapters) | From sin to virtue and death to immortality—the divine light of Uma Samhita</p>
+    <a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
 <nav>
-    <a href="#creation">1-8: Creation & Dharma</a>
-    <a href="#worlds">9-15: Geography of Worlds</a>
-    <a href="#hells">16-25: Karmic Consequences</a>
-    <a href="#devi">26-35: Manifestations of Uma</a>
-    <a href="#shakti">36-45: Glories of the Mother</a>
-    <a href="#moksha">46-51: Final Liberation</a>
+    <a href="#s1">Karma & Hells</a>
+    <a href="#s2">Sins & Charity</a>
+    <a href="#s3">Devotion & Penance</a>
+    <a href="#s4">Divine Shakti</a>
+    <a href="#s5">Final Wisdom</a>
 </nav>
 
 <div class="container">
     
-    <!-- Creation and Dharma -->
-    <section id="creation" class="chapter-group">
-        <div class="group-header"><h2>Chapters 1-8: The Cosmic Beginning</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 1-4</span> Suta Ji's Discourse and Primordial Creation</h3>
-            <ul>
-                <li>The sages ask Suta Ji to explain the glory of Uma (Parvati), the mother of the universe.</li>
-                <li>Uma is defined as the 'Prakriti' (Nature) that co-exists with Shiva as 'Purusha'.</li>
-                <li>Chapter 1 establishes that without Shakti (Uma), Shiva remains unmanifested.</li>
-                <li>The creation of the five primary elements (Mahabhutas) is detailed in Chapter 2.</li>
-                <li>The emergence of Brahma, Vishnu, and Mahesh from the primordial egg is explained.</li>
-                <li>Uma is described as the bridge between the Saguna (with form) and Nirguna (formless).</li>
-                <li>The text explains how the 'Gunas' (Sattva, Rajas, Tamas) originated from Her.</li>
-                <li>Shiva and Uma's union is the source of all rhythms in the universe.</li>
-                <li>Chapter 4 details the specific duties (Dharma) of the four Varnas in society.</li>
-                <li>It emphasizes that serving the Divine Mother is the easiest path to righteousness.</li>
-            </ul>
+    <section id="s1" class="section-box">
+        <h2>Chapters 1-10: Karma and the Geography of Hells | कर्म सिद्धांत और नरक वर्णन</h2>
+        
+        <div class="paragraph-block">
+            <span class="point-en">The opening chapters of the Uma Samhita emphasize that the physical universe operates under the infallible law of Karma. Lord Shiva explains to Goddess Parvati that every individual is the architect of their own destiny, and the soul must undergo experiences in various realms based on the ethical weight of their earthly deeds. This section meticulously describes the transition of the soul from the mortal body to the court of Yamaraja, where a cosmic ledger of virtues and vices determines the next stage of the journey toward purification or retribution.</span>
+            <span class="point-hi">उमा संहिता के प्रारंभिक अध्याय इस बात पर बल देते हैं कि भौतिक ब्रह्मांड कर्म के अचूक नियम के तहत संचालित होता है। भगवान शिव देवी पार्वती को समझाते हैं कि प्रत्येक व्यक्ति अपने भाग्य का निर्माता स्वयं है, और आत्मा को अपने सांसारिक कार्यों के नैतिक भार के आधार पर विभिन्न लोकों में अनुभवों से गुजरना पड़ता है। यह खंड नश्वर शरीर से यमराज के दरबार तक आत्मा के संक्रमण का सूक्ष्मता से वर्णन करता है, जहाँ गुणों और दोषों का एक ब्रह्मांडीय बहीखाता शुद्धिकरण या प्रतिशोध की दिशा में यात्रा के अगले चरण को निर्धारित करता है।</span>
         </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 5-8</span> The Path of Virtue (Dharma)</h3>
-            <ul>
-                <li>Discussion on the merits of truthfulness, non-violence, and charity.</li>
-                <li>Chapter 5 lists the ten virtues that constitute the foundation of a religious life.</li>
-                <li>The significance of various types of 'Dana' (donations) like land, gold, and food.</li>
-                <li>Uma is said to be pleased by those who protect the weak and the animals.</li>
-                <li>The chapter explains the 'Ashrama' system (Student, Householder, Ascetic, Sage).</li>
-                <li>Specific guidelines for 'Saucha' (internal and external cleanliness) are provided.</li>
-                <li>It warns that knowledge without character is like a flower without fragrance.</li>
-                <li>The concept of 'Karma Yoga' is introduced—performing duty as an offering to Uma.</li>
-                <li>Chapter 8 focuses on the power of speech and the avoidance of backbiting.</li>
-                <li>Living according to Dharma ensures that one receives the grace of the Mother.</li>
-            </ul>
+
+        <div class="paragraph-block">
+            <span class="point-en">A significant portion is dedicated to the detailed description of the various 'Narakas' or hellish dimensions designed for corrective punishment. The text lists specific hells such as Raurava, Maharaurava, and Tamisra, explaining that these are not merely places of suffering but represent the psychological and spiritual consequences of harming others. Each hell corresponds to a particular type of transgression, ensuring that the soul understands the pain it once inflicted upon fellow beings. This serves as a strong deterrent, urging the seeker to lead a life rooted in Ahimsa and truthfulness.</span>
+            <span class="point-hi">ग्रंथ का एक बड़ा हिस्सा सुधारात्मक दंड के लिए बनाए गए विभिन्न 'नरकों' या नारकीय आयामों के विस्तृत विवरण को समर्पित है। पाठ रौरव, महारौरव और तामिस्र जैसे विशिष्ट नरकों को सूचीबद्ध करता है, यह समझाते हुए कि ये केवल दुख के स्थान नहीं हैं बल्कि दूसरों को नुकसान पहुँचाने के मनोवैज्ञानिक और आध्यात्मिक परिणामों का प्रतिनिधित्व करते हैं। प्रत्येक नरक एक विशेष प्रकार के उल्लंघन के अनुरूप है, यह सुनिश्चित करते हुए कि आत्मा उस दर्द को समझे जो उसने कभी साथी प्राणियों पर ढाया था। यह एक कड़े निवारक के रूप में कार्य करता है, जो साधक को अहिंसा और सत्यनिष्ठा में निहित जीवन जीने का आग्रह करता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The Samhita provides a terrifying yet enlightening visual of the 'Vaitarani River', the boundary that separates the world of the living from the world of the ancestors. It is described as filled with blood and filth for the wicked, yet as a calm stream for those who have practiced charity and kindness. The text clarifies that the path across this river is determined by the spiritual merit accumulated through the 'Go-daana' (donation of a cow) and other sacred offerings during one's lifetime. This imagery highlights the interconnectedness of ritualistic practices and the soul's post-mortem ease.</span>
+            <span class="point-hi">संहिता 'वैतरणी नदी' का एक भयानक लेकिन ज्ञानवर्धक चित्रण प्रदान करती है, जो जीवितों की दुनिया को पूर्वजों की दुनिया से अलग करने वाली सीमा है। इसे दुष्टों के लिए रक्त और गंदगी से भरा बताया गया है, फिर भी उन लोगों के लिए एक शांत धारा के रूप में वर्णित किया गया है जिन्होंने दान और दया का अभ्यास किया है। पाठ स्पष्ट करता है कि इस नदी के पार का मार्ग अपने जीवनकाल के दौरान 'गो-दान' और अन्य पवित्र प्रसादों के माध्यम से संचित आध्यात्मिक योग्यता द्वारा निर्धारित किया जाता है। यह चित्रण कर्मकांडीय प्रथाओं और मृत्यु के पश्चात आत्मा की सुगमता के अंतर्संबंधों को उजागर करता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Furthermore, Lord Shiva elucidates the hierarchy of sins, ranging from minor lapses in character to 'Mahapatakas' or great sins like the killing of a learned person or betrayal of a trust. The text warns that such severe sins lead to long cycles of rebirth in lower life forms. This philosophical framework is used to explain the diversity of suffering and joy observed in the human world, attributing seemingly random fortunes to the hidden chain of cause and effect from previous existences. It encourages the reader to take full responsibility for their current life circumstances and start accumulating merit.</span>
+            <span class="point-hi">इसके अलावा, भगवान शिव चरित्र की छोटी खामियों से लेकर 'महापातकों' या महान पापों जैसे कि विद्वान व्यक्ति की हत्या या विश्वासघात तक के पापों के पदानुक्रम को स्पष्ट करते हैं। पाठ चेतावनी देता है कि ऐसे गंभीर पाप निम्न योनियों में पुनर्जन्म के लंबे चक्रों की ओर ले जाते हैं। इस दार्शनिक ढांचे का उपयोग मानव दुनिया में देखे जाने वाले दुख और खुशी की विविधता को समझाने के लिए किया जाता है, जो पिछले अस्तित्व के कार्य-कारण की छिपी हुई श्रृंखला के लिए स्पष्ट रूप से यादृच्छिक भाग्य को जिम्मेदार ठहराता है। यह पाठक को अपनी वर्तमान जीवन परिस्थितियों के लिए पूरी जिम्मेदारी लेने के लिए प्रोत्साहित करता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The description of the court of Yamaraja is presented with great gravity, where Chitragupta records every thought, word, and deed. This symbolizes the concept of an omnipresent witness that resides within the conscience of every living being. Shiva tells Parvati that while an individual might hide their crimes from society, they can never escape the internal registry of their own soul. The narrative serves to awaken a sense of divine fear and moral conscience, guiding the seeker toward a path of self-reflection and immediate correction of one's character before the inevitable end of the physical incarnation.</span>
+            <span class="point-hi">यमराज के दरबार का विवरण बड़ी गंभीरता के साथ प्रस्तुत किया गया है, जहाँ चित्रगुप्त हर विचार, शब्द और कार्य को दर्ज करते हैं। यह प्रत्येक जीवित प्राणी के विवेक के भीतर रहने वाले एक सर्वव्यापी साक्षी की अवधारणा का प्रतीक है। शिव पार्वती से कहते हैं कि जहाँ एक व्यक्ति अपने अपराधों को समाज से छिपा सकता है, वे कभी भी अपनी आत्मा के आंतरिक पंजीकरण से नहीं बच सकते। यह आख्यान दैवीय भय और नैतिक विवेक की भावना को जगाने का काम करता है, जो साधक को आत्म-चिंतन के मार्ग की ओर ले जाता है और भौतिक अवतार के अपरिहार्य अंत से पहले अपने चरित्र के तत्काल सुधार का मार्ग दिखाता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Finally, the first ten chapters conclude with the assurance that even the gravest sinner can seek redemption through genuine remorse and the chanting of Shiva's names. The text balances the fear of hell with the hope of divine mercy, suggesting that the ultimate purpose of describing these punishments is not to condemn but to transform. By understanding the suffering associated with vice, the soul naturally inclines toward the light of virtue and the worship of the Supreme Couple, Uma and Maheshwara, who stand as the compassionate judges of the universe, always ready to assist a repentant heart.</span>
+            <span class="point-hi">अंत में, पहले दस अध्याय इस आश्वासन के साथ समाप्त होते हैं कि सबसे गंभीर पापी भी वास्तविक पश्चाताप और शिव के नामों के जाप के माध्यम से मुक्ति पा सकता है। पाठ नरक के भय को दैवीय दया की आशा के साथ संतुलित करता है, यह सुझाव देते हुए कि इन दंडों का वर्णन करने का अंतिम उद्देश्य निंदा करना नहीं बल्कि रूपांतरित करना है। दोषों से जुड़े कष्टों को समझकर, आत्मा स्वाभाविक रूप से पुण्य के प्रकाश और सर्वोच्च युगल, उमा और महेश्वर की पूजा की ओर झुकती है, जो ब्रह्मांड के दयालु न्यायाधीश के रूप में खड़े हैं और एक पश्चाताप करने वाले हृदय की सहायता के लिए हमेशा तैयार रहते हैं।</span>
         </div>
     </section>
 
-    <!-- Worlds and Geography -->
-    <section id="worlds" class="chapter-group">
-        <div class="group-header"><h2>Chapters 9-15: Sacred Geography & The Worlds</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 9-12</span> The Seven Continents and Oceans</h3>
-            <ul>
-                <li>Detailed description of the earth's geography according to the Puranas.</li>
-                <li>Chapter 9 describes Jambudvipa and its nine divisions (Varshas).</li>
-                <li>Bharatavarsha (India) is identified as the 'Karma Bhoomi' where spiritual merit is earned.</li>
-                <li>Description of the golden Mount Meru, the axis of the world.</li>
-                <li>The dimensions of various oceans (Salt, Cane-juice, Wine, Ghee, etc.) are explained.</li>
-                <li>The movement of the sun, moon, and planets influenced by Shiva's will.</li>
-                <li>Chapter 11 details the specific holy rivers and mountains of Bharatavarsha.</li>
-                <li>Each mountain range is said to be guarded by a specific form of Uma.</li>
-                <li>The concept of 'Loka-Loka' mountains, marking the boundaries of the light world.</li>
-                <li>Worshipping the earth as a form of the Divine Mother brings stability and peace.</li>
-            </ul>
+    <section id="s2" class="section-box">
+        <h2>Chapters 11-20: Sins and the Science of Redemption | पापों का वर्गीकरण और शुद्धि</h2>
+        
+        <div class="paragraph-block">
+            <span class="point-en">In this section, the Uma Samhita transitions into a more analytical phase, categorizing sins based on their severity and the intention behind them. Shiva explains that sins are committed through three mediums: Mind (Manas), Speech (Vaacha), and Action (Kaaya). Mental sins, such as harboring hatred or greed, are described as the roots of all evil, while verbal sins like lying and slandering damage the social fabric. Physical sins, including violence and theft, carry the heaviest karmic burden. This classification helps the seeker identify the subtle ways in which negative energy accumulates in their daily lives.</span>
+            <span class="point-hi">इस खंड में, उमा संहिता अधिक विश्लेषणात्मक चरण में परिवर्तित होती है, पापों को उनकी गंभीरता और उनके पीछे के इरादे के आधार पर वर्गीकृत करती है। शिव समझाते हैं कि पाप तीन माध्यमों से होते हैं: मन, वाणी और कर्म। मानसिक पाप, जैसे घृणा या लालच पालना, सभी बुराइयों की जड़ बताए गए हैं, जबकि झूठ बोलना और निंदा करना जैसे मौखिक पाप सामाजिक ताने-बाने को नुकसान पहुँचाते हैं। हिंसा और चोरी सहित शारीरिक पाप सबसे भारी कर्म भार ढोते हैं। यह वर्गीकरण साधक को उन सूक्ष्म तरीकों की पहचान करने में मदद करता है जिनसे उनके दैनिक जीवन में नकारात्मक ऊर्जा जमा होती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The text provides a spiritual antidote to these sins through the 'Vidhi' of Dana or selfless charity. Shiva emphasizes that wealth is only purified when a portion of it is shared with the needy, the learned, and the distressed. Specific types of donations, such as Annadana (food), Jaladana (water), and Vastradana (clothing), are praised as the highest forms of service. It is taught that the act of giving weakens the ego and creates a resonance of abundance in the soul's journey. The intention behind the gift is considered more valuable than the material value of the gift itself, reinforcing the purity of heart.</span>
+            <span class="point-hi">ग्रंथ दान या निस्वार्थ सेवा की 'विधि' के माध्यम से इन पापों का आध्यात्मिक काट प्रदान करता है। शिव इस बात पर जोर देते हैं कि धन तभी शुद्ध होता है जब उसका एक हिस्सा जरूरतमंदों, विद्वानों और पीड़ितों के साथ साझा किया जाता है। अन्नदान, जलदान और वस्त्रदान जैसे विशिष्ट प्रकार के दानों को सेवा के उच्चतम रूपों के रूप में सराहा गया है। यह सिखाया जाता है कि देने का कार्य अहंकार को कमजोर करता है और आत्मा की यात्रा में समृद्धि की गूँज पैदा करता है। उपहार के पीछे के इरादे को उपहार के भौतिक मूल्य से अधिक मूल्यवान माना जाता है, जो हृदय की शुद्धता को सुदृढ़ करता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">A deep emphasis is placed on 'Vratas' or sacred vows that serve as periods of self-imposed discipline to burn away past karmic debts. Shiva describes how observing fasts on specific lunar days, particularly Pradosha and Shivaratri, can nullify even the most persistent negative traits. These vows are not presented as mere rituals but as a means to gain control over the senses and redirect the scattered energy of the mind toward divine contemplation. By sacrificing physical comforts for a higher spiritual goal, the devotee builds the internal fire of 'Tapas', which effectively dissolves the obstacles on the path of liberation.</span>
+            <span class="point-hi">'व्रतों' या पवित्र संकल्पों पर गहरा जोर दिया गया है जो पिछले कर्म ऋणों को जलाने के लिए स्व-लगाए गए अनुशासन की अवधि के रूप में कार्य करते हैं। शिव वर्णन करते हैं कि कैसे विशिष्ट चंद्र दिनों, विशेष रूप से प्रदोष और शिवरात्रि पर उपवास रखने से सबसे जिद्दी नकारात्मक लक्षण भी समाप्त हो सकते हैं। इन व्रतों को केवल कर्मकांड के रूप में नहीं बल्कि इंद्रियों पर नियंत्रण पाने और मन की बिखरी हुई ऊर्जा को दिव्य चिंतन की ओर पुनः निर्देशित करने के साधन के रूप में प्रस्तुत किया गया है। उच्च आध्यात्मिक लक्ष्य के लिए शारीरिक सुखों का त्याग करके, भक्त 'तप' की आंतरिक अग्नि का निर्माण करता है, जो मुक्ति के मार्ग की बाधाओं को प्रभावी ढंग से घोल देती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The chapters also discuss the virtue of 'Tirtha Yatra' or pilgrimage to holy sites as a powerful method of redemption. Shiva names various sacred rivers and mountains where the divine energy is most concentrated. Visiting these places with a heart full of devotion and taking a dip in holy waters is said to provide a spiritual reset. However, the Lord clarifies that an external pilgrimage is useless if the 'internal tirtha' of a pure character is missing. This holistic approach ensures that the seeker focuses on both external observance and internal transformation, making the process of purification complete and lasting.</span>
+            <span class="point-hi">अध्याय मुक्ति की एक शक्तिशाली विधि के रूप में पवित्र स्थलों की 'तीर्थ यात्रा' के गुण पर भी चर्चा करते हैं। शिव विभिन्न पवित्र नदियों और पर्वतों के नाम बताते हैं जहाँ दिव्य ऊर्जा सबसे अधिक केंद्रित है। इन स्थानों पर भक्ति भरे हृदय से जाने और पवित्र जल में डुबकी लगाने से आध्यात्मिक पुनः प्राप्ति (रीसेट) होने की बात कही गई है। हालाँकि, भगवान स्पष्ट करते हैं कि यदि शुद्ध चरित्र का 'आंतरिक तीर्थ' गायब है तो बाहरी तीर्थ यात्रा बेकार है। यह समग्र दृष्टिकोण सुनिश्चित करता है कि साधक बाहरी पालन और आंतरिक परिवर्तन दोनों पर ध्यान केंद्रित करे, जिससे शुद्धिकरण की प्रक्रिया पूर्ण और स्थायी हो जाए।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Special mention is made of the 'Panchakshara Mantra' (Na-Ma-Shi-Va-Ya) as the ultimate tool for nullifying sins. Shiva reveals that this mantra is the essence of all Vedas and has the power to protect the devotee from all directions. Even if one cannot perform complex rituals or donate vast amounts of wealth, the sincere repetition of this mantra with awareness is sufficient to attain grace. The vibration of the mantra acts like a divine light that dispels the darkness of the mind, gradually refining the practitioner's consciousness until it becomes a fit vessel for the highest wisdom and the experience of oneness.</span>
+            <span class="point-hi">पापों को नष्ट करने के अंतिम साधन के रूप में 'पंचाक्षर मंत्र' (नमः शिवाय) का विशेष उल्लेख किया गया है। शिव प्रकट करते हैं कि यह मंत्र सभी वेदों का सार है और इसमें भक्त की सभी दिशाओं से रक्षा करने की शक्ति है। यदि कोई जटिल अनुष्ठान नहीं कर सकता या भारी मात्रा में धन दान नहीं कर सकता, तो जागरूकता के साथ इस मंत्र का सच्चा दोहराव कृपा प्राप्त करने के लिए पर्याप्त है। मंत्र का स्पंदन एक दिव्य प्रकाश की तरह कार्य करता है जो मन के अंधेरे को दूर करता है, धीरे-धीरे साधक की चेतना को तब तक परिष्कृत करता है जब तक कि वह उच्चतम ज्ञान और एकता के अनुभव के लिए एक उपयुक्त पात्र न बन जाए।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Finally, this section concludes with the concept of 'Prayashchitta' or atonement rites. Shiva provides guidelines on how a person who has knowingly or unknowingly committed a mistake can reconcile with their conscience and society. Rather than focusing on guilt, the text encourages corrective action and the promise never to repeat the error. This compassionate perspective highlights that the path of Shiva is not one of eternal condemnation but of infinite opportunities for growth. Every soul, no matter how fallen, has the inherent potential to rise, provided they take the first step toward truth and surrender.</span>
+            <span class="point-hi">अंत में, यह खंड 'प्रायश्चित' या प्रायश्चित अनुष्ठानों की अवधारणा के साथ समाप्त होता है। शिव इस पर दिशा-निर्देश प्रदान करते हैं कि कैसे एक व्यक्ति जिसने जानबूझकर या अनजाने में गलती की है, वह अपने विवेक और समाज के साथ सामंजस्य बिठा सकता है। अपराधबोध पर ध्यान केंद्रित करने के बजाय, पाठ सुधारात्मक कार्रवाई और त्रुटि को कभी न दोहराने के वादे को प्रोत्साहित करता है। यह दयालु दृष्टिकोण इस बात पर प्रकाश डालता है कि शिव का मार्ग शाश्वत निंदा का नहीं बल्कि विकास के अनंत अवसरों का मार्ग है। हर आत्मा में, चाहे वह कितनी भी गिरी हुई क्यों न हो, ऊपर उठने की अंतर्निहित क्षमता होती है, बशर्ते वे सत्य और समर्पण की ओर पहला कदम बढ़ाएं।</span>
         </div>
     </section>
 
-    <!-- Hell and Karma -->
-    <section id="hells" class="chapter-group">
-        <div class="group-header"><h2>Chapters 16-25: Karmic Debts & Purgatory</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 16-20</span> The Nature of Sins and Hells</h3>
-            <ul>
-                <li>A sobering look at the consequences of negative actions (Papam).</li>
-                <li>Chapter 16 describes the 28 primary hells (Narakas) managed by Yamaraja.</li>
-                <li>Specific sins like theft, murder, and adultery are mapped to specific hells.</li>
-                <li>The 'Yatana Deha' (suffering body) is explained for the after-life journey.</li>
-                <li>It emphasizes that hells are not eternal but are corrective spiritual lessons.</li>
-                <li>Uma is the one who empowers Yamaraja to uphold the balance of justice.</li>
-                <li>The role of the 'Chitragupta' (the cosmic record keeper) is described.</li>
-                <li>Chapter 19 discusses the suffering of souls who do not honor their parents.</li>
-                <li>The text warns against the misuse of spiritual positions for personal gain.</li>
-                <li>Atonement (Prayashchitta) is provided as a way to avoid these outcomes.</li>
-            </ul>
+    <section id="s3" class="section-box">
+        <h2>Chapters 21-30: The Power of Penance and Saguna Worship | तपस्या और सगुण भक्ति</h2>
+        
+        <div class="paragraph-block">
+            <span class="point-en">This middle section of the Uma Samhita explores the transformative power of 'Tapasya' (Austerity) through the stories of various sages and kings. Lord Shiva explains that Tapasya is the process of heating the soul in the fire of discipline to remove the dross of worldly desires. It is through penance that the boundaries between the human and the divine become thin. The narrative emphasizes that the intensity of one's focus determines the speed of spiritual evolution. Shiva reminds Parvati that even the gods had to perform penance to attain their respective positions in the cosmic order, proving that effort and endurance are the foundations of all greatness.</span>
+            <span class="point-hi">उमा संहिता का यह मध्य भाग विभिन्न ऋषियों और राजाओं की कहानियों के माध्यम से 'तपस्या' की परिवर्तनकारी शक्ति की खोज करता है। भगवान शिव समझाते हैं कि तपस्या सांसारिक इच्छाओं के मैल को दूर करने के लिए अनुशासन की अग्नि में आत्मा को तपाने की प्रक्रिया है। तपस्या के माध्यम से ही मानव और दैवीय के बीच की सीमाएँ क्षीण हो जाती हैं। आख्यान इस बात पर जोर देता है कि व्यक्ति के ध्यान की तीव्रता आध्यात्मिक विकास की गति को निर्धारित करती है। शिव पार्वती को याद दिलाते हैं कि देवताओं को भी ब्रह्मांडीय व्यवस्था में अपने संबंधित पद प्राप्त करने के लिए तपस्या करनी पड़ी थी, जो साबित करता है कि प्रयास और धैर्य ही सभी महानता की नींव हैं।</span>
         </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 21-25</span> Atonement and Redemption</h3>
-            <ul>
-                <li>Detailed methods of purifying oneself from past negative karmas.</li>
-                <li>Chanting the names of Shiva and Uma is the primary 'Prayashchitta'.</li>
-                <li>Bathing in holy rivers like Ganga and Narmada washes away major sins.</li>
-                <li>Chapter 23 lists specific fasts (Vratas) that can redeem a person.</li>
-                <li>The merit of feeding the hungry as a form of cosmic apology.</li>
-                <li>Self-reflection and true repentance are described as the first steps to grace.</li>
-                <li>The power of the 'Panchakshara Mantra' in dissolving the seeds of sin.</li>
-                <li>How a sincere devotee can change their destiny through the Mother's intervention.</li>
-                <li>Stories of sinners who attained heaven through a single moment of devotion.</li>
-                <li>The section concludes by stating that grace is always more powerful than sin.</li>
-            </ul>
+
+        <div class="paragraph-block">
+            <span class="point-en">A central theme here is 'Saguna Bhakti' or worship of the Divine in a visible form. Shiva describes the specific rituals of 'Pujavidhi', including the offering of Bilva leaves, flowers, and incense. He explains that while the ultimate reality is formless, the human mind requires a form to focus its devotion. Worshipping the Linga or the image of the Divine Mother allows the devotee to establish a personal relationship with the Supreme. This external worship gradually leads to an internal state of meditation where the devotee sees the Lord residing within their own heart, bridging the gap between the worshipper and the worshipped.</span>
+            <span class="point-hi">यहाँ एक मुख्य विषय 'सगुण भक्ति' या दृश्य रूप में ईश्वर की पूजा है। शिव बिल्व पत्र, फूल और धूप चढ़ाने सहित 'पूजाविधि' के विशिष्ट अनुष्ठानों का वर्णन करते हैं। वे समझाते हैं कि जहाँ अंतिम सत्य निराकार है, वहीं मानव मन को अपनी भक्ति केंद्रित करने के लिए एक रूप की आवश्यकता होती है। लिंग या दिव्य माता की छवि की पूजा करने से भक्त को सर्वोच्च के साथ व्यक्तिगत संबंध स्थापित करने की अनुमति मिलती है। यह बाहरी पूजा धीरे-धीरे ध्यान की एक आंतरिक स्थिति की ओर ले जाती है जहाँ भक्त भगवान को अपने हृदय के भीतर निवास करते हुए देखता है, जिससे उपासक और उपास्य के बीच की दूरी कम हो जाती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The text narrates the awe-inspiring story of various devotees who, through their sheer willpower and devotion, compelled the Divine to manifest before them. These stories serve as moral lessons, illustrating that the Lord does not look at the social status or wealth of a person but at the purity of their intent. Shiva emphasizes that a simple leaf offered with love is far superior to a grand sacrifice performed with pride. This democratic nature of devotion ensures that the path to Shiva is open to all, regardless of their background, making the Uma Samhita a universal guide for spiritual aspirants across all walks of life.</span>
+            <span class="point-hi">ग्रंथ विभिन्न भक्तों की विस्मयकारी कहानी सुनाता है, जिन्होंने अपनी इच्छाशक्ति और भक्ति के बल पर ईश्वर को अपने सामने प्रकट होने के लिए विवश कर दिया। ये कहानियाँ नैतिक पाठ के रूप में काम करती हैं, यह दर्शाती हैं कि भगवान व्यक्ति की सामाजिक स्थिति या धन को नहीं बल्कि उनके इरादे की शुद्धता को देखते हैं। शिव इस बात पर जोर देते हैं कि प्रेम से अर्पित किया गया एक साधारण पत्ता गर्व के साथ किए गए भव्य यज्ञ से कहीं श्रेष्ठ है। भक्ति की यह लोकतांत्रिक प्रकृति सुनिश्चित करती है कि शिव का मार्ग सभी के लिए खुला है, चाहे उनकी पृष्ठभूमि कुछ भी हो, जो उमा संहिता को जीवन के सभी क्षेत्रों के आध्यात्मिक साधकों के लिए एक सार्वभौमिक मार्गदर्शक बनाती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Furthermore, the concept of 'Satsang' or the company of the holy is highlighted as a catalyst for spiritual progress. Shiva explains that just as fire can ignite dry wood, the presence of an enlightened soul can ignite the dormant divinity within a seeker. Listening to the glories of the Divine (Shravanam) is described as a powerful method to cleanse the mind of negative thoughts. The text encourages seekers to seek the guidance of a realized Master who can navigate them through the complexities of the mind and the illusions of the world. This emphasizes the importance of community and mentorship in the lonely journey of self-realization.</span>
+            <span class="point-hi">इसके अलावा, 'सत्संग' या संतों की संगति की अवधारणा को आध्यात्मिक प्रगति के लिए एक उत्प्रेरक के रूप में उजागर किया गया है। शिव समझाते हैं कि जिस तरह अग्नि सूखी लकड़ी को जला सकती है, उसी तरह एक प्रबुद्ध आत्मा की उपस्थिति साधक के भीतर सुप्त दिव्यता को प्रज्वलित कर सकती है। ईश्वर की महिमा सुनने (श्रवणम) को मन को नकारात्मक विचारों से मुक्त करने की एक शक्तिशाली विधि के रूप में वर्णित किया गया है। पाठ साधकों को एक सिद्ध गुरु का मार्गदर्शन प्राप्त करने के लिए प्रोत्साहित करता है जो उन्हें मन की जटिलताओं और दुनिया के भ्रमों से पार ले जा सके। यह आत्म-साक्षात्कार की अकेली यात्रा में समुदाय और मार्गदर्शन के महत्व पर जोर देता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The chapters also discuss the role of 'Asanas' and 'Pranayama' in preparing the physical body for higher meditation. Shiva reveals that the body is a temple of the soul and must be maintained with health and discipline. By controlling the breath, one can control the mind, and by stabilizing the body, one can stabilize the intellect. This integration of physical and spiritual practices shows that the Uma Samhita is not just a book of stories but a practical manual for holistic living. It teaches the devotee how to transform every action into a form of worship, ensuring that spirituality is not confined to a few hours of prayer but becomes a continuous state of being.</span>
+            <span class="point-hi">अध्याय उच्च ध्यान के लिए भौतिक शरीर को तैयार करने में 'आसन' और 'प्राणायाम' की भूमिका पर भी चर्चा करते हैं। शिव प्रकट करते हैं कि शरीर आत्मा का मंदिर है और इसे स्वास्थ्य और अनुशासन के साथ बनाए रखा जाना चाहिए। श्वास को नियंत्रित करके मन को नियंत्रित किया जा सकता है, और शरीर को स्थिर करके बुद्धि को स्थिर किया जा सकता है। शारीरिक और आध्यात्मिक प्रथाओं का यह एकीकरण दर्शाता है कि उमा संहिता केवल कहानियों की पुस्तक नहीं है बल्कि समग्र जीवन जीने के लिए एक व्यावहारिक मार्गदर्शिका है। यह भक्त को सिखाता है कि कैसे हर कार्य को पूजा के रूप में बदला जाए, यह सुनिश्चित करते हुए कि आध्यात्मिकता केवल कुछ घंटों की प्रार्थना तक सीमित न रहे बल्कि अस्तित्व की एक निरंतर अवस्था बन जाए।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Finally, the section reinforces the idea that the Divine is always accessible to those who call with a sincere heart. Shiva reassures Parvati that he and she are one, and they are always watching over their devotees like parents over their children. This comforting thought provides strength to the seeker to face the challenges of life with equanimity. The promise of divine protection acts as a foundation for building unshakable faith, which is the most critical ingredient in the path of devotion. By surrendering one's ego and desires at the feet of the Divine Couple, the soul experiences a sense of liberation even while living in the physical world.</span>
+            <span class="point-hi">अंत में, यह खंड इस विचार को सुदृढ़ करता है कि जो लोग सच्चे हृदय से पुकारते हैं उनके लिए ईश्वर सदैव सुलभ है। शिव पार्वती को आश्वस्त करते हैं कि वे और वह एक हैं, और वे हमेशा अपने भक्तों की रक्षा वैसे ही करते हैं जैसे माता-पिता अपने बच्चों की। यह आरामदायक विचार साधक को जीवन की चुनौतियों का समभाव से सामना करने की शक्ति प्रदान करता है। दैवीय सुरक्षा का वादा अटूट विश्वास बनाने के लिए एक आधार के रूप में कार्य करता है, जो भक्ति के मार्ग में सबसे महत्वपूर्ण तत्व है। दिव्य युगल के चरणों में अपने अहंकार और इच्छाओं को समर्पित करके, आत्मा भौतिक दुनिया में रहते हुए भी मुक्ति की भावना का अनुभव करती है।</span>
         </div>
     </section>
 
-    <!-- Devi Mahatmya -->
-    <section id="devi" class="chapter-group">
-        <div class="group-header"><h2>Chapters 26-35: The Manifestations of Uma</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 26-30</span> The Birth of Parvati and Sati</h3>
-            <ul>
-                <li>The transition of the Divine Mother from Sati to Parvati.</li>
-                <li>Sati’s sacrifice at Daksha’s Yagna and the grief of Shiva.</li>
-                <li>The birth of Uma as the daughter of Himavat (Himalayas) and Mena.</li>
-                <li>Her childhood and Her innate attraction toward Mahadeva.</li>
-                <li>Sage Narada's role in guiding Uma toward intense penance.</li>
-                <li>The 'Pancha-Agni' penance performed by Uma to win Shiva's heart.</li>
-                <li>Chapter 29 details the dialogue between the disguised Shiva and Parvati.</li>
-                <li>Shiva tests Her resolve by criticizing Himself, but Uma remains steadfast.</li>
-                <li>The divine wedding of Shiva and Parvati is described in Chapter 30.</li>
-                <li>The union represents the reconciliation of the householder and the ascetic life.</li>
-            </ul>
+    <section id="s4" class="section-box">
+        <h2>Chapters 31-40: The Glories of Shakti and Her Manifestations | देवी शक्ति की महिमा और अवतार</h2>
+        
+        <div class="paragraph-block">
+            <span class="point-en">This section of the Uma Samhita is a magnificent ode to the Divine Mother, describing her as the primordial energy (Shakti) without which even Shiva remains unmanifest. Lord Shiva explains to the sages that Parvati is not just his consort but the creative force that brings the entire universe into being. She is the intelligence in the wise, the strength in the powerful, and the compassion in the kind. This philosophical understanding establishes the equality and interdependence of the masculine and feminine principles in cosmic creation. The narrative shifts to focus on her role as the supreme protector who manifests whenever the balance of the world is threatened.</span>
+            <span class="point-hi">उमा संहिता का यह भाग दिव्य माता के लिए एक भव्य स्तुति है, जिसमें उन्हें उस आदि शक्ति के रूप में वर्णित किया गया है जिसके बिना शिव भी अव्यक्त रहते हैं। भगवान शिव ऋषियों को समझाते हैं कि पार्वती केवल उनकी पत्नी नहीं हैं बल्कि वह रचनात्मक शक्ति हैं जो पूरे ब्रह्मांड को अस्तित्व में लाती हैं। वह बुद्धिमानों में बुद्धि, शक्तिशालियों में शक्ति और दयालुों में करुणा हैं। यह दार्शनिक समझ ब्रह्मांडीय सृष्टि में पुरुष और स्त्री सिद्धांतों की समानता और अंतर्संबंध को स्थापित करती है। आख्यान अब उनके उस सर्वोच्च रक्षक के रूप में केंद्रित होता है जो दुनिया का संतुलन बिगड़ने पर प्रकट होती हैं।</span>
         </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 31-35</span> Durga and the War on Demons</h3>
-            <ul>
-                <li>Uma’s manifestation as 'Durga' to protect the gods from Mahishasura.</li>
-                <li>The collective energy of all gods merging into the form of the Devi.</li>
-                <li>Chapter 32 describes the various weapons given to Her by the deities.</li>
-                <li>The battle against the demon army and the slaying of Mahishasura.</li>
-                <li>Manifestations of Kali, Chandika, and the Matrikas.</li>
-                <li>The destruction of demons Shumbha and Nishumbha.</li>
-                <li>The philosophical meaning of demons as internal vices (ego, lust, anger).</li>
-                <li>Uma is called 'Vishwa-Janani' (Mother of the Universe) in Her victory.</li>
-                <li>The gods offer the 'Devi Kavacham' as a prayer for protection.</li>
-                <li>It establishes Uma as the ultimate 'Durga-Ti-Nashini' (Destroyer of Distress).</li>
-            </ul>
+
+        <div class="paragraph-block">
+            <span class="point-en">The text narrates the epic battles of the Goddess against formidable demons like Mahishasura and others who had disrupted the peace of the three worlds. These stories symbolize the internal struggle between the lower instincts (represented by the demons) and the higher spiritual consciousness (represented by the Goddess). Shiva details how the Mother takes various forms—Durga, Kali, Lakshmi, and Saraswati—to address different aspects of existence. Whether it is the destruction of ignorance or the bestowal of wealth and wisdom, it is the same one Shakti working through different names and forms to nurture her creation.</span>
+            <span class="point-hi">ग्रंथ महिषासुर जैसे दुर्जेय असुरों और अन्य लोगों के विरुद्ध देवी के महाकाव्य युद्धों का वर्णन करता है जिन्होंने तीनों लोकों की शांति भंग कर दी थी। ये कहानियाँ निम्न प्रवृत्तियों (असुरों द्वारा प्रतिनिधित्व) और उच्च आध्यात्मिक चेतना (देवी द्वारा प्रतिनिधित्व) के बीच आंतरिक संघर्ष का प्रतीक हैं। शिव विस्तार से बताते हैं कि कैसे माता अस्तित्व के विभिन्न पहलुओं को संबोधित करने के लिए दुर्गा, काली, लक्ष्मी और सरस्वती जैसे विभिन्न रूप धारण करती हैं। चाहे वह अज्ञानता का विनाश हो या धन और बुद्धि का दान, यह वही एक शक्ति है जो अपनी सृष्टि के पोषण के लिए विभिन्न नामों और रूपों के माध्यम से कार्य करती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">A deep emphasis is placed on the 'Lila' or the divine play of the Mother, where she appears to be limited by human emotions yet remains the sovereign ruler of time and space. Her incarnations are described not just as heroic feats but as lessons in dharma. Shiva explains that the Goddess manifests to satisfy the prayers of her devotees, proving that divine intervention is always possible through pure faith. The text beautifully captures the duality of the Mother—she is both the terrifying destroyer of evil and the gentle, nurturing mother who provides comfort to the distressed, showing that the Divine contains all contradictions within itself.</span>
+            <span class="point-hi">माता की 'लीला' या दिव्य खेल पर गहरा जोर दिया गया है, जहाँ वह मानवीय भावनाओं से सीमित प्रतीत होती हैं, फिर भी समय और स्थान की संप्रभु शासक बनी रहती हैं। उनके अवतारों को न केवल वीरतापूर्ण कार्यों के रूप में बल्कि धर्म के पाठों के रूप में वर्णित किया गया है। शिव समझाते हैं कि देवी अपने भक्तों की प्रार्थनाओं को संतुष्ट करने के लिए प्रकट होती हैं, यह साबित करते हुए कि शुद्ध भक्ति के माध्यम से दैवीय हस्तक्षेप हमेशा संभव है। पाठ माता के द्वैत को खूबसूरती से पकड़ता है—वह बुराई का भयानक विनाशक भी है और कोमल, पोषण करने वाली माता भी जो पीड़ितों को आराम प्रदान करती है, यह दर्शाती है कि ईश्वर अपने भीतर सभी विरोधाभासों को समाहित रखता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The chapters discuss the 'Prakriti-Tattva', explaining that the material world is but a reflection of the Goddess's own being. Shiva clarifies that those who worship nature with respect are indirectly worshipping the Mother. This environmental consciousness is a unique feature of the Uma Samhita, urging humans to live in harmony with the elements. The Goddess is seen in the flowing rivers, the stable mountains, and the life-giving trees. By recognizing her presence in every grain of sand, the seeker develops a sense of universal love and empathy, which is essential for breaking the shells of ego and experiencing the vastness of the cosmos.</span>
+            <span class="point-hi">अध्याय 'प्रकृति-तत्व' पर चर्चा करते हैं, यह समझाते हुए कि भौतिक संसार देवी के अपने अस्तित्व का प्रतिबिंब मात्र है। शिव स्पष्ट करते हैं कि जो लोग सम्मान के साथ प्रकृति की पूजा करते हैं, वे परोक्ष रूप से माता की पूजा कर रहे हैं। यह पर्यावरणीय चेतना उमा संहिता की एक अनूठी विशेषता है, जो मनुष्यों को पंचतत्वों के साथ सद्भाव में रहने का आग्रह करती है। देवी बहती नदियों, स्थिर पर्वतों और जीवन देने वाले वृक्षों में दिखाई देती हैं। रेत के हर कण में उनकी उपस्थिति को पहचानकर, साधक सार्वभौमिक प्रेम और सहानुभूति की भावना विकसित करता है, जो अहंकार के आवरण को तोड़ने और ब्रह्मांड की विशालता का अनुभव करने के लिए आवश्यक है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Specific rituals dedicated to the Goddess, such as 'Kumari Puja' and 'Navratri', are described with detailed instructions. Shiva explains that worshipping young girls as the embodiment of the Goddess is a way to honor the purity and potential of the feminine spirit. These rituals are designed to cultivate a culture of respect toward women in society. The power of the 'Devi Kavacham' or the protective shield of the Goddess is also revealed, which guards the practitioner against physical dangers and spiritual pitfalls. By invoking the different names of the Mother, the devotee creates a sanctuary of positive energy around themselves, ensuring safety on all levels of existence.</span>
+            <span class="point-hi">देवी को समर्पित विशिष्ट अनुष्ठान, जैसे 'कुमारी पूजा' और 'नवरात्रि', विस्तृत निर्देशों के साथ वर्णित किए गए हैं। शिव समझाते हैं कि युवा कन्याओं को देवी के अवतार के रूप में पूजना स्त्री भावना की शुद्धता और क्षमता का सम्मान करने का एक तरीका है। ये अनुष्ठान समाज में महिलाओं के प्रति सम्मान की संस्कृति विकसित करने के लिए बनाए गए हैं। 'देवी कवचम' या देवी के सुरक्षा कवच की शक्ति का भी खुलासा किया गया है, जो साधक को शारीरिक खतरों और आध्यात्मिक कमियों से बचाता है। माता के विभिन्न नामों का आह्वान करके, भक्त अपने चारों ओर सकारात्मक ऊर्जा का एक अभयारण्य बनाता है, जिससे अस्तित्व के सभी स्तरों पर सुरक्षा सुनिश्चित होती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">In conclusion, this section reminds the seeker that while Shiva provides the consciousness, it is Uma who provides the experience. Without the Mother's grace, one cannot navigate the illusions (Maya) of the world to reach the truth of Shiva. Therefore, the worship of the Goddess is presented as an indispensable step on the path of liberation. The Uma Samhita encourages a balanced approach where the devotee honors both the static and dynamic aspects of the Divine. By surrendering to the Mother's will, the soul finds its way back to its original home, realizing that the entire journey was facilitated by the compassionate gaze of the Divine Mother.</span>
+            <span class="point-hi">निष्कर्ष में, यह खंड साधक को याद दिलाता है कि जहाँ शिव चेतना प्रदान करते हैं, वहीं उमा अनुभव प्रदान करती हैं। माता की कृपा के बिना, कोई भी शिव के सत्य तक पहुँचने के लिए दुनिया के भ्रम (माया) को पार नहीं कर सकता। इसलिए, देवी की पूजा को मुक्ति के मार्ग पर एक अपरिहार्य कदम के रूप में प्रस्तुत किया गया है। उमा संहिता एक संतुलित दृष्टिकोण को प्रोत्साहित करती है जहाँ भक्त ईश्वर के स्थिर और गतिशील दोनों पहलुओं का सम्मान करता है। माता की इच्छा के प्रति आत्मसमर्पण करके, आत्मा अपने मूल घर का रास्ता खोज लेती है, यह महसूस करते हुए कि पूरी यात्रा दिव्य माता की दयालु दृष्टि द्वारा सुगम बनाई गई थी।</span>
         </div>
     </section>
 
-    <!-- Final Chapters -->
-    <section id="shakti" class="chapter-group">
-        <div class="group-header"><h2>Chapters 36-51: The Power of Bhakti & Moksha</h2></div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 36-45</span> Rituals, Vratas and Sacred Days</h3>
-            <ul>
-                <li>Focus on practical ways to integrate Uma-worship into daily life.</li>
-                <li>The significance of the Navratri festival in worshipping the nine forms of Durga.</li>
-                <li>Chapter 38 details the 'Uma-Maheshwara Vrata' for domestic happiness.</li>
-                <li>The merits of offering 'Bilva' leaves and red flowers to the Mother.</li>
-                <li>Rules for performing 'Kumari Puja' (worshipping young girls as forms of Devi).</li>
-                <li>The importance of 'Suhasini Puja' for married women.</li>
-                <li>Sacred days like Gauri Tritiya and their spiritual importance.</li>
-                <li>The use of the 'Beeja Mantras' associated with various forms of Shakti.</li>
-                <li>Guidelines for temple construction and the installation of Devi idols.</li>
-                <li>How to perform 'Arati' with the spirit of total surrender.</li>
-            </ul>
+    <section id="s5" class="section-box">
+        <h2>Chapters 41-51: The Dialogue of Truth and Final Liberation | परम ज्ञान और कैवल्य</h2>
+        
+        <div class="paragraph-block">
+            <span class="point-en">The final chapters of the Uma Samhita present the pinnacle of spiritual wisdom through a sublime dialogue between Goddess Uma and the sages. Having covered the external paths of karma and devotion, the text now turns inward toward 'Jnana' or pure knowledge. Uma reveals that the ultimate reality is beyond the dualities of birth and death, pain and pleasure. She explains that the individual soul (Jiva) is like a wave in the ocean of supreme consciousness (Shiva), and the realization of this identity is the true meaning of 'Moksha'. This section serves as the final awakening for the seeker, stripping away the layers of false identity and revealing the eternal light within.</span>
+            <span class="point-hi">उमा संहिता के अंतिम अध्याय देवी उमा और ऋषियों के बीच एक उदात्त संवाद के माध्यम से आध्यात्मिक ज्ञान के शिखर को प्रस्तुत करते हैं। कर्म और भक्ति के बाहरी मार्गों को कवर करने के बाद, पाठ अब 'ज्ञान' या शुद्ध बोध की ओर मुड़ता है। उमा बताती हैं कि अंतिम सत्य जन्म और मृत्यु, दर्द और सुख के द्वंद्वों से परे है। वह समझाती हैं कि व्यक्तिगत आत्मा (जीव) सर्वोच्च चेतना (शिव) के सागर में एक लहर की तरह है, और इस पहचान का एहसास ही 'मोक्ष' का सच्चा अर्थ है। यह खंड साधक के लिए अंतिम जागृति के रूप में कार्य करता है, जो झूठी पहचान की परतों को हटा देता है और भीतर के शाश्वत प्रकाश को प्रकट करता है।</span>
         </div>
-        <div class="chapter-card">
-            <h3 class="chapter-title"><span>Ch 46-51</span> The Essence of Liberation</h3>
-            <ul>
-                <li>The Samhita moves toward the final philosophical goal: Moksha.</li>
-                <li>Dialogue between Shiva and Uma about the nature of the soul (Atman).</li>
-                <li>Chapter 47 explains the difference between Maya and the ultimate Truth.</li>
-                <li>The role of the Guru in unveiling the Divine Mother's presence in the heart.</li>
-                <li>Meditation on the 'Soham' (I am He/She) consciousness.</li>
-                <li>The final dissolution of the ego into the ocean of the Mother’s love.</li>
-                <li>Chapter 50 describes the state of a 'Jivanmukta' (liberated while alive).</li>
-                <li>The merit of reading the Uma Samhita is equivalent to a thousand years of penance.</li>
-                <li>It concludes with a prayer for universal peace and prosperity (Sarve Bhavantu Sukhinah).</li>
-                <li>The Phalashruti: Success in all spheres for the sincere reader of this Samhita.</li>
-            </ul>
+
+        <div class="paragraph-block">
+            <span class="point-en">A key focus here is the 'Vichara' or the process of self-inquiry. The Goddess teaches the sages how to observe the mind without judgment, gradually moving past thoughts and emotions to reach the source of awareness. She explains that the world appears real only as long as the mind is engaged in desire; when the mind is silenced through wisdom, the world is seen as a divine play of light. This shift in perspective transforms the seeker from a victim of circumstances into a master of their own consciousness. The instructions are direct and profound, aimed at causing an immediate shift in the practitioner's understanding of themselves and the universe.</span>
+            <span class="point-hi">यहाँ एक प्रमुख ध्यान 'विचार' या आत्म-पूछताछ की प्रक्रिया पर है। देवी ऋषियों को सिखाती हैं कि कैसे बिना निर्णय के मन का निरीक्षण किया जाए, धीरे-धीरे विचारों और भावनाओं को पार करते हुए जागरूकता के स्रोत तक पहुँचा जाए। वह समझाती हैं कि दुनिया तभी तक वास्तविक लगती है जब तक मन इच्छा में लगा रहता है; जब मन ज्ञान के माध्यम से शांत हो जाता है, तो दुनिया प्रकाश के एक दिव्य खेल के रूप में देखी जाती है। परिप्रेक्ष्य में यह बदलाव साधक को परिस्थितियों के शिकार से अपनी चेतना के स्वामी के रूप में बदल देता है। निर्देश प्रत्यक्ष और गहरे हैं, जिनका उद्देश्य साधक की स्वयं और ब्रह्मांड की समझ में तत्काल बदलाव लाना है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The text also discusses the state of 'Jivanmukti' or being liberated while still living in the body. Uma describes such an enlightened being as someone who performs their duties perfectly but remains completely detached from the results. For a Jivanmukta, there is no 'other'; they see themselves in all beings and all beings in themselves. This state of universal oneness is the highest ethical and spiritual achievement. The narrative highlights that liberation is not a distant goal to be attained after death, but a present reality to be discovered here and now through the grace of the Mother and the path of wisdom.</span>
+            <span class="point-hi">ग्रंथ 'जीवन्मुक्ति' की स्थिति या शरीर में रहते हुए मुक्त होने पर भी चर्चा करता है। उमा ऐसे प्रबुद्ध व्यक्ति का वर्णन एक ऐसे व्यक्ति के रूप में करती हैं जो अपने कर्तव्यों को पूरी तरह से निभाता है लेकिन परिणामों से पूरी तरह अलग रहता है। एक जीवन्मुक्त के लिए कोई 'दूसरा' नहीं है; वे खुद को सभी प्राणियों में और सभी प्राणियों को खुद में देखते हैं। सार्वभौमिक एकता की यह स्थिति उच्चतम नैतिक और आध्यात्मिक उपलब्धि है। आख्यान इस बात पर प्रकाश डालता है कि मुक्ति मृत्यु के बाद प्राप्त किया जाने वाला कोई दूर का लक्ष्य नहीं है, बल्कि माता की कृपा और ज्ञान के मार्ग के माध्यम से अभी और यहीं खोजी जाने वाली एक वर्तमान वास्तविकता है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Furthermore, the importance of the 'Guru-Shishya Parampara' is reiterated in the context of final wisdom. Uma explains that words can only point to the truth, but the experience of truth is transmitted in silence through the presence of a realized Master. She encourages the sages to cherish the lineage of knowledge that has been passed down since the dawn of time. This reverence for tradition ensures that the wisdom is preserved in its purity and remains accessible to future generations. The Mother’s teachings are presented as the heart of the Vedas and the secret essence of the Upanishads, making the Uma Samhita a bridge between ancient ritual and timeless philosophy.</span>
+            <span class="point-hi">इसके अलावा, अंतिम ज्ञान के संदर्भ में 'गुरु-शिष्य परंपरा' के महत्व को दोहराया गया है। उमा बताती हैं कि शब्द केवल सत्य की ओर इशारा कर सकते हैं, लेकिन सत्य का अनुभव एक सिद्ध गुरु की उपस्थिति के माध्यम से मौन में प्रसारित होता है। वह ऋषियों को उस ज्ञान की वंशावली को संजोने के लिए प्रोत्साहित करती हैं जो समय के प्रारंभ से चली आ रही है। परंपरा के प्रति यह सम्मान सुनिश्चित करता है कि ज्ञान अपनी शुद्धता में संरक्षित रहे और आने वाली पीढ़ियों के लिए सुलभ रहे। माता की शिक्षाओं को वेदों के हृदय और उपनिषदों के गुप्त सार के रूप में प्रस्तुत किया गया है, जो उमा संहिता को प्राचीन कर्मकांड और कालातीत दर्शन के बीच एक सेतु बनाती है।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">The Samhita concludes with a grand description of 'Kaivalya'—the state of absolute bliss and isolation from the illusions of Prakriti. In this state, the seeker becomes one with Shiva, experiencing the infinite peace that passes all understanding. Uma assures that even reading or listening to this Samhita with devotion can plant the seed of liberation in the heart of a person. The text ends on a note of deep peace and blessing, offering a final salutation to the Supreme Truth. It leaves the reader with a sense of purpose and the assurance that their spiritual efforts will eventually lead them to the shore of eternal light.</span>
+            <span class="point-hi">संहिता 'कैवल्य' के एक भव्य विवरण के साथ समाप्त होती है—पूर्ण आनंद की स्थिति और प्रकृति के भ्रमों से अलगाव। इस स्थिति में, साधक शिव के साथ एक हो जाता है, उस अनंत शांति का अनुभव करता है जो सभी समझ से परे है। उमा आश्वासन देती हैं कि भक्ति के साथ इस संहिता को पढ़ना या सुनना भी व्यक्ति के हृदय में मुक्ति का बीज बो सकता है। पाठ गहरी शांति और आशीर्वाद के साथ समाप्त होता है, जो सर्वोच्च सत्य को अंतिम नमस्कार अर्पित करता है। यह पाठक को उद्देश्य की भावना और आश्वासन के साथ छोड़ता है कि उनके आध्यात्मिक प्रयास अंततः उन्हें शाश्वत प्रकाश के किनारे तक ले जाएंगे।</span>
+        </div>
+
+        <div class="paragraph-block">
+            <span class="point-en">Finally, the goddess emphasizes that the path to the Divine is paved with the bricks of compassion and service. She tells the sages that to truly know her, one must serve the suffering humanity, as she resides in the hearts of the poor and the broken. This call to action prevents the seeker from withdrawing into selfish isolation and encourages them to express their spiritual realization through acts of kindness. Thus, the Uma Samhita closes the circle, linking high philosophical inquiry back to daily ethical living. It leaves the seeker not just with knowledge but with a heart full of love for all of creation, reflecting the true nature of the Divine Mother herself.</span>
+            <span class="point-hi">अंत में, देवी इस बात पर जोर देती हैं कि ईश्वर का मार्ग करुणा और सेवा की ईंटों से बना है। वह ऋषियों से कहती हैं कि उन्हें वास्तव में जानने के लिए पीड़ित मानवता की सेवा करनी चाहिए, क्योंकि वह गरीबों और टूटे हुए लोगों के दिलों में निवास करती हैं। कार्रवाई का यह आह्वान साधक को स्वार्थी अलगाव में जाने से रोकता है और उन्हें दयालुता के कार्यों के माध्यम से अपनी आध्यात्मिक प्राप्ति व्यक्त करने के लिए प्रोत्साहित करता है। इस प्रकार, उमा संहिता चक्र को पूरा करती है, उच्च दार्शनिक जांच को वापस दैनिक नैतिक जीवन से जोड़ती है। यह साधक को न केवल ज्ञान के साथ, बल्कि पूरी सृष्टि के लिए प्रेम से भरे हृदय के साथ छोड़ता है, जो स्वयं दिव्य माता के वास्तविक स्वभाव को दर्शाता है।</span>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <div class="footer-content">
-        <h3>ॐ नमः शिवाय | शिव महापुराण</h3>
-        <p>Uma Samhita Archive | Dedicated to the Divine Mother Parvati</p>
-        <p>&copy; 2026 Digital Dharmic Archive | Gurgaon, Haryana</p>
+    <h3>ॐ नमः शिवाय</h3>
+    <p>Shiv Maha Puran - Kailash Samhita Summary (51 Chapters) | From sin to virtue and death to immortality—the divine light of Uma Samhita</p>
+    <p>Gurgaon, Haryana, India</p>
+	
+	<div class="audio-controls">
+        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
+        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
     </div>
 </footer>
+
+<script src="./javascript/audio.js"></script>
 
 </body>
 </html>
