@@ -5,8 +5,7 @@ let chunkIndex = 0;
 let isPaused = false;
 
 /**
- * Completely stops audio and resets all states.
- * Use this for language switching or when audio finishes.
+ * Resets the entire audio state.
  */
 function stopAllAudio() {
     synth.cancel();
@@ -14,15 +13,11 @@ function stopAllAudio() {
     textChunks = [];
     chunkIndex = 0;
     isPaused = false;
-
     updateButtonUI(null);
 }
 
 /**
- * Updates the button appearance based on the current state:
- * - Playing: ⏸️ PAUSE
- * - Paused: ▶️ RESUME
- * - Stopped: 🔊 Listen...
+ * Updates the UI state of the buttons.
  */
 function updateButtonUI(lang) {
     const btnHi = document.getElementById('btn-hi');
@@ -31,20 +26,18 @@ function updateButtonUI(lang) {
 
     buttons.forEach(btn => {
         if (!btn) return;
-        
         const isCurrent = (lang === 'hi-IN' && btn.id === 'btn-hi') || (lang === 'en-US' && btn.id === 'btn-en');
 
         if (isCurrent) {
             if (isPaused) {
                 btn.innerHTML = `▶️ RESUME AUDIO`;
-                btn.style.backgroundColor = "#28a745"; // Green for resume
+                btn.style.backgroundColor = "#28a745"; // Green
             } else {
                 btn.innerHTML = `⏸️ PAUSE AUDIO`;
-                btn.style.backgroundColor = "#c5a059"; // Gold for pause
+                btn.style.backgroundColor = "#c5a059"; // Gold
             }
             btn.style.color = "white";
         } else {
-            // Reset the other button to its original state
             btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
             btn.style.background = "transparent";
             btn.style.color = "#d1c4b2";
@@ -53,10 +46,10 @@ function updateButtonUI(lang) {
 }
 
 /**
- * Handles the click logic for the audio buttons.
+ * Toggles play, pause, and resume.
  */
 function toggleAudio(lang) {
-    // 1. If the same language is already active, toggle Pause/Resume
+    // 1. If the same language is active
     if (currentLang === lang) {
         if (synth.speaking && !isPaused) {
             synth.pause();
@@ -64,35 +57,50 @@ function toggleAudio(lang) {
             updateButtonUI(lang);
             return;
         } else if (isPaused) {
-            synth.resume();
             isPaused = false;
             updateButtonUI(lang);
+            
+            // Try official resume first
+            synth.resume();
+
+            // MOBILE FIX: If resume fails to start audio within 200ms, force restart the chunk
+            setTimeout(() => {
+                if (!synth.speaking) {
+                    synth.cancel();
+                    playChunk();
+                }
+            }, 200);
             return;
         }
     }
 
-    // 2. If a different language is clicked or starting new, stop current audio
+    // 2. Starting fresh or switching languages
     stopAllAudio();
-    
     currentLang = lang;
-    isPaused = false;
     
-    // Select text based on language
     const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
     const elements = document.querySelectorAll(selector);
-    textChunks = Array.from(elements).map(el => el.innerText);
+
+    // MICRO-CHUNKING: Split long text into sentences to prevent "restart-from-beginning" bugs
+    textChunks = [];
+    elements.forEach(el => {
+        // Splitting by English periods and Hindi Purna Viram
+        const sentences = el.innerText.match(/[^.।!?]+[.।!?]*/g) || [el.innerText];
+        sentences.forEach(s => {
+            const trimmed = s.trim();
+            if (trimmed.length > 0) textChunks.push(trimmed);
+        });
+    });
 
     if (textChunks.length === 0) return;
 
     updateButtonUI(lang);
     chunkIndex = 0;
-    
-    // Start playback
     playChunk();
 }
 
 /**
- * Plays the current text chunk.
+ * Handles the playback of individual sentence chunks.
  */
 function playChunk() {
     if (!currentLang || chunkIndex >= textChunks.length) {
@@ -100,44 +108,48 @@ function playChunk() {
         return;
     }
 
-    // "Keep Alive" Metadata for mobile lock screens
+    // Media Session: This keeps the mobile browser's audio process prioritized
     if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: currentLang === 'hi-IN' ? 'शिव महापुराण' : 'Shiv Mahapuran',
             artist: 'Satarudra Samhita',
             album: 'Shiva Puran'
         });
-        
-        // Handle lock-screen play/pause buttons if supported
-        navigator.mediaSession.setActionHandler('play', () => { synth.resume(); isPaused = false; updateButtonUI(currentLang); });
-        navigator.mediaSession.setActionHandler('pause', () => { synth.pause(); isPaused = true; updateButtonUI(currentLang); });
+
+        navigator.mediaSession.setActionHandler('play', () => { 
+            if (isPaused) { isPaused = false; synth.resume(); updateButtonUI(currentLang); } 
+        });
+        navigator.mediaSession.setActionHandler('pause', () => { 
+            if (!isPaused) { isPaused = true; synth.pause(); updateButtonUI(currentLang); } 
+        });
     }
 
     const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
     utter.lang = currentLang;
-    utter.rate = 0.75;
+    utter.rate = 0.85; // Optimal speed for mobile clarity
 
     utter.onend = () => {
-        // Only proceed to next chunk if not intentionally paused
+        // Only move to next chunk if we didn't hit pause
         if (!isPaused) {
             chunkIndex++;
-            setTimeout(playChunk, 100);
+            playChunk();
         }
     };
 
-    utter.onerror = (event) => {
-        console.error("Speech Error:", event);
-        stopAllAudio();
+    utter.onerror = (e) => {
+        // Ignore "interrupted" errors (common on lock screens) and keep going
+        if (e.error !== 'interrupted') {
+            console.error("Speech Error:", e);
+            stopAllAudio();
+        }
     };
 
     synth.speak(utter);
 }
 
 /**
- * Event Listeners for Tab/Phone behavior
+ * Tab/Phone Behavior: Pause instead of Stop.
  */
-
-// PAUSE when screen locks or tab switches (prevents losing progress)
 window.addEventListener('blur', () => {
     if (synth.speaking && !isPaused) {
         synth.pause();
@@ -146,5 +158,4 @@ window.addEventListener('blur', () => {
     }
 });
 
-// KILL audio only when the tab/browser is actually closed
 window.addEventListener('beforeunload', stopAllAudio);
