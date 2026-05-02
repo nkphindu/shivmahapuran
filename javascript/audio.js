@@ -2,7 +2,7 @@ const synth = window.speechSynthesis;
 let currentLang = null;
 let textChunks = [];
 let chunkIndex = 0;
-let isPaused = false; // New state tracker
+let isPaused = false;
 
 function stopAllAudio() {
     synth.cancel();
@@ -10,7 +10,6 @@ function stopAllAudio() {
     textChunks = [];
     chunkIndex = 0;
     isPaused = false;
-
     updateButtonUI(null);
 }
 
@@ -21,17 +20,11 @@ function updateButtonUI(lang) {
 
     buttons.forEach(btn => {
         if (!btn) return;
-        
         const isCurrent = (lang === 'hi-IN' && btn.id === 'btn-hi') || (lang === 'en-US' && btn.id === 'btn-en');
 
         if (isCurrent) {
-            if (isPaused) {
-                btn.innerHTML = `▶️ RESUME AUDIO`;
-                btn.style.backgroundColor = "#59c5a0"; // Greenish for resume
-            } else {
-                btn.innerHTML = `⏸️ PAUSE AUDIO`;
-                btn.style.backgroundColor = "#c5a059"; // Gold for pause
-            }
+            btn.innerHTML = isPaused ? `▶️ RESUME AUDIO` : `⏸️ PAUSE AUDIO`;
+            btn.style.backgroundColor = isPaused ? "#28a745" : "#c5a059";
             btn.style.color = "white";
         } else {
             btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
@@ -42,32 +35,51 @@ function updateButtonUI(lang) {
 }
 
 function toggleAudio(lang) {
-    // 1. If speaking and same language, handle Pause/Resume
     if (currentLang === lang) {
         if (synth.speaking && !isPaused) {
+            // Logic for Pausing
             synth.pause();
             isPaused = true;
             updateButtonUI(lang);
             return;
         } else if (isPaused) {
-            synth.resume();
+            // Logic for Resuming
             isPaused = false;
             updateButtonUI(lang);
+            
+            /**
+             * CRITICAL MOBILE FIX:
+             * On mobile, resume() often hangs. We cancel the "frozen" 
+             * state and manually trigger a new speak command for the current chunk.
+             */
+            synth.resume(); // Try official first
+            
+            setTimeout(() => {
+                // If it's still not speaking after 150ms, the engine is dead.
+                // We force a restart of the current sentence.
+                if (!synth.speaking) {
+                    synth.cancel(); 
+                    playChunk();
+                }
+            }, 150);
             return;
         }
     }
 
-    // 2. If changing language or starting fresh
+    // New Session
     stopAllAudio();
-    
     currentLang = lang;
-    isPaused = false;
     const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
     const elements = document.querySelectorAll(selector);
-    textChunks = Array.from(elements).map(el => el.innerText);
+
+    textChunks = [];
+    elements.forEach(el => {
+        // Sentence splitting ensures that a 'restart' only repeats the current sentence
+        const sentences = el.innerText.match(/[^.।!?]+[.।!?]*/g) || [el.innerText];
+        sentences.forEach(s => { if(s.trim().length > 0) textChunks.push(s.trim()); });
+    });
 
     if (textChunks.length === 0) return;
-
     updateButtonUI(lang);
     chunkIndex = 0;
     playChunk();
@@ -79,28 +91,42 @@ function playChunk() {
         return;
     }
 
+    // Media Session prevents the OS from killing the browser process
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: currentLang === 'hi-IN' ? 'शिव महापुराण' : 'Shiv Mahapuran',
+            artist: 'Satarudra Samhita'
+        });
+    }
+
     const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
     utter.lang = currentLang;
-    utter.rate = 0.75;
+    utter.rate = 0.85;
 
     utter.onend = () => {
-        // Only move to next if we aren't currently paused 
-        // (onend can trigger when paused on some browsers)
         if (!isPaused) {
             chunkIndex++;
-            setTimeout(playChunk, 100);
+            playChunk();
         }
     };
 
-    utter.onerror = () => stopAllAudio();
+    utter.onerror = (e) => {
+        // Interrupted is a common mobile status when screen locks; don't reset index.
+        if (e.error !== 'interrupted' && !isPaused) {
+            stopAllAudio();
+        }
+    };
 
     synth.speak(utter);
 }
 
-// Global listeners to prevent ghost audio
+// Handle lock screen/tab switch by pausing.
 window.addEventListener('blur', () => {
-    // Optional: Use synth.pause() instead of stop if you want it to 
-    // resume when they come back to the tab.
-    stopAllAudio(); 
+    if (synth.speaking && !isPaused) {
+        synth.pause();
+        isPaused = true;
+        updateButtonUI(currentLang);
+    }
 });
+
 window.addEventListener('beforeunload', stopAllAudio);
