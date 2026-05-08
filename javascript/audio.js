@@ -1,230 +1,96 @@
 const synth = window.speechSynthesis;
-
 let currentLang = null;
 let textChunks = [];
 let chunkIndex = 0;
-let isPaused = false;
-let isPlaying = false;
 
-// Elements
-const btnHi = document.getElementById("btn-hi");
-const btnEn = document.getElementById("btn-en");
-const slider = document.getElementById("audio-slider");
-const sliderLabel = document.getElementById("slider-label");
-
-// Initialize slider
-document.addEventListener("DOMContentLoaded", () => {
-    if (slider) {
-        slider.addEventListener("input", handleSliderChange);
-        slider.disabled = true;
-    }
-});
-
-// Setup content for chosen language
-function loadTextChunks(lang) {
-    const selector = lang === "hi-IN" ? ".point-hi" : ".point-en";
-
-    textChunks = Array.from(document.querySelectorAll(selector))
-        .map(el => el.innerText.trim())
-        .filter(text => text.length > 0);
-
-    if (slider) {
-        slider.max = textChunks.length - 1;
-        slider.disabled = false;
-    }
-
-    updateSliderUI();
-}
-
-// Main button logic
-function toggleAudio(lang) {
-
-    // Switching to another language
-    if (currentLang && currentLang !== lang) {
-        synth.cancel();
-        resetPlaybackState();
-    }
-
-    // First time start
-    if (!currentLang) {
-        currentLang = lang;
-        loadTextChunks(lang);
-        startPlayback();
-        return;
-    }
-
-    // Same language controls
-    if (currentLang === lang) {
-
-        if (isPlaying && !isPaused) {
-            pausePlayback();
-            return;
-        }
-
-        if (isPaused) {
-            resumePlayback();
-            return;
-        }
-
-        if (!isPlaying) {
-            startPlayback();
-            return;
-        }
-    }
-}
-
-// Start reading
-function startPlayback() {
-    if (!textChunks.length) return;
-
-    isPaused = false;
-    isPlaying = true;
-
-    updateButtons();
-
-    speakCurrentChunk();
-}
-
-// Pause reading
-function pausePlayback() {
-    synth.cancel(); // mobile-safe
-    isPaused = true;
-    isPlaying = true;
-
-    updateButtons();
-}
-
-// Resume reading
-function resumePlayback() {
-    isPaused = false;
-    isPlaying = true;
-
-    updateButtons();
-
-    speakCurrentChunk();
-}
-
-// Speak selected section
-function speakCurrentChunk() {
-    if (
-        !currentLang ||
-        chunkIndex >= textChunks.length ||
-        isPaused
-    ) {
-        if (chunkIndex >= textChunks.length) {
-            stopAllAudio();
-        }
-        return;
-    }
-
-    updateSliderUI();
-
-    const utter = new SpeechSynthesisUtterance(
-        textChunks[chunkIndex]
-    );
-
-    utter.lang = currentLang;
-    utter.rate = 0.75;
-
-    utter.onend = () => {
-        if (!isPaused) {
-            chunkIndex++;
-            setTimeout(speakCurrentChunk, 150);
-        }
-    };
-
-    utter.onerror = () => stopAllAudio();
-
-    synth.speak(utter);
-}
-
-// Slider handler
-function handleSliderChange() {
-    chunkIndex = parseInt(slider.value);
-
-    updateSliderUI();
-
-    if (currentLang) {
-        synth.cancel();
-
-        if (!isPaused) {
-            setTimeout(() => {
-                speakCurrentChunk();
-            }, 150);
-        }
-    }
-}
-
-// Update slider display
-function updateSliderUI() {
-    if (slider) {
-        slider.value = chunkIndex;
-    }
-
-    if (sliderLabel) {
-        sliderLabel.innerText = `Section: ${chunkIndex + 1} / ${textChunks.length}`;
-    }
-}
-
-// Stop completely
 function stopAllAudio() {
-    synth.cancel();
-    resetPlaybackState();
-    resetButtons();
+	synth.cancel();
+	currentLang = null;
+	textChunks = [];
+	chunkIndex = 0;
 
-    if (slider) {
-        slider.value = 0;
-    }
-
-    if (sliderLabel) {
-        sliderLabel.innerText = "Section: 1";
-    }
+	const btnHi = document.getElementById('btn-hi');
+	const btnEn = document.getElementById('btn-en');
+	
+	[btnHi, btnEn].forEach(btn => {
+		if (btn) {
+			btn.innerHTML = btn.id === 'btn-hi' ? "🔊 शिव महापुराण हिंदी में सुनें" : "🔊 Listen Shiv Mahapuran in English";
+			btn.style.background = "transparent";
+			btn.style.color = "#d1c4b2";
+		}
+	});
 }
 
-// Reset playback variables
-function resetPlaybackState() {
-    currentLang = null;
-    textChunks = [];
-    chunkIndex = 0;
-    isPaused = false;
-    isPlaying = false;
+function toggleAudio(lang) {
+	// 1. Check if we are toggling the same language OFF
+	if (synth.speaking && currentLang === lang) {
+		stopAllAudio();
+		return;
+	}
+
+	// 2. Kill current speech and reset UI
+	synth.cancel(); 
+	
+	// Reset buttons manually here for instant feedback
+	const btnHi = document.getElementById('btn-hi');
+	const btnEn = document.getElementById('btn-en');
+	btnHi.innerHTML = "🔊 शिव महापुराण हिंदी में सुनें"; btnHi.style.background = "transparent";
+	btnEn.innerHTML = "🔊 Listen Shiv Mahapuran in English"; btnEn.style.background = "transparent";
+
+	// 3. Setup new language
+	currentLang = lang;
+	const selector = lang === 'hi-IN' ? '.point-hi' : '.point-en';
+	const elements = document.querySelectorAll(selector);
+	textChunks = Array.from(elements).map(el => el.innerText);
+
+	if (textChunks.length === 0) return;
+
+	// 4. Update Active Button UI
+	const activeBtn = document.getElementById(lang === 'hi-IN' ? 'btn-hi' : 'btn-en');
+	activeBtn.innerHTML = `🛑 STOP AUDIO`;
+	activeBtn.style.backgroundColor = "#c5a059";
+	activeBtn.style.color = "white";
+
+	chunkIndex = 0;
+
+	/** * MOBILE CRITICAL FIX: 
+	 * We MUST call speak() immediately inside the click event. 
+	 * Mobile browsers will block speak() if it's delayed by logic.
+	 */
+	const firstUtterance = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+	firstUtterance.lang = currentLang;
+	firstUtterance.rate = 0.75;
+
+	firstUtterance.onend = () => {
+		chunkIndex++;
+		speakNext();
+	};
+
+	firstUtterance.onerror = () => stopAllAudio();
+
+	// This direct call satisfies the mobile browser's security policy
+	synth.speak(firstUtterance);
 }
 
-// Button UI
-function resetButtons() {
-    if (btnHi) {
-        btnHi.innerHTML = "🔊 शिव महापुराण हिंदी में सुनें";
-        btnHi.style.background = "transparent";
-        btnHi.style.color = "#d1c4b2";
-    }
+function speakNext() {
+	// If user stopped it or we reached the end, quit.
+	if (!currentLang || chunkIndex >= textChunks.length) {
+		stopAllAudio();
+		return;
+	}
 
-    if (btnEn) {
-        btnEn.innerHTML = "🔊 Listen Shiv Mahapuran in English";
-        btnEn.style.background = "transparent";
-        btnEn.style.color = "#d1c4b2";
-    }
+	const utter = new SpeechSynthesisUtterance(textChunks[chunkIndex]);
+	utter.lang = currentLang;
+	utter.rate = 0.75;
+
+	utter.onend = () => {
+		chunkIndex++;
+		setTimeout(speakNext, 100);
+	};
+
+	utter.onerror = () => stopAllAudio();
+
+	synth.speak(utter);
 }
-
-// Dynamic button states
-function updateButtons() {
-    resetButtons();
-
-    const activeBtn =
-        currentLang === "hi-IN" ? btnHi : btnEn;
-
-    if (!activeBtn) return;
-
-    if (isPaused) {
-        activeBtn.innerHTML = "▶️ Resume Audio";
-        activeBtn.style.backgroundColor = "#28a745";
-    } else {
-        activeBtn.innerHTML = "⏸️ Pause Audio";
-        activeBtn.style.backgroundColor = "#c5a059";
-    }
-
-    activeBtn.style.color = "white";
-}
-
-// Cleanup
-window.addEventListener("blur", stopAllAudio);
-window.addEventListener("beforeunload", stopAllAudio);
+window.addEventListener('blur', stopAllAudio);
+window.addEventListener('beforeunload', stopAllAudio);
