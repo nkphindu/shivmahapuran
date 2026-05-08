@@ -304,10 +304,40 @@
     <p>Shiv Maha Puran - Vidyeshwara Samhita Summary (25 Chapters) | Glory of Shiv Purana, Pranav, Shivaratri, Panchakritya, Sacred Mantras, Bhasma & Rudraksh</p>
     <p>Gurgaon, Haryana, India</p>
 
-    <div class="audio-controls">
-        <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">🔊 Listen Shiv Mahapuran in English</button>
-        <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">🔊 शिव महापुराण हिंदी में सुनें</button>
+
+<div class="audio-controls">
+
+    <button id="btn-en" class="btn-audio" onclick="toggleAudio('en-US')">
+        🔊 Listen Shiv Mahapuran in English
+    </button>
+
+    <button id="btn-hi" class="btn-audio" onclick="toggleAudio('hi-IN')">
+        🔊 शिव महापुराण हिंदी में सुनें
+    </button>
+
+    <div style="width:100%; max-width:500px; margin-top:20px;">
+        <input
+            type="range"
+            id="audio-slider"
+            min="0"
+            max="0"
+            value="0"
+            step="1"
+            style="width:100%;"
+        />
+
+        <div
+            id="slider-label"
+            style="margin-top:8px; color:#d1c4b2; text-align:center;"
+        >
+            Section: 1
+        </div>
     </div>
+
+</div>
+
+
+    
 </footer>
 
 <script src="./javascript/audio.js"></script>
