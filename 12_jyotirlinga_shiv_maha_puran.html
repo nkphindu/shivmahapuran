@@ -10,6 +10,7 @@
             --soft-gold: #c5a059;
             --text-gray: #333333;
             --bg-linen: #fdfaf5;
+			--nav-bg: rgba(253, 250, 245, 0.95);
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -30,6 +31,9 @@
             border-bottom: 5px solid var(--soft-gold);
         }
 		
+		.om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
+		
 		.btn-top {
             display: inline-block;
             margin-top: 25px;
@@ -42,25 +46,44 @@
             font-size: 0.9rem;
         }
 
-        .om { font-size: 2.5rem; margin-bottom: 10px; display: block; }
-        header h1 { font-weight: normal; font-size: 2.4rem; margin: 0; letter-spacing: 1px; }
-        
-        .sub-header {
-            font-size: 1.1rem;
-            margin-top: 15px;
-            color: #f1e4d1;
-            opacity: 0.9;
+		nav {
+            position: sticky;
+            top: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0dcd5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        nav a {
+            text-decoration: none;
+            color: var(--primary-maroon);
+            padding: 10px 10px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            margin: 0 0px;
+        }
+
+        nav a:hover {
+            background: #f1e4d1;
+            color: #8b0000;
+        }
+
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
 
         .section-box {
             background: white;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             padding: 50px;
             border-radius: 12px;
             box-shadow: 0 4px 30px rgba(0,0,0,0.02);
             border: 1px solid #f0ede9;
+			scroll-margin-top: 150px;
         }
 
         h2 { 
@@ -119,8 +142,9 @@
         .btn-audio:hover { background: var(--soft-gold); color: white; }
 
         @media (max-width: 600px) {
+            nav { flex-wrap: wrap; padding: 5px; }
+            nav a { font-size: 0.8rem; padding: 8px 10px; }
             .section-box { padding: 25px; }
-            header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -129,13 +153,28 @@
 <header>
     <span class="om">ॐ नमः शिवाय</span>
     <h1>श्री शिव महापुराण: द्वादश ज्योतिर्लिंग</h1>
-    <p class="sub-header">The Twelve Sacred Jyotirlingas - A Divine Digital Journey</p>
+    <p>The Twelve Sacred Jyotirlingas - A Divine Digital Journey</p>
 	<a href="index.html" class="btn-top">← Back to Shiv Puran Home Page</a>
 </header>
 
+<nav>
+    <a href="#s1">Somnath</a>
+    <a href="#s2">Mallikarjuna</a>
+    <a href="#s3">Mahakal</a>
+    <a href="#s4">Omkar</a>
+    <a href="#s5">Kedarnath</a>
+	<a href="#s6">Bhimashankar</a>
+    <a href="#s7">Vishveshwar</a>
+    <a href="#s8">Trimbakeshwar</a>
+    <a href="#s9">Vaidyanath</a>
+    <a href="#s10">Nageshwar</a>
+	<a href="#s11">Rameshwar</a>
+	<a href="#s12">Grishneshwar</a>
+</nav>
+
 <div class="container">
 
-    <section class="section-box">
+    <section id="s1" class="section-box">
         <h2>1. सोमनाथ ज्योतिर्लिंग | Somnath Jyotirlinga</h2>
         
 		<span class="point-en">
@@ -191,7 +230,7 @@
 		</span>
     </section>
 
-    <section class="section-box">
+    <section id="s2" class="section-box">
         <h2>2. मल्लिकार्जुन ज्योतिर्लिंग | Mallikarjuna Jyotirlinga</h2>
         <span class="point-en">
 		
@@ -219,7 +258,7 @@
 		</span>	
     </section>
 
-    <section class="section-box">
+    <section id="s3" class="section-box">
     <h2>3. महाकालेश्वर ज्योतिर्लिंग | Mahakaleshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -257,7 +296,7 @@
 	</span>
 	</section>
 	
-    <section class="section-box">
+    <section id="s4" class="section-box">
         <h2>4. ओंकारेश्वर ज्योतिर्लिंग | Omkareshwar Jyotirlinga</h2>
         <span class="point-en">
         <p><b>Omkareshwar Jyotirlinga:</b> The sacred story of Omkareshwar Jyotirlinga, described in Shiv Puran’s Kotirudra Samhita Chapter 18, centers on Vindhya Mountain. Vindhya, though mighty and glorious, became jealous of Mount Meru, which was praised as the greatest among mountains. Filled with pride, Vindhya desired to surpass Meru in power and spiritual significance.</p> 
@@ -304,7 +343,7 @@
     </span>
     </section>
 
-    <section class="section-box">
+    <section id="s5" class="section-box">
     <h2>5. केदारनाथ ज्योतिर्लिंग | Kedarnath Jyotirlinga</h2>
 
     <span class="point-en">
@@ -352,7 +391,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s6" class="section-box">
     <h2>6. भीमाशंकर ज्योतिर्लिंग | Bhimashankar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -400,7 +439,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s7" class="section-box">
     <h2>7. विश्वेश्वर ज्योतिर्लिंग | Vishveshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -448,7 +487,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s8" class="section-box">
     <h2>8. त्रयंबकेश्वर ज्योतिर्लिंग | Trimbakeshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -496,7 +535,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s9" class="section-box">
     <h2>9. वैद्यनाथ ज्योतिर्लिंग | Vaidyanath Jyotirlinga</h2>
 
     <span class="point-en">
@@ -544,7 +583,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s10" class="section-box">
     <h2>10. नागेश्वर ज्योतिर्लिंग | Nageshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -592,7 +631,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s11" class="section-box">
     <h2>11. रामेश्वरम ज्योतिर्लिंग | Rameshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -636,7 +675,7 @@
     </span>
 	</section>
 
-    <section class="section-box">
+    <section id="s12" class="section-box">
     <h2>12. घृष्णेश्वर ज्योतिर्लिंग | Grishneshwar Jyotirlinga</h2>
 
     <span class="point-en">
@@ -688,7 +727,7 @@
 
 <footer>
     <h3>ॐ नमः शिवाय</h3>
-    <p class="sub-header">The Twelve Sacred Jyotirlingas - A Divine Digital Journey</p>
+    <p>The Twelve Sacred Jyotirlingas - A Divine Digital Journey</p>
     <p>Gurgaon, Haryana, India</p>
 
     <div class="audio-controls">
