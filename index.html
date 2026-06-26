@@ -74,6 +74,68 @@
         }
 
         nav a:hover { background: #f1e4d1; color: #8b0000; }
+		
+		/* Institute Banner */
+
+		.institute-banner {
+			margin: 35px auto 0;
+			max-width: 950px;
+			background: linear-gradient(
+				135deg,
+				rgba(197,160,89,0.15),
+				rgba(255,255,255,0.08)
+			);
+			border: 1px solid rgba(197,160,89,0.5);
+			border-radius: 14px;
+			padding: 18px 25px;
+			backdrop-filter: blur(4px);
+		}
+
+		.institute-content {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.institute-icon {
+			font-size: 3rem;
+			color: var(--soft-gold);
+			flex-shrink: 0;
+		}
+
+		.institute-text {
+			flex: 1;
+		}
+
+		.institute-text h3 {
+			margin: 0 0 8px 0;
+			color: #fff;
+			border: none;
+			font-size: 1.4rem;
+		}
+
+		.institute-text p {
+			margin: 4px 0;
+			color: #f3e8d1;
+			text-align: left;
+			font-size: 1rem;
+		}
+
+		.institute-btn {
+			background: var(--soft-gold);
+			color: var(--primary-maroon);
+			text-decoration: none;
+			padding: 12px 24px;
+			border-radius: 40px;
+			font-weight: bold;
+			white-space: nowrap;
+			transition: all 0.3s ease;
+		}
+
+		.institute-btn:hover {
+			background: #d9b36a;
+			transform: translateY(-2px);
+		}
 
         .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
 
@@ -188,6 +250,20 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2rem; }
             .grid-layout { grid-template-columns: 1fr; }
+			
+			.institute-content {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.institute-text p {
+				text-align: center;
+			}
+
+			.institute-btn {
+				width: 100%;
+				max-width: 280px;
+			}
         }
     </style>
 </head>
@@ -198,6 +274,27 @@
     <h1>शिव महापुराण</h1>
     <p>Shri Shiv Mahapuran Divine Knowledge Portal | The Complete Sacred Digital Treasury of Lord Shiva’s Eternal Wisdom, Leelas, Avatars, Vrats, Mantras, and Cosmic Teachings</p>
 	<p>श्री शिव महापुराण दिव्य ज्ञानकोश — भगवान शिव के सनातन ज्ञान, लीलाओं, अवतारों, व्रतों, मंत्रों और ब्रह्मांडीय उपदेशों का संपूर्ण पवित्र डिजिटल भंडार</p>
+	
+	<div class="institute-banner">
+		<div class="institute-content">
+			<span class="institute-icon">🕉</span>
+
+			<div class="institute-text">
+				<h3>Institute of Shiva Consciousness & Spiritual Wisdom</h3>
+				<p>
+					Founder: Naresh Kumar • Saral Shiv Puran • Online Shiv Puran Classes
+				</p>
+				<p>
+					शिव चेतना एवं आध्यात्मिक ज्ञान संस्थान • सरल शिव पुराण • ऑनलाइन शिव पुराण कक्षाएँ
+				</p>
+			</div>
+
+			<a href="https://shivmahapuran.com/institute_of_shiva_consciousness_and_spiritual_wisdom.html" class="institute-btn">
+				Visit Institute →
+			</a>
+		</div>
+	</div>
+	
 </header>
 
 <nav>
@@ -206,14 +303,25 @@
     <a href="#lore">गाथाएं | Lore</a>
 </nav>
 
+
+
 <div class="container">
 
     <section id="intro" class="intro-section">
         <div class="summary-text">
             <h2>शिव पुराण का महत्व | Significance of Shiv Puran</h2>
 			<img src="./images/shiv_maha_puran.png" alt="भगवान शिव" class="top-big-image">
-            <p><strong>शिव पुराण</strong> सनातन धर्म के सबसे महत्वपूर्ण और प्राचीन अठारह पुराणों में से एक है, जो साक्षात भगवान शिव की महिमा का बखान करता है। यह ग्रंथ केवल कथाओं का संग्रह नहीं है, बल्कि जीवन जीने की एक सम्पूर्ण कला और मोक्ष प्राप्ति का सुगम मार्ग है। इसके श्रवण मात्र से मनुष्य के जन्म-जन्मांतर के संचित पापों का नाश होता है और हृदय में भक्ति का उदय होता है। इसमें भगवान शिव के निर्गुण निराकार स्वरूप से लेकर सगुण साकार स्वरूप तक की यात्रा का वैज्ञानिक और आध्यात्मिक वर्णन मिलता है। सृष्टि की उत्पत्ति, पालन और संहार के रहस्यों को इस पुराण में अत्यंत विस्तारपूर्वक समझाया गया है। यह ग्रंथ गृहस्थों के लिए धर्म का पालन करने और संन्यासियों के लिए आत्मज्ञान प्राप्त करने की प्रेरणा देता है। इसमें वर्णित पंचाक्षर मंत्र (ॐ नमः शिवाय) और महामृत्युंजय मंत्र की महिमा साधक को अकाल मृत्यु के भय से मुक्त करती है। शिव पुराण का नियमित पाठ करने से मन की चंचलता समाप्त होती है और साधक को मानसिक शांति एवं संतोष की प्राप्ति होती है। यह दिव्य ग्रंथ हमें सिखाता है कि अहंकार का त्याग और समस्त प्राणियों के प्रति करुणा ही शिवत्व प्राप्त करने का वास्तविक पथ है। कलियुग में शिव पुराण की अमृतवाणी मानव जाति के कल्याण और विश्व शांति के लिए एक अमूल्य उपहार है।</p>
-            <p>The <strong>Shiv Purana</strong> is a magnificent spiritual encyclopedia that unveils the profound mysteries of the universe through the lens of Shaivism. It stands as an eternal beacon of wisdom, guiding humanity from the darkness of ignorance toward the luminous light of Self-realization. Comprising 24,000 verses, it meticulously details the divine exploits and cosmic functions of Lord Shiva, the primordial source of all existence. The scripture explains that Shiva is both the 'Nirguna' Brahman (formless reality) and the 'Saguna' Ishvara (the manifest deity) who loves his devotees. It provides a scientific understanding of creation (Srishti), explaining how the cosmos emerged from the union of Shiva and Shakti. Through its sacred stories, it emphasizes the importance of 'Dharma' (righteousness), 'Satya' (truth), and 'Ahinsa' (non-violence) in daily life. The text highlights the unparalleled power of the holy syllable 'Om' and the 'Panchakshara Mantra' as tools for achieving mental liberation. By studying the Shiv Purana, a seeker learns to transcend the ego and recognize the divine presence in every atom of the physical world. It offers practical spiritual remedies for overcoming the struggles of the modern age, such as stress, anxiety, and moral degradation. Ultimately, this sacred archive is a roadmap for the soul to merge back into the ocean of infinite bliss and eternal consciousness.</p>
+            <p><strong>शिव पुराण</strong> सनातन धर्म के सबसे महत्वपूर्ण और प्राचीन अठारह पुराणों में से एक है, जो साक्षात भगवान शिव की महिमा का बखान करता है। यह ग्रंथ केवल कथाओं का संग्रह नहीं है, बल्कि जीवन जीने की एक सम्पूर्ण कला और मोक्ष प्राप्ति का सुगम मार्ग है। इसके श्रवण मात्र से मनुष्य के जन्म-जन्मांतर के संचित पापों का नाश होता है और हृदय में भक्ति का उदय होता है।</p>
+			
+			<p>इसमें भगवान शिव के निर्गुण निराकार स्वरूप से लेकर सगुण साकार स्वरूप तक की यात्रा का वैज्ञानिक और आध्यात्मिक वर्णन मिलता है। सृष्टि की उत्पत्ति, पालन और संहार के रहस्यों को इस पुराण में अत्यंत विस्तारपूर्वक समझाया गया है। यह ग्रंथ गृहस्थों के लिए धर्म का पालन करने और संन्यासियों के लिए आत्मज्ञान प्राप्त करने की प्रेरणा देता है। इसमें वर्णित पंचाक्षर मंत्र (ॐ नमः शिवाय) और महामृत्युंजय मंत्र की महिमा साधक को अकाल मृत्यु के भय से मुक्त करती है।</p>
+			
+			<p>शिव पुराण का नियमित पाठ करने से मन की चंचलता समाप्त होती है और साधक को मानसिक शांति एवं संतोष की प्राप्ति होती है। यह दिव्य ग्रंथ हमें सिखाता है कि अहंकार का त्याग और समस्त प्राणियों के प्रति करुणा ही शिवत्व प्राप्त करने का वास्तविक पथ है। कलियुग में शिव पुराण की अमृतवाणी मानव जाति के कल्याण और विश्व शांति के लिए एक अमूल्य उपहार है।</p>
+			
+            <p>The <strong>Shiv Purana</strong> is a magnificent spiritual encyclopedia that unveils the profound mysteries of the universe through the lens of Shaivism. It stands as an eternal beacon of wisdom, guiding humanity from the darkness of ignorance toward the luminous light of Self-realization. Comprising 24,000 verses, it meticulously details the divine exploits and cosmic functions of Lord Shiva, the primordial source of all existence.</p> 
+			
+			<p>The scripture explains that Shiva is both the 'Nirguna' Brahman (formless reality) and the 'Saguna' Ishvara (the manifest deity) who loves his devotees. It provides a scientific understanding of creation (Srishti), explaining how the cosmos emerged from the union of Shiva and Shakti. Through its sacred stories, it emphasizes the importance of 'Dharma' (righteousness), 'Satya' (truth), and 'Ahinsa' (non-violence) in daily life. The text highlights the unparalleled power of the holy syllable 'Om' and the 'Panchakshara Mantra' as tools for achieving mental liberation.</p> 
+			
+			<p>By studying the Shiv Purana, a seeker learns to transcend the ego and recognize the divine presence in every atom of the physical world. It offers practical spiritual remedies for overcoming the struggles of the modern age, such as stress, anxiety, and moral degradation. Ultimately, this sacred archive is a roadmap for the soul to merge back into the ocean of infinite bliss and eternal consciousness.</p>
         </div>
     </section>
 
